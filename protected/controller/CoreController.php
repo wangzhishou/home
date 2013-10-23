@@ -64,18 +64,19 @@ class CoreController extends Controller {
 						);
 						$this->session->auth = $auth;
 						setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
+						$this->data ['user'] = $this->session->get ( 'user' );
 					} else {
-						$this->data ['user'] = null;
+						$this->data ['user'] = array ();
 					}
 				}
 			} else {
-				$this->data ['user'] = null;
+				$this->data ['user'] = array ();
 			}
 		}
 		$this->data ['randomTags'] = $this->getRandomTags ();
 		$this->data ['menu'] = $this->getMenu ();
 		// if not login, group = anonymous
-		$role = (isset ( $user ['group'] )) ? $user ['group'] : 'anonymous';
+		$role = (isset ( $this->data  ['group'] )) ? $this->data  ['group'] : 'anonymous';
 		$rs = "";
 		$rs == $this->acl ()->process ( $role, $resource, $action );
 		if (! empty ( $rs )) {
