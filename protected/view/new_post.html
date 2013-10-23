@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>haotebie</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/ui.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/ueditor/themes/default/css/umeditor.min.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+<script src="{{baseurl}}global/js/ui.js"></script>
+<script type="text/javascript" charset="utf-8">
+	window.UEDITOR_HOME_URL = "{{baseurl}}global/ueditor/";	
+	window.BASE_URL = "{{baseurl}}";
+</script>
+<script type="text/javascript" charset="utf-8" src="{{baseurl}}global/ueditor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="{{baseurl}}global/ueditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="{{baseurl}}global/ueditor/umeditor.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="{{baseurl}}global/swfupload/swfupload.js"></script>
+<script type="text/javascript" charset="utf-8" src="{{baseurl}}global/swfupload/swfUploadHandler.js"></script>
+</head><body>
+<div class="wrap"> 
+  <!-- include 'top' -->
+  <div class="content">
+    <div class="left mbox f">
+      <div class="post-box">
+        <h2>发布文章</h2>
+        <form method="POST" action="{{baseurl}}post/saveNew" id="AjaxForm">  
+          <div class="field"> <strong>文章标题: </strong>
+            <input type="text" size="60" name="title" class="input"/>
+          </div>      
+          <div class="field"> <strong>文章主图: </strong>
+          	<div class="thumbnails-container">
+            	<div id="ThumbnailsDiv" class="thumbnails"></div>
+                <div id="ThumbnailsTips" class="thumbnails-tips">暂无缩略图,点击上传</div>
+                <div id="ThumbnailsBtn" class="thumbnails-btn"><div id="DivButtonPlaceholder" class="btn"></div></div>
+            </div>
+          	<input type="hidden" name="thumbnails" id="Thumbnails" value=""/>
+          </div>
+          <!-- if {{menu}} -->
+          <div class="field" id="CatBox"> <strong>文章分类: </strong> 
+            <!-- loop menu -->
+            <label>
+              <input type="checkbox" name="cat" value="{{menu' value.@name}}">
+              {{menu' value.@name}} </label>
+            <!-- endloop --> 
+          </div>
+          <input type="hidden" name="cats" id="CatsInput" value="" />
+          <!-- endif -->
+          <div class="field"> <strong>文章摘要: </strong>
+            <textarea class="textarea" name="summary"></textarea>
+          </div>
+          <div class="field"> <strong>文章内容: </strong> 
+            <script type="text/plain" id="editor" name="content"></script> 
+          </div>
+          <div class="field"> <strong>标签:<em>用逗号分隔不同的标签。</em> </strong>             
+      		<div class="tag-box" id="TagBox">
+            <!-- cache('randomTag', 300) --> 
+            <!-- loop randomTags --> 
+            <a href="{{baseurl}}tag/{{randomTags' value.@name}}">{{randomTags' value.@name}}</a>
+            <!-- endloop --> 
+            <!-- endcache -->
+            </div>
+            <input type="text" size="60" name="tags" id="TagsInput" class="input" />
+          </div>
+          <div class="field"> <strong>商品价格: </strong>
+            <input type="text" size="60" name="price" class="input" style="width:100px;"/> 元
+          </div> 
+          <div class="field"> <strong>商品地址: </strong>
+            <input type="text" size="60" name="sourceurl" class="input"/>
+          </div> 
+          <div class="field">
+            <input type="submit" name="submit" value="确认发布"  class="btn btn-big" id="SubmitBtn" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="right"> </div>
+    <div class="clear">&nbsp;</div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+<script language="javascript" type="text/javascript">
+var G = {
+	saveSuccess : "{{baseurl}}post/saveSuccess"
+};
+</script> 
+<script src="{{baseurl}}global/js/post.js"></script>
+
+<script type="text/javascript">
+var ue = UM.getEditor('editor', {
+	imageUrl:"{{baseurl}}post/imageUp",
+	imagePath:"",
+	lang:/^zh/.test(navigator.language || navigator.browserLanguage || navigator.userLanguage) ? 'zh-cn' : 'en',
+	langPath:UMEDITOR_CONFIG.UMEDITOR_HOME_URL + "lang/",
+	focus: true
+});
+
+// Create the SWFUpload Object
+var settings = new SWFUpload({
+	upload_url : "{{baseurl}}post/thumbUp",
+	post_params: {"PHPSESSID": "NONE"},
+	flash_url : "{{baseurl}}global/swfupload/swfupload.swf",
+	file_size_limit : "1024",
+	file_post_name : "thumbFile",
+	file_types : "*.jpg;*.gif;*.png;*.jpeg",
+	file_types_description: "图片文件",
+	file_upload_limit : 100,
+	file_queue_limit : 1,
+	
+	ile_queued_handler : swfUploadHandler.fileQueued,
+	file_queue_error_handler : swfUploadHandler.uploadErrorEventHandler,
+	file_dialog_complete_handler : swfUploadHandler.fileDialogComplete,
+	upload_start_handler : swfUploadHandler.uploadStartEventHandler,
+	upload_error_handler : swfUploadHandler.uploadErrorEventHandler,
+	upload_success_handler : swfUploadHandler.uploadSuccessEventHandler,
+	upload_complete_handler : swfUploadHandler.uploadCompleteEventHandler,
+
+	
+	// Button Settings
+	button_placeholder_id : "DivButtonPlaceholder",
+	button_image_url : "{{baseurl}}global/img/transparent.png",
+	button_width: 315,
+	button_height: 236,
+	button_text_top_padding: 2,
+	button_text_left_padding: 15,
+	button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+	button_cursor: SWFUpload.CURSOR.HAND,
+});
+</script>
+</body>
+</html>

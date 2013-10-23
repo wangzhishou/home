@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>haotebie</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+</head><body>
+<div class="wrap"> 
+  <!-- include 'top' -->
+  <div class="content">
+    <div class="left mbox f">
+      <div class="reg-container">
+       <!-- if {{error}} -->
+        <div class="message message-error">    
+            {{error}}&nbsp;
+        </div>
+        <!-- endif -->
+        <form class="reg-from" action="{{baseurl}}user/login" method="post">
+          <fieldset>
+            <div>
+              <label for="Email">邮件地址:</label>
+              <input id="Email" type="email" name="email" placeholder="Email Address">
+              <span id="EmailTip" class=""></span> </div>
+            <div>
+              <label for="Password">密码:</label>
+              <input id="Password" type="password" name="password" placeholder="Password">
+              <span id="PasswordTip" class=""></span> </div>
+            <div class="controls-bar">
+              <input type="hidden" id="Referrer" name="referrer" value="" />
+              <button type="submit" class="submit-button green-btn">登录</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="right"></div>
+    <div class="clear"></div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+<script language="javascript" type="text/javascript">
+var referrer = Q("Referrer");
+if(referrer) {
+	referrer.value = document.referrer;
+}
+</script>
+</body>
+</html>

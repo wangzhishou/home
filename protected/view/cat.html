@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>haotebie</title>
+{{head}}
+<link rel="shortcut icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+</head><body>
+<div class="wrap"> 
+  <!-- include 'top' -->
+  <div class="content">
+    <div class="section1"> 
+      <!-- if {{isset(posts)}}==true -->
+      <?php $i=1; ?>
+      <!-- loop posts -->
+      <?php if($i > 1 && $i % 3 == 0) { ?>
+      <div class="grid1 last">
+      <?php } else { ?>
+      <div class="grid1">
+      <?php } ?>
+        <article class="block offset"> <a href="{{baseurl}}article/{{posts' value.@id}}" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+          <div class="intro">
+          <h3> <a href="{{baseurl}}article/{{posts' value.@id}}">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
+          <div class="tagList">
+          <!-- loop posts' value.@Tag --> 
+          <a href="{{baseurl}}tag/{{posts' v' v.@name}}">{{posts' v' v.@name}}</a>
+          <!-- endloop -->
+          </div>
+          </div>
+        </article>
+      </div>
+      <?php $i++; ?>
+      <!-- endloop -->
+      
+      
+      <div class="clear">&nbsp;</div>
+      <div>{{pager}}</div> 
+      <!-- endif --> 
+      
+    </div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<div class="top">
+  <header>
+    <nav>
+      <ul class="nav">      
+        <!-- if {{isset(pinyin)}} --> 
+        <li> <a href="{{baseurl}}">首页</a> </li>
+        <!-- else -->
+        <li> <a href="{{baseurl}}" class="selected">首页</a> </li>        
+        <!-- endif -->         
+        <!-- if {{menu}} -->
+        <!-- {{debug(menu)}} -->  
+        <!-- loop menu -->          
+        <!-- if {{isset(pinyin)}} && {{menu' value.@pinyin}} == {{pinyin}} -->
+        <li> <a href="{{baseurl}}cat/{{menu' value.@pinyin}}" class="selected">{{menu' value.@name}}</a> </li>
+        <!-- else --> 
+        <li> <a href="{{baseurl}}cat/{{menu' value.@pinyin}}">{{menu' value.@name}}</a> </li>
+        <!-- endif --> 
+        <!-- endloop --> 
+        <!-- endif --> 
+      </ul>
+      <div class="head-right"> 
+        <!-- if {{user}} == Null --> 
+        <a href="{{baseurl}}user/reg" class="join">注册</a> <a href="{{baseurl}}user/login" id="login-link" class="btn btn-small">登录</a> 
+        <!-- else -->
+        <p class="normal">Hi, <strong>{{user.username}}</strong>，欢迎登录！<a href="{{baseurl}}user/logout" id="login-link" class="btn btn-small">退出</a></p>
+        <!-- endif --> 
+      </div>
+    </nav>
+  </header>
+</div>

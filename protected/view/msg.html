@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>haotebie</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+</head><body>
+<div class="wrap">
+<!-- include 'top' -->
+<div class="content mbox f"> 
+  <!-- if {{isset(status)}} -->
+  <div class="message message-{{status}}"> 
+    <!-- else -->
+    <div class="message message-success"> 
+      <!-- endif --> 
+      <span class="close"></span> 
+      <!-- if {{isset(title)}} -->
+      <header>{{title}}</header>
+      <!-- endif --> 
+      {{content}} </div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+</body>
+</html>

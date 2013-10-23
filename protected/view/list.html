@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>haotebie</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+</head><body>
+<div class="wrap"> 
+  <!-- include 'top' -->
+  <div class="content">
+    <div class="box left"> 
+      <!-- loop posts -->
+      <h2><a href="{{baseurl}}article/{{posts' value.@id}}">{{posts' value.@title}}</a></h2>
+      <div class="articles"> {{shorten(posts' value.@content)}}
+        <div class="tagContainer"> <strong>Tags: </strong> 
+          <!-- loop posts' value.@Tag --> 
+          <span class="tag"><a href="{{baseurl}}tag/{{posts' v' v.@name}}">{{posts' v' v.@name}}</a></span> 
+          <!-- endloop --> 
+        </div>
+        <em class="datePosted">&nbsp;<a href="{{baseurl}}article/{{posts' value.@id}}#comments" style="text-decoration:none;">Comments ({{posts' value.@totalcomment}})</a> | Posted on {{formatDate(posts' value.@createtime)}}</em> </div>
+      <hr class="divider"/>
+      <!-- endloop -->
+      <div>{{pager}}</div>
+      <div class="clear">&nbsp;</div>
+    </div>
+    <div class="right">
+      <div class="box"> <a href="{{baseurl}}post/create">我要投稿</a>
+        <h2>Tags :</h2>
+        <!-- cache('randomTag', 300) --> 
+        <!-- loop randomTags --> 
+        <span class="tag"><a href="{{baseurl}}tag/{{randomTags' value.@name}}">{{randomTags' value.@name}}</a></span> 
+        <!-- endloop --> 
+        <!-- endcache --> 
+      </div>
+    </div>
+    <div class="clear">&nbsp;</div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+</body>
+</html>

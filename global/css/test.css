@@ -1,0 +1,7502 @@
+.jspContainer {
+	overflow: hidden;
+	position: relative
+}
+.jspPane {
+	position: absolute
+}
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 6px;
+	height: 100%;
+	background: transparent
+}
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: transparent
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+	margin: 0;
+	padding: 0
+}
+.jspCap {
+	display: none
+}
+.jspHorizontalBar .jspCap {
+	float: left
+}
+.jspTrack {
+	background: #dde;
+	position: relative
+}
+.jspDrag {
+	background: #bbd;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+	float: left;
+	height: 100%
+}
+.jspArrow {
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer
+}
+.jspArrow.jspDisabled {
+	cursor: default;
+	background: #80808d
+}
+.jspVerticalBar .jspArrow {
+	height: 16px
+}
+.jspHorizontalBar .jspArrow {
+	width: 16px;
+	float: left;
+	height: 100%
+}
+.jspVerticalBar .jspArrow:focus {
+	outline: none
+}
+.jspCorner {
+	background: #eeeef4;
+	float: left;
+	height: 100%
+}
+* html .jspCorner {
+	margin: 0 -3px 0 0
+}
+.c2-sb-wrap {
+	position: relative;
+	display: inline;
+	float: left
+}
+.c2-sb-inner-wrap {
+	position: relative;
+	height: 42px;
+	padding-left: 23px;
+	background: url(https://www.zozi.com/assets/select-810a66e5dc693b524a48047b1ffe16b0.png) no-repeat 0px 0px
+}
+.c2-sb-wrap:focus {
+	outline: 0
+}
+.c2-sb-wrap .c2-sb-text {
+	position: relative;
+	display: inline;
+	float: left;
+	height: 20px;
+	overflow: hidden;
+	padding: 11px 0px;
+	border: 0 none;
+	color: #141933;
+	font-family: 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+	background: transparent;
+	white-space: nowrap
+}
+.c2-sb-wrap .c2-sb-button {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 7px;
+	font-size: 0px;
+	line-height: 0px;
+	text-indent: -4000px;
+	background: url(https://www.zozi.com/assets/qty-ef886342740338966db3ebe77e5098ea.png) no-repeat;
+	cursor: pointer;
+	top: 18px;
+	right: 20px
+}
+.c2-sb-wrap .c2-sb-list-wrap {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	border: 1px solid #f6f6f6;
+	border-top: 0;
+	background: #FFFFFF;
+	min-width: 100%;
+	max-height: 170px;
+	overflow-x: hidden;
+	border-bottom-left-radius: 13px;
+	-moz-border-bottom-left-radius: 13px;
+	-webkit-border-bottom-left-radius: 13px;
+	-o-border-bottom-left-radius: 13px;
+	border-bottom-right-radius: 13px;
+	-moz-border-bottom-right-radius: 13px;
+	-webkit-border-bottom-right-radius: 13px;
+	-o-border-bottom-right-radius: 13px
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list {
+	display: block;
+	position: relative;
+	list-style-type: none;
+	padding: 5px;
+	margin: 0px;
+	display: block;
+	overflow-x: hidden
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item {
+	display: block;
+	width: 100%;
+	padding: 0px;
+	margin: 0px 0 5px 0
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item .c2-sb-list-item-link {
+	display: block;
+	padding: 0px 5px;
+	margin: 0px;
+	height: 20px;
+	line-height: 22px;
+	white-space: nowrap;
+	text-decoration: none;
+	color: #1a1f39;
+	font-size: 16px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item .c2-sb-list-item-link:hover, .c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item .c2-sb-list-item-link-active {
+	background: #f17a3e;
+	color: #fff
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item .c2-sb-list-item-group {
+	display: block;
+	padding: 0 5px;
+	margin: 0px;
+	height: 20px;
+	line-height: 20px;
+	white-space: nowrap;
+	text-decoration: none;
+	color: #1a1f39;
+	font-size: 16px;
+	font-weight: bold
+}
+.c2-sb-wrap, .c2-sb-wrap .c2-sb-inner-wrap, .c2-sb-wrap .c2-sb-text, .c2-sb-wrap .c2-sb-button {
+	z-index: 10
+}
+.c2-sb-wrap .c2-sb-list-wrap {
+	z-index: 6
+}
+.c2-sb-closing, .c2-sb-closing .c2-sb-inner-wrap, .c2-sb-closing .c2-sb-text, .c2-sb-closing .c2-sb-button {
+	z-index: 15
+}
+.c2-sb-closing .c2-sb-list-wrap {
+	z-index: 11
+}
+.c2-sb-open, .c2-sb-open .c2-sb-inner-wrap, .c2-sb-open .c2-sb-text, .c2-sb-open .c2-sb-button {
+	z-index: 20
+}
+.c2-sb-open .c2-sb-list-wrap {
+	z-index: 30
+}
+.c2-sb-wrap .jspTrack {
+	background: #F3F3F3
+}
+.c2-sb-wrap .jspDrag {
+	background: #ddd;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px
+}
+.c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item .c2-disabled-option {
+	display: block;
+	padding: 0px 5px;
+	margin: 0px;
+	height: 20px;
+	line-height: 22px;
+	white-space: nowrap;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: default
+}
+.c2-sb-list-wrap.jspScrollable {
+	outline: none
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url("/assets/fontawesome.eot");
+	src: url("/assets/fontawesome.eot?#iefix") format("embedded-opentype"), url("/assets/fontawesome.woff") format("woff"), url("/assets/fontawesome.ttf") format("truetype"), url("/assets/fontawesome.svg#fontawesome") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+[class^="icon-"], [class*=" icon-"] {
+font-family:FontAwesome;
+font-weight:normal;
+font-style:normal;
+text-decoration:inherit;
+-webkit-font-smoothing:antialiased;
+*margin-right:.3em
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	text-decoration: inherit;
+	display: inline-block;
+	speak: none
+}
+.icon-large:before {
+	vertical-align: -10%;
+	font-size: 1.3333333333333333em
+}
+a [class^="icon-"], a [class*=" icon-"], a [class^="icon-"]:before, a [class*=" icon-"]:before {
+	display: inline
+}
+[class^="icon-"].icon-fixed-width, [class*=" icon-"].icon-fixed-width {
+	display: inline-block;
+	width: 1.2857142857142858em;
+	text-align: center
+}
+[class^="icon-"].icon-fixed-width.icon-large, [class*=" icon-"].icon-fixed-width.icon-large {
+	width: 1.5714285714285714em
+}
+ul.icons-ul {
+	list-style-type: none;
+	text-indent: -0.7142857142857143em;
+	margin-left: 2.142857142857143em
+}
+ul.icons-ul>li .icon-li {
+	width: 0.7142857142857143em;
+	display: inline-block;
+	text-align: center
+}
+[class^="icon-"].hide, [class*=" icon-"].hide {
+	display: none
+}
+.icon-muted {
+	color: #eeeeee
+}
+.icon-light {
+	color: #ffffff
+}
+.icon-dark {
+	color: #333333
+}
+.icon-border {
+	border: solid 1px #eeeeee;
+	padding: .2em .25em .15em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px
+}
+.icon-2x {
+	font-size: 2em
+}
+.icon-2x.icon-border {
+	border-width: 2px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+.icon-3x {
+	font-size: 3em
+}
+.icon-3x.icon-border {
+	border-width: 3px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px
+}
+.icon-4x {
+	font-size: 4em
+}
+.icon-4x.icon-border {
+	border-width: 4px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px
+}
+.icon-5x {
+	font-size: 5em
+}
+.icon-5x.icon-border {
+	border-width: 5px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px
+}
+[class^="icon-"].pull-left, [class*=" icon-"].pull-left {
+	margin-right: .3em
+}
+[class^="icon-"].pull-right, [class*=" icon-"].pull-right {
+	margin-left: .3em
+}
+[class^="icon-"], [class*=" icon-"] {
+display:inline;
+width:auto;
+height:auto;
+line-height:normal;
+vertical-align:baseline;
+background-image:none;
+background-position:0% 0%;
+background-repeat:repeat;
+margin-top:0
+}
+.icon-white, .nav-pills>.active>a>[class^="icon-"], .nav-pills>.active>a>[class*=" icon-"], .nav-list>.active>a>[class^="icon-"], .nav-list>.active>a>[class*=" icon-"], .navbar-inverse .nav>.active>a>[class^="icon-"], .navbar-inverse .nav>.active>a>[class*=" icon-"], .dropdown-menu>li>a:hover>[class^="icon-"], .dropdown-menu>li>a:hover>[class*=" icon-"], .dropdown-menu>.active>a>[class^="icon-"], .dropdown-menu>.active>a>[class*=" icon-"], .dropdown-submenu:hover>a>[class^="icon-"], .dropdown-submenu:hover>a>[class*=" icon-"] {
+background-image:none
+}
+.btn [class^="icon-"].icon-large, .nav [class^="icon-"].icon-large, .btn [class*=" icon-"].icon-large, .nav [class*=" icon-"].icon-large {
+	line-height: .9em
+}
+.btn [class^="icon-"].icon-spin, .nav [class^="icon-"].icon-spin, .btn [class*=" icon-"].icon-spin, .nav [class*=" icon-"].icon-spin {
+	display: inline-block
+}
+.nav-tabs [class^="icon-"], .nav-pills [class^="icon-"], .nav-tabs [class*=" icon-"], .nav-pills [class*=" icon-"], .nav-tabs [class^="icon-"].icon-large, .nav-pills [class^="icon-"].icon-large, .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class*=" icon-"].icon-large {
+	line-height: .9em
+}
+.btn [class^="icon-"].pull-left.icon-2x, .btn [class*=" icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x, .btn [class*=" icon-"].pull-right.icon-2x {
+	margin-top: .18em
+}
+.btn [class^="icon-"].icon-spin.icon-large, .btn [class*=" icon-"].icon-spin.icon-large {
+	line-height: .8em
+}
+.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class*=" icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x, .btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+	margin-top: .25em
+}
+.btn.btn-large [class^="icon-"], .btn.btn-large [class*=" icon-"] {
+	margin-top: 0
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class*=" icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x, .btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+	margin-top: .05em
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+	margin-right: .2em
+}
+.btn.btn-large [class^="icon-"].pull-right.icon-2x, .btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+	margin-left: .2em
+}
+.icon-stack {
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: -35%
+}
+.icon-stack [class^="icon-"], .icon-stack [class*=" icon-"] {
+	display: block;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	line-height: inherit;
+*line-height:2em
+}
+.icon-stack .icon-stack-base {
+	font-size: 2em;
+*line-height:1em
+}
+.icon-spin {
+	display: inline-block;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	-webkit-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear
+}
+@-moz-keyframes spin {
+0% {
+-moz-transform:rotate(0deg)
+}
+100% {
+-moz-transform:rotate(359deg)
+}
+}
+@-webkit-keyframes spin {
+0% {
+-webkit-transform:rotate(0deg)
+}
+100% {
+-webkit-transform:rotate(359deg)
+}
+}
+@-o-keyframes spin {
+0% {
+-o-transform:rotate(0deg)
+}
+100% {
+-o-transform:rotate(359deg)
+}
+}
+@-ms-keyframes spin {
+0% {
+-ms-transform:rotate(0deg)
+}
+100% {
+-ms-transform:rotate(359deg)
+}
+}
+@keyframes spin {
+0% {
+transform:rotate(0deg)
+}
+100% {
+transform:rotate(359deg)
+}
+}
+.icon-rotate-90:before {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1)
+}
+.icon-rotate-180:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+.icon-rotate-270:before {
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+}
+.icon-flip-horizontal:before {
+	-webkit-transform: scale(-1, 1);
+	-moz-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1)
+}
+.icon-flip-vertical:before {
+	-webkit-transform: scale(1, -1);
+	-moz-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+	-o-transform: scale(1, -1);
+	transform: scale(1, -1)
+}
+[data-icon]:before {
+	font-family: 'FontAwesome';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased
+}
+.icon-question:before {
+	content: "\e011"
+}
+.icon-plus:before {
+	content: "\e001"
+}
+.icon-remove:before {
+	content: "\e002"
+}
+.icon-caret-down:before {
+	content: "\e003"
+}
+.icon-sort:before {
+	content: "\e004"
+}
+.icon-check:before {
+	content: "\e005"
+}
+.icon-empty-checkmark:before {
+	content: "\e006"
+}
+.icon-checkmark:before {
+	content: "\e007"
+}
+.icon-edit:before {
+	content: "\e008"
+}
+.icon-angle-right:before {
+	content: "\e009"
+}
+.icon-angle-left:before {
+	content: "\e00a"
+}
+.icon-angle-up:before {
+	content: "\e00b"
+}
+.icon-angle-down:before {
+	content: "\e00c"
+}
+.icon-cog:before {
+	content: "\e00d"
+}
+.icon-calendar:before {
+	content: "\e00e"
+}
+.icon-user:before {
+	content: "\e00f"
+}
+.icon-facetime-video:before {
+	content: "\e010"
+}
+.icon-camera:before {
+	content: "\e000"
+}
+.icon-glass:before {
+	content: "\f000"
+}
+.icon-music:before {
+	content: "\f001"
+}
+.icon-search:before {
+	content: "\f002"
+}
+.icon-envelope:before {
+	content: "\f003"
+}
+.icon-heart:before {
+	content: "\f004"
+}
+.icon-star:before {
+	content: "\f005"
+}
+.icon-star-empty:before {
+	content: "\f006"
+}
+.icon-film:before {
+	content: "\f008"
+}
+.icon-th-large:before {
+	content: "\f009"
+}
+.icon-th:before {
+	content: "\f00a"
+}
+.icon-th-list:before {
+	content: "\f00b"
+}
+.icon-ok:before {
+	content: "\f00c"
+}
+.icon-remove-2:before {
+	content: "\f00d"
+}
+.icon-zoom-in:before {
+	content: "\f00e"
+}
+.icon-zoom-out:before {
+	content: "\f010"
+}
+.icon-off:before {
+	content: "\f011"
+}
+.icon-signal:before {
+	content: "\f012"
+}
+.icon-trash:before {
+	content: "\f014"
+}
+.icon-home:before {
+	content: "\f015"
+}
+.icon-file:before {
+	content: "\f016"
+}
+.icon-time:before {
+	content: "\f017"
+}
+.icon-road:before {
+	content: "\f018"
+}
+.icon-download-alt:before {
+	content: "\f019"
+}
+.icon-download:before {
+	content: "\f01a"
+}
+.icon-upload:before {
+	content: "\f01b"
+}
+.icon-inbox:before {
+	content: "\f01c"
+}
+.icon-play-circle:before {
+	content: "\f01d"
+}
+.icon-repeat:before {
+	content: "\f01e"
+}
+.icon-refresh:before {
+	content: "\f021"
+}
+.icon-list-alt:before {
+	content: "\f022"
+}
+.icon-lock:before {
+	content: "\f023"
+}
+.icon-flag:before {
+	content: "\f024"
+}
+.icon-headphones:before {
+	content: "\f025"
+}
+.icon-volume-off:before {
+	content: "\f026"
+}
+.icon-volume-down:before {
+	content: "\f027"
+}
+.icon-volume-up:before {
+	content: "\f028"
+}
+.icon-qrcode:before {
+	content: "\f029"
+}
+.icon-barcode:before {
+	content: "\f02a"
+}
+.icon-tag:before {
+	content: "\f02b"
+}
+.icon-tags:before {
+	content: "\f02c"
+}
+.icon-book:before {
+	content: "\f02d"
+}
+.icon-bookmark:before {
+	content: "\f02e"
+}
+.icon-print:before {
+	content: "\f02f"
+}
+.icon-font:before {
+	content: "\f031"
+}
+.icon-bold:before {
+	content: "\f032"
+}
+.icon-italic:before {
+	content: "\f033"
+}
+.icon-text-height:before {
+	content: "\f034"
+}
+.icon-text-width:before {
+	content: "\f035"
+}
+.icon-align-left:before {
+	content: "\f036"
+}
+.icon-align-center:before {
+	content: "\f037"
+}
+.icon-align-right:before {
+	content: "\f038"
+}
+.icon-align-justify:before {
+	content: "\f039"
+}
+.icon-list:before {
+	content: "\f03a"
+}
+.icon-indent-left:before {
+	content: "\f03b"
+}
+.icon-indent-right:before {
+	content: "\f03c"
+}
+.icon-picture:before {
+	content: "\f03e"
+}
+.icon-pencil:before {
+	content: "\f040"
+}
+.icon-map-marker:before {
+	content: "\f041"
+}
+.icon-adjust:before {
+	content: "\f042"
+}
+.icon-tint:before {
+	content: "\f043"
+}
+.icon-share:before {
+	content: "\f045"
+}
+.icon-move:before {
+	content: "\f047"
+}
+.icon-step-backward:before {
+	content: "\f048"
+}
+.icon-fast-backward:before {
+	content: "\f049"
+}
+.icon-backward:before {
+	content: "\f04a"
+}
+.icon-play:before {
+	content: "\f04b"
+}
+.icon-pause:before {
+	content: "\f04c"
+}
+.icon-stop:before {
+	content: "\f04d"
+}
+.icon-forward:before {
+	content: "\f04e"
+}
+.icon-fast-forward:before {
+	content: "\f050"
+}
+.icon-step-forward:before {
+	content: "\f051"
+}
+.icon-eject:before {
+	content: "\f052"
+}
+.icon-chevron-left:before {
+	content: "\f053"
+}
+.icon-chevron-right:before {
+	content: "\f054"
+}
+.icon-plus-sign:before {
+	content: "\f055"
+}
+.icon-minus-sign:before {
+	content: "\f056"
+}
+.icon-remove-sign:before {
+	content: "\f057"
+}
+.icon-ok-sign:before {
+	content: "\f058"
+}
+.icon-question-sign:before {
+	content: "\f059"
+}
+.icon-info-sign:before {
+	content: "\f05a"
+}
+.icon-screenshot:before {
+	content: "\f05b"
+}
+.icon-remove-circle:before {
+	content: "\f05c"
+}
+.icon-ok-circle:before {
+	content: "\f05d"
+}
+.icon-ban-circle:before {
+	content: "\f05e"
+}
+.icon-arrow-left:before {
+	content: "\f060"
+}
+.icon-arrow-right:before {
+	content: "\f061"
+}
+.icon-arrow-up:before {
+	content: "\f062"
+}
+.icon-arrow-down:before {
+	content: "\f063"
+}
+.icon-share-alt:before {
+	content: "\f064"
+}
+.icon-resize-full:before {
+	content: "\f065"
+}
+.icon-resize-small:before {
+	content: "\f066"
+}
+.icon-plus-2:before {
+	content: "\f067"
+}
+.icon-minus:before {
+	content: "\f068"
+}
+.icon-asterisk:before {
+	content: "\f069"
+}
+.icon-exclamation-sign:before {
+	content: "\f06a"
+}
+.icon-gift:before {
+	content: "\f06b"
+}
+.icon-leaf:before {
+	content: "\f06c"
+}
+.icon-fire:before {
+	content: "\f06d"
+}
+.icon-eye-open:before {
+	content: "\f06e"
+}
+.icon-eye-close:before {
+	content: "\f070"
+}
+.icon-warning-sign:before {
+	content: "\f071"
+}
+.icon-plane:before {
+	content: "\f072"
+}
+.icon-calendar-2:before {
+	content: "\f073"
+}
+.icon-random:before {
+	content: "\f074"
+}
+.icon-comment:before {
+	content: "\f075"
+}
+.icon-magnet:before {
+	content: "\f076"
+}
+.icon-chevron-up:before {
+	content: "\f077"
+}
+.icon-chevron-down:before {
+	content: "\f078"
+}
+.icon-retweet:before {
+	content: "\f079"
+}
+.icon-shopping-cart:before {
+	content: "\f07a"
+}
+.icon-folder-close:before {
+	content: "\f07b"
+}
+.icon-folder-open:before {
+	content: "\f07c"
+}
+.icon-resize-vertical:before {
+	content: "\f07d"
+}
+.icon-resize-horizontal:before {
+	content: "\f07e"
+}
+.icon-bar-chart:before {
+	content: "\f080"
+}
+.icon-twitter-sign:before {
+	content: "\f081"
+}
+.icon-facebook-sign:before {
+	content: "\f082"
+}
+.icon-camera-retro:before {
+	content: "\f083"
+}
+.icon-key:before {
+	content: "\f084"
+}
+.icon-cogs:before {
+	content: "\f085"
+}
+.icon-comments:before {
+	content: "\f086"
+}
+.icon-thumbs-up:before {
+	content: "\f087"
+}
+.icon-thumbs-down:before {
+	content: "\f088"
+}
+.icon-star-half:before {
+	content: "\f089"
+}
+.icon-heart-empty:before {
+	content: "\f08a"
+}
+.icon-signout:before {
+	content: "\f08b"
+}
+.icon-linkedin-sign:before {
+	content: "\f08c"
+}
+.icon-pushpin:before {
+	content: "\f08d"
+}
+.icon-external-link:before {
+	content: "\f08e"
+}
+.icon-signin:before {
+	content: "\f090"
+}
+.icon-trophy:before {
+	content: "\f091"
+}
+.icon-github-sign:before {
+	content: "\f092"
+}
+.icon-upload-alt:before {
+	content: "\f093"
+}
+.icon-lemon:before {
+	content: "\f094"
+}
+.icon-phone:before {
+	content: "\f095"
+}
+.icon-check-empty:before {
+	content: "\f096"
+}
+.icon-bookmark-empty:before {
+	content: "\f097"
+}
+.icon-phone-sign:before {
+	content: "\f098"
+}
+.icon-twitter:before {
+	content: "\f099"
+}
+.icon-facebook:before {
+	content: "\f09a"
+}
+.icon-github:before {
+	content: "\f09b"
+}
+.icon-unlock:before {
+	content: "\f09c"
+}
+.icon-credit:before {
+	content: "\f09d"
+}
+.icon-rss:before {
+	content: "\f09e"
+}
+.icon-hdd:before {
+	content: "\f0a0"
+}
+.icon-bullhorn:before {
+	content: "\f0a1"
+}
+.icon-bell:before {
+	content: "\f0a2"
+}
+.icon-certificate:before {
+	content: "\f0a3"
+}
+.icon-hand-right:before {
+	content: "\f0a4"
+}
+.icon-hand-left:before {
+	content: "\f0a5"
+}
+.icon-hand-up:before {
+	content: "\f0a6"
+}
+.icon-hand-down:before {
+	content: "\f0a7"
+}
+.icon-circle-arrow-left:before {
+	content: "\f0a8"
+}
+.icon-circle-arrow-right:before {
+	content: "\f0a9"
+}
+.icon-circle-arrow-up:before {
+	content: "\f0aa"
+}
+.icon-circle-arrow-down:before {
+	content: "\f0ab"
+}
+.icon-globe:before {
+	content: "\f0ac"
+}
+.icon-wrench:before {
+	content: "\f0ad"
+}
+.icon-tasks:before {
+	content: "\f0ae"
+}
+.icon-filter:before {
+	content: "\f0b0"
+}
+.icon-briefcase:before {
+	content: "\f0b1"
+}
+.icon-fullscreen:before {
+	content: "\f0b2"
+}
+.icon-group:before {
+	content: "\f0c0"
+}
+.icon-link:before {
+	content: "\f0c1"
+}
+.icon-cloud:before {
+	content: "\f0c2"
+}
+.icon-beaker:before {
+	content: "\f0c3"
+}
+.icon-cut:before {
+	content: "\f0c4"
+}
+.icon-copy:before {
+	content: "\f0c5"
+}
+.icon-paper-clip:before {
+	content: "\f0c6"
+}
+.icon-save:before {
+	content: "\f0c7"
+}
+.icon-sign-blank:before {
+	content: "\f0c8"
+}
+.icon-reorder:before {
+	content: "\f0c9"
+}
+.icon-list-ul:before {
+	content: "\f0ca"
+}
+.icon-list-ol:before {
+	content: "\f0cb"
+}
+.icon-strikethrough:before {
+	content: "\f0cc"
+}
+.icon-underline:before {
+	content: "\f0cd"
+}
+.icon-table:before {
+	content: "\f0ce"
+}
+.icon-magic:before {
+	content: "\f0d0"
+}
+.icon-truck:before {
+	content: "\f0d1"
+}
+.icon-pinterest:before {
+	content: "\f0d2"
+}
+.icon-pinterest-sign:before {
+	content: "\f0d3"
+}
+.icon-google-plus-sign:before {
+	content: "\f0d4"
+}
+.icon-google-plus:before {
+	content: "\f0d5"
+}
+.icon-money:before {
+	content: "\f0d6"
+}
+.icon-caret-up:before {
+	content: "\f0d8"
+}
+.icon-caret-left:before {
+	content: "\f0d9"
+}
+.icon-caret-right:before {
+	content: "\f0da"
+}
+.icon-columns:before {
+	content: "\f0db"
+}
+.icon-sort-down:before {
+	content: "\f0dd"
+}
+.icon-sort-up:before {
+	content: "\f0de"
+}
+.icon-envelope-alt:before {
+	content: "\f0e0"
+}
+.icon-linkedin:before {
+	content: "\f0e1"
+}
+.icon-undo:before {
+	content: "\f0e2"
+}
+.icon-legal:before {
+	content: "\f0e3"
+}
+.icon-dashboard:before {
+	content: "\f0e4"
+}
+.icon-comment-alt:before {
+	content: "\f0e5"
+}
+.icon-comments-alt:before {
+	content: "\f0e6"
+}
+.icon-bolt:before {
+	content: "\f0e7"
+}
+.icon-sitemap:before {
+	content: "\f0e8"
+}
+.icon-umbrella:before {
+	content: "\f0e9"
+}
+.icon-paste:before {
+	content: "\f0ea"
+}
+.icon-lightbulb:before {
+	content: "\f0eb"
+}
+.icon-exchange:before {
+	content: "\f0ec"
+}
+.icon-cloud-download:before {
+	content: "\f0ed"
+}
+.icon-cloud-upload:before {
+	content: "\f0ee"
+}
+.icon-user-md:before {
+	content: "\f0f0"
+}
+.icon-stethoscope:before {
+	content: "\f0f1"
+}
+.icon-suitcase:before {
+	content: "\f0f2"
+}
+.icon-bell-alt:before {
+	content: "\f0f3"
+}
+.icon-coffee:before {
+	content: "\f0f4"
+}
+.icon-food:before {
+	content: "\f0f5"
+}
+.icon-file-alt:before {
+	content: "\f0f6"
+}
+.icon-building:before {
+	content: "\f0f7"
+}
+.icon-hospital:before {
+	content: "\f0f8"
+}
+.icon-ambulance:before {
+	content: "\f0f9"
+}
+.icon-medkit:before {
+	content: "\f0fa"
+}
+.icon-fighter-jet:before {
+	content: "\f0fb"
+}
+.icon-beer:before {
+	content: "\f0fc"
+}
+.icon-h-sign:before {
+	content: "\f0fd"
+}
+.icon-plus-sign-2:before {
+	content: "\f0fe"
+}
+.icon-double-angle-left:before {
+	content: "\f100"
+}
+.icon-double-angle-right:before {
+	content: "\f101"
+}
+.icon-double-angle-up:before {
+	content: "\f102"
+}
+.icon-double-angle-down:before {
+	content: "\f103"
+}
+.icon-desktop:before {
+	content: "\f108"
+}
+.icon-laptop:before {
+	content: "\f109"
+}
+.icon-tablet:before {
+	content: "\f10a"
+}
+.icon-mobile:before {
+	content: "\f10b"
+}
+.icon-circle-blank:before {
+	content: "\f10c"
+}
+.icon-quote-left:before {
+	content: "\f10d"
+}
+.icon-quote-right:before {
+	content: "\f10e"
+}
+.icon-spinner:before {
+	content: "\f110"
+}
+.icon-circle:before {
+	content: "\f111"
+}
+.icon-reply:before {
+	content: "\f112"
+}
+.icon-github-alt:before {
+	content: "\f113"
+}
+.icon-folder-close-alt:before {
+	content: "\f114"
+}
+.icon-folder-open-alt:before {
+	content: "\f115"
+}
+strong {
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	font-weight: 400
+}
+.modal-shade {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	background: black;
+	z-index: 100
+}
+.responsive-promo-button-container {
+	position: absolute;
+	top: 0;
+	margin-top: -9px;
+	right: 390px
+}
+.responsive-promo-button-container button.promo {
+	right: -310px
+}
+button.promo {
+	padding: 1px 12px;
+	margin: 5px 0 0 15px;
+	position: relative;
+	float: left;
+	font-family: "proxima_nova_cn_rgbold", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	border: none;
+	cursor: pointer;
+	z-index: 19;
+	color: white;
+	background-color: #2e324a;
+	-webkit-transition: background-color 500ms ease;
+	-moz-transition: background-color 500ms ease;
+	-o-transition: background-color 500ms ease;
+	transition: background-color 500ms ease;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+button.promo.toggled {
+	background: #757a9a
+}
+button.promo:hover {
+	color: #f0733d
+}
+button.promo::before {
+	content: '\F005';
+	position: relative;
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	padding-right: 8px
+}
+button.promo.logged-out::before {
+	padding-right: 0
+}
+.promo-dialog-container {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif !important;
+	font-size: 15px !important;
+	line-height: 18px !important;
+	display: none;
+	width: 320px;
+	height: 325px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	z-index: 1;
+	text-align: center;
+	perspective: 800px;
+	-webkit-perspective: 800;
+	-webkit-transition: top 600ms ease;
+	-moz-transition: top 600ms ease;
+	-o-transition: top 600ms ease;
+	transition: top 600ms ease
+}
+.promo-dialog-container ul, .promo-dialog-container ol {
+	padding: 0 !important
+}
+.promo-dialog-container h3 {
+	display: block;
+	margin: 0;
+	padding: 0;
+	line-height: 60px;
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400
+}
+.promo-dialog-container.responsive {
+	position: absolute;
+	top: 43px;
+	right: 0
+}
+.promo-dialog-container.non-responsive {
+	position: fixed;
+	top: 60px;
+	margin: 0 auto;
+	left: 516px;
+	right: 0
+}
+.promo-dialog-container .card {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s
+}
+.promo-dialog-container .card>div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 100%;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden
+}
+.promo-dialog-container .card .card-back {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg)
+}
+.promo-dialog-container .promo-page-container {
+	top: 93px;
+	left: 124px;
+	position: absolute
+}
+.promo-dialog-container .promo-page-footer {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 0 36px;
+	position: absolute;
+	bottom: 56px;
+	color: white
+}
+.promo-dialog-container .bear-bg {
+	background: url(https://www.zozi.com/assets/bear-grylls/bear_dialog_bg_1x-4589c83861ae7cf693d95935699c78f6.jpg) no-repeat center center;
+	background-size: 320px 325px;
+	width: 320px;
+	height: 325px
+}
+.promo-dialog-container .bear-bg span {
+	padding: 190px 28px 0 28px;
+	display: block;
+	font-size: 18px;
+	line-height: 26px;
+	color: white;
+	color: rgba(255,255,255,0.5);
+	color: limegreen
+}
+.promo-dialog-container .number-credits {
+	color: #f3791f;
+	font-size: 70px;
+	line-height: 70px
+}
+.promo-dialog-container .number-credits-label {
+	display: block;
+	margin-top: -4px;
+	line-height: 16px;
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	color: #6b6d77;
+	text-transform: uppercase
+}
+.promo-dialog-container .promo-connect-page a {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 176px;
+	height: 36px;
+	display: block;
+	position: absolute;
+	padding-left: 20px;
+	left: -50px;
+	color: white;
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 36px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+.promo-dialog-container .promo-connect-page a:last-child {
+	margin-top: 46px
+}
+.promo-dialog-container .promo-connect-page a::before {
+	position: absolute;
+	font-family: 'FontAwesome';
+	font-size: 18px
+}
+.promo-dialog-container .promo-dashboard {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 320px;
+	height: 397px;
+	margin: 0 auto;
+	background-color: #2e324a;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+.promo-dialog-container .promo-dashboard .points-container {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	left: 10px;
+	top: 60px;
+	width: 300px;
+	padding: 10px 0;
+	border: 2px solid;
+	border-color: white;
+	border-color: rgba(255,255,255,0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+.promo-dialog-container .promo-dashboard .share-info-container {
+	color: #6b6d77;
+	font-family: "proxima_nova_cn_rgregular", Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: #171b36;
+	width: 100%;
+	height: 210px;
+	bottom: 0;
+	border-top: 4px solid #757a9a;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px
+}
+.promo-dialog-container .promo-dashboard .share-info-container span {
+	margin: -10px 0 30px 0;
+	display: block
+}
+.promo-dialog-container .promo-dashboard .share-info-container .copy-text {
+	margin-bottom: 0;
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif
+}
+.promo-dialog-container .promo-dashboard .referral-box {
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	margin: 0 10px;
+	padding: 10px;
+	font-size: 24px;
+	line-height: 24px !important;
+	white-space: nowrap;
+	background-color: #2e3144;
+	border: 2px solid #414354;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+.promo-dialog-container .promo-dashboard .referral-box::before {
+	content: '';
+	background: url(https://www.zozi.com/assets/bear-grylls/link-550df784833873ddea22b42f244d853e.png) no-repeat center center;
+	position: relative;
+	padding-right: 14px;
+	background-size: 16px 14px;
+	display: block;
+	width: 16px;
+	height: 14px;
+	top: 19px;
+	margin-top: -16px;
+	left: 4px
+}
+.promo-dialog-container .promo-dashboard .referral-box-hover {
+	background-color: #434762;
+	border-color: #575a71
+}
+.promo-dialog-container .promo-dashboard .referral-box-active {
+	background-color: #2e3144;
+	border-color: #414354
+}
+.promo-dialog-container .share-button-container {
+	margin: 10px
+}
+.promo-dialog-container .share-button-container .social-button {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: inline-block;
+	width: 85px;
+	padding: 5px;
+	margin-right: 18px;
+	text-decoration: none
+}
+.promo-dialog-container .share-button-container .social-button:last-child {
+	margin-right: 0
+}
+.promo-dialog-container .share-button-container .social-button::before {
+	font-family: 'FontAwesome';
+	font-size: 26px;
+	line-height: 26px;
+	color: white
+}
+.promo-dialog-container .fb-button {
+	background-color: #3664a2;
+	border: 2px solid #28508f
+}
+.promo-dialog-container .fb-button::before {
+	content: '\F09A';
+	left: 16px
+}
+.promo-dialog-container .twitter-button {
+	background-color: #00aced;
+	border: 2px solid #009ae7
+}
+.promo-dialog-container .twitter-button::before {
+	content: '\F099';
+	left: 9px
+}
+.promo-dialog-container .email-button {
+	background-color: #9ccc69;
+	border: 2px solid #88be55
+}
+.promo-dialog-container .email-button::before {
+	content: '\F0E0';
+	left: 9px
+}
+.promo-dialog-container .flipped {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg)
+}
+.promo-dialog-container .orbit-container {
+	height: 325px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: white;
+	background: #171b36;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	overflow: hidden
+}
+.promo-dialog-container .bear-button-box {
+	position: relative;
+	top: -12px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 320px;
+	background-color: white;
+	height: 80px;
+	padding: 20px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px
+}
+.promo-dialog-container .orbit-container .orbit-slides-container {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative
+}
+.promo-dialog-container .orbit-container .orbit-slides-container>* {
+	position: relative;
+	float: left;
+	height: 100%
+}
+.promo-dialog-container .orbit-container .orbit-prev, .promo-dialog-container .orbit-container .orbit-next, .promo-dialog-container .orbit-container .orbit-progress, .promo-dialog-container .orbit-container .orbit-slide-number, .promo-dialog-container .orbit-container .orbit-timer {
+	opacity: 0
+}
+.promo-dialog-container .orbit-container .orbit-prev, .promo-dialog-container .orbit-container .orbit-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	background-color: black;
+	background-color: rgba(0,0,0,0.6);
+	width: 50px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	text-indent: -9999px !important
+}
+.promo-dialog-container .orbit-container .orbit-prev {
+	left: 0
+}
+.promo-dialog-container .orbit-container .orbit-next {
+	right: 0
+}
+.promo-dialog-container .orbit-bullets {
+	list-style: none;
+	text-align: center;
+	padding: 0 0 0 8px;
+	margin: 0 auto 30px auto;
+	overflow: hidden;
+	position: relative;
+	top: -46px !important
+}
+.promo-dialog-container .orbit-bullets li {
+	display: block;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+	float: none;
+	width: 10px;
+	height: 10px;
+	border: none;
+	background: #333;
+	background: rgba(0,0,0,0.25)
+}
+.promo-dialog-container .orbit-bullets li.active {
+	background: rgba(0,0,0,0.75)
+}
+.promo-dialog-container .touch .orbit-container .orbit-prev, .promo-dialog-container .touch .orbit-container .orbit-next {
+	display: none
+}
+.promo-dialog-container .touch .orbit-container .orbit-prev, .promo-dialog-container .touch .orbit-container .orbit-next {
+	display: inherit
+}
+.promo-button {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	border: 2px solid rgba(164,164,164,0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	z-index: 2;
+	color: white;
+	color: rgba(255,255,255,0.2);
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	padding: 10px 10px 7px 10px
+}
+.promo-button:hover {
+	text-decoration: none
+}
+.promo-flip-button {
+	top: 10px;
+	left: 10px
+}
+.promo-nav-button {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	height: 40px;
+	width: 46%;
+	margin: 0 auto;
+	border: 2px solid rgba(164,164,164,0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	z-index: 2;
+	font-family: "proxima_nova_excn_rgbold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px 10px 7px 10px
+}
+.promo-nav-button:hover {
+	text-decoration: none
+}
+.promo-back-button {
+	background-color: #efefef;
+	color: #a0a0a0;
+	float: left
+}
+.promo-next-button, .promo-finish-button {
+	background-color: #f0733d;
+	border-color: #ee6225;
+	color: white;
+	float: right
+}
+.promo-get-started-button {
+	background-color: #f0733d;
+	border-color: #ee6225;
+	color: white
+}
+.touch .promo-dialog-container .orbit-bullets {
+	display: block
+}
+.touch .promo-dialog-container .promo-dashboard .share-info-container .copy-text {
+	display: none
+}
+.promo-dialog-container .orbit-bullets {
+	top: -42px;
+	margin-bottom: -28px;
+	opacity: 1
+}
+.promo-dialog-container .orbit-bullets li {
+	background-color: rgba(255,255,255,0.5);
+	width: 5px;
+	height: 5px;
+	margin-right: 10px
+}
+.promo-dialog-container .orbit-bullets li.active {
+	background-color: #fff
+}
+.promo-sign-up-container {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: white;
+	background: #171b36;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	width: 320px;
+	text-align: center;
+	height: 250px !important
+}
+.promo-container-slide-in {
+	-webkit-animation: slide_in 600ms ease 0ms 1 forwards;
+	-moz-animation: slide_in 600ms ease 0ms 1 forwards;
+	-o-animation: slide_in 600ms ease 0ms 1 forwards;
+	-ms-animation: slide_in 600ms ease 0ms 1 forwards;
+	animation: slide_in 600ms ease 0ms 1 forwards
+}
+.promo-container-slide-out {
+	-webkit-animation: slide_out 600ms ease 0ms 1 forwards;
+	-moz-animation: slide_out 600ms ease 0ms 1 forwards;
+	-o-animation: slide_out 600ms ease 0ms 1 forwards;
+	-ms-animation: slide_out 600ms ease 0ms 1 forwards;
+	animation: slide_out 600ms ease 0ms 1 forwards
+}
+@-webkit-keyframes slide_in {
+0% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px);
+z-index:1
+}
+}
+@-moz-keyframes slide_in {
+0% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px);
+z-index:1
+}
+}
+@-o-keyframes slide_in {
+0% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px);
+z-index:1
+}
+}
+@-ms-keyframes slide_in {
+0% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px);
+z-index:1
+}
+}
+@keyframes slide_in {
+0% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px);
+z-index:1
+}
+}
+@-webkit-keyframes slide_out {
+0% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px);
+z-index:200
+}
+}
+@-moz-keyframes slide_out {
+0% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px);
+z-index:200
+}
+}
+@-o-keyframes slide_out {
+0% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px);
+z-index:200
+}
+}
+@-ms-keyframes slide_out {
+0% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px);
+z-index:200
+}
+}
+@keyframes slide_out {
+0% {
+-webkit-transform:translate3d(0px, -425px, 0px);
+-moz-transform:translate3d(0px, -425px, 0px);
+-o-transform:translate3d(0px, -425px, 0px);
+transform:translate3d(0px, -425px, 0px)
+}
+90% {
+z-index:1
+}
+100% {
+-webkit-transform:translate3d(0px, 0px, 0px);
+-moz-transform:translate3d(0px, 0px, 0px);
+-o-transform:translate3d(0px, 0px, 0px);
+transform:translate3d(0px, 0px, 0px);
+z-index:200
+}
+}
+.no-cssanimations .promo-container-slide-in {
+	top: -385px
+}
+.no-cssanimations .promo-container-slide-out {
+	top: 60px
+}
+.no-csstransforms3d .promo-dialog-container .card .card-back {
+	display: none;
+	visibility: hidden
+}
+.no-csstransforms3d .promo-dialog-container .flipped .card-back {
+	display: block;
+	visibility: visible
+}
+.no-csstransforms3d .promo-dialog-container .flipped .card-front {
+	display: none;
+	visibility: hidden
+}
+@media only screen and (min-width: 1024px) {
+.responsive-promo-button-container {
+	top: 21px;
+	right: 257px
+}
+.responsive-promo-button-container button.promo {
+	right: 0
+}
+.promo-dialog-container.responsive {
+	top: 60px;
+	margin: 0 auto;
+	left: 516px;
+	right: 0
+}
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.promo-dialog-container .bear-bg {
+	background: url(https://www.zozi.com/assets/bear-grylls/bear_dialog_bg_2x-a3feb4c7ef6b77345bd0b3b5c269ac8f.jpg) no-repeat center center;
+	background-size: 320px 325px
+}
+}
+@font-face {
+	font-family: 'proxima_nova_cn_rgregular';
+	src: url("/assets/proxima_nova_cond_reg-webfont.eot");
+	src: url("/assets/proxima_nova_cond_reg-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/proxima_nova_cond_reg-webfont.woff") format("woff"), url("/assets/proxima_nova_cond_reg-webfont.ttf") format("truetype"), url("/assets/proxima_nova_cond_reg-webfont.svg#proxima_nova_cn_rgregular") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'proxima_nova_cn_rgbold';
+	src: url("/assets/proxima_nova_cond_bold-webfont.eot");
+	src: url("/assets/proxima_nova_cond_bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/proxima_nova_cond_bold-webfont.woff") format("woff"), url("/assets/proxima_nova_cond_bold-webfont.ttf") format("truetype"), url("/assets/proxima_nova_cond_bold-webfont.svg#proxima_nova_cn_rgbold") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'proxima_nova_excn_rgregular';
+	src: url("/assets/proxima_nova_excn_reg-webfont.eot");
+	src: url("/assets/proxima_nova_excn_reg-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/proxima_nova_excn_reg-webfont.woff") format("woff"), url("/assets/proxima_nova_excn_reg-webfont.ttf") format("truetype"), url("/assets/proxima_nova_excn_reg-webfont.svg#proxima_nova_excn_rgregular") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'proxima_nova_excn_rgbold';
+	src: url("/assets/proxima_nova_excn_bold-webfont.eot");
+	src: url("/assets/proxima_nova_excn_bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/proxima_nova_excn_bold-webfont.woff") format("woff"), url("/assets/proxima_nova_excn_bold-webfont.ttf") format("truetype"), url("/assets/proxima_nova_excn_bold-webfont.svg#proxima_nova_excn_rgbold") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'proxima_nova_excn_thbold';
+	src: url("/assets/proxima_nova_excn_xbold-webfont.eot");
+	src: url("/assets/proxima_nova_excn_xbold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/proxima_nova_excn_xbold-webfont.woff") format("woff"), url("/assets/proxima_nova_excn_xbold-webfont.ttf") format("truetype"), url("/assets/proxima_nova_excn_xbold-webfont.svg#proxima_nova_excn_thbold") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+body {
+	margin: 0;
+	color: #999;
+	font: 15px/18px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	background: #f5f5f5;
+	min-width: 1000px
+}
+img {
+	border-style: none
+}
+a {
+	text-decoration: none;
+	color: #999
+}
+a:hover {
+	text-decoration: underline
+}
+input, textarea, select {
+	font: 100% Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: #000
+}
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none
+}
+header, footer, article, section, hgroup, nav, figure, aside {
+	display: block
+}
+figure {
+	margin: 0;
+	padding: 0
+}
+#wrapper {
+	width: 100%;
+	min-width: 1045px
+}
+#header {
+	background-color: #171B35;
+	opacity: 1.0;
+	-webkit-box-shadow: 1px 1px 8px rgba(50,50,50,0.8);
+	-moz-box-shadow: 1px 1px 8px rgba(50,50,50,0.8);
+	box-shadow: 1px 1px 8px rgba(50,50,50,0.8);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-width: 1045px;
+	height: 60px;
+	z-index: 199;
+	font: 15px/18px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif
+}
+.header-holder {
+	width: 995px;
+	padding: 10px 0 10px;
+	margin: 0 auto
+}
+.header-holder:after {
+	content: '';
+	display: block;
+	clear: both
+}
+#header_buffer {
+	display: block;
+	height: 59px
+}
+#header .logo {
+	float: left;
+	width: 128px;
+	height: 40px;
+	margin: 0 30px 0 0;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(https://www.zozi.com/assets/logo-e4d06ba17f657d6d9f48373a119e76c1.png) no-repeat;
+	background: rgba(0,0,0,0) url(https://www.zozi.com/assets/logo-701c7e9714165ee258a72aa839276362.svg) no-repeat
+}
+#header .logo a {
+	display: block;
+	height: 100%
+}
+#gifts-link {
+	margin-left: 40px
+}
+#gifts-link img {
+	height: 50px;
+	position: relative;
+	top: -5px
+}
+button.promo {
+	padding: 1px 12px;
+	margin: 5px 0 0 0px;
+	font-family: "proxima_nova_cn_rgbold", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	background-color: #2e324a;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+button.promo:hover {
+	color: #f0733d
+}
+button.promo::before {
+	content: '\F005';
+	position: relative;
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	padding-right: 8px
+}
+button.promo.logged-out::before {
+	padding-right: 0
+}
+.btn-place {
+	position: relative;
+	float: left;
+	width: 137px;
+	height: 31px;
+	padding: 0 30px 0 16px;
+	margin: 4px 31px 0 0;
+	font-size: 18px;
+	line-height: 31px;
+	color: #fff;
+	background: url(https://www.zozi.com/assets/btn-place-9ea4ab19035dfdafd8687453ac2540c8.png) no-repeat;
+	z-index: 10
+}
+.btn-place:hover {
+	font-family: 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-position: 0 -31px
+}
+.add-nav {
+	position: relative;
+	float: left;
+	z-index: 10
+}
+.add-nav ul {
+	padding: 7px 0 0;
+	margin: 0;
+	list-style: none;
+	font: 20px/28px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase
+}
+.add-nav ul:after {
+	content: '';
+	display: block;
+	clear: both
+}
+.add-nav ul li {
+	float: left;
+	margin: 0 16px 0 0
+}
+.add-nav ul a {
+	color: #fff
+}
+.add-nav ul .active a, .add-nav ul a:hover {
+	text-decoration: none;
+	color: #f17739
+}
+.add-nav ul li .nav-menu-link.active {
+	color: #f17739
+}
+.info-block {
+	position: relative;
+	float: left
+}
+.info-block .drop {
+	position: absolute;
+	top: -10px;
+	left: -31px;
+	width: 487px;
+	background: url(https://www.zozi.com/assets/bg-drop-92f4c39c9e5f455734031cdda51e442f.png);
+	border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
+	-webkit-border-radius: 0 0 15px 15px;
+	-o-border-radius: 0 0 15px 15px;
+	z-index: 1
+}
+.drop1 {
+	display: none;
+	padding: 64px 2px 20px 20px
+}
+.drop .col1, .drop .col2, .drop .col3 {
+	float: left;
+	padding: 0;
+	margin: 0 1px 0 0;
+	list-style: none;
+	font-size: 16px;
+	line-height: 20px
+}
+.drop1 .col1 {
+	width: 163px
+}
+.drop1 .col2 {
+	width: 153px
+}
+.drop1 .col3 {
+	width: 153px
+}
+.drop ul li {
+	overflow: hidden
+}
+.drop ul a {
+	display: block;
+	height: 1%;
+	padding: 0 9px;
+	color: #fff
+}
+.drop ul a:hover {
+	text-decoration: none;
+	color: #f17739;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px
+}
+.drop2 {
+	padding: 59px 2px 20px 20px
+}
+.drop2 .tabset {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font: 16px/18px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif
+}
+.drop2 .tabset li {
+	float: left;
+	padding: 0 0 13px
+}
+.drop2 .tabset a {
+	color: #999
+}
+.drop2 .tabset .active a, .drop2 .tabset a:hover {
+	color: #fff;
+	background: none
+}
+.drop2 .tabset .active {
+	background: url(https://www.zozi.com/assets/bg-arrow-bottom-f44717b2c74b4e7fff0b0aac1653abc8.png) no-repeat 50% 100%
+}
+.drop2 .tab-list {
+	padding: 13px 0 0
+}
+.drop2 .tab-list .col1 {
+	float: left;
+	width: 163px
+}
+.drop2 .tab-list .col2 {
+	float: left;
+	width: 143px
+}
+.drop2 .tab-list .col3 {
+	float: left;
+	width: 163px
+}
+.drop2 .tab-list .active a {
+	color: #f17739
+}
+.account-buttons {
+	float: left;
+	padding: 5px 0 0 80px;
+	margin: 0;
+	list-style: none
+}
+.account-buttons li {
+	float: left;
+	margin: 0 0 0 10px
+}
+.account-buttons a {
+	float: left;
+	font: 15px/30px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #fff
+}
+.account-buttons .btn-signup {
+	padding: 0 10px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	background: #fc9135;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjOTEzNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMTc3M2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #fc9135 0%, #f1773a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fc9135), color-stop(100%, #f1773a));
+	background: -webkit-linear-gradient(top, #fc9135 0%, #f1773a 100%);
+	background: -o-linear-gradient(top, #fc9135 0%, #f1773a 100%);
+	background: -ms-linear-gradient(top, #fc9135 0%, #f1773a 100%);
+	background: linear-gradient(to bottom, #fc9135 0%, #f1773a 100%)
+}
+.account-buttons .btn-signin {
+	padding: 0 10px;
+	background: url(https://www.zozi.com/assets/bg-btn-signin-bea4c4b494ce1953669548c50ad6a8a3.png);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px
+}
+.visual {
+	background: #f0f0f0
+}
+.visual-holder {
+	width: 995px;
+	margin: 0 auto
+}
+.visual-holder img {
+	vertical-align: top
+}
+.panel {
+	background: #fff
+}
+.panel-holder {
+	width: 995px;
+	padding: 8px 0;
+	margin: 0 auto
+}
+#nav ul {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	font: 22px/28px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase
+}
+#nav ul li {
+	float: left;
+	margin: 0 -1px 0 0
+}
+#nav ul a {
+	float: left;
+	width: 202px;
+	padding: 4px 0 2px;
+	color: #929292;
+	background: url(https://www.zozi.com/assets/bg-nav-link-fac9a501daa77d3e21891d3f7c762430.png) no-repeat
+}
+#nav ul .active a, #nav ul a:hover {
+	text-decoration: none;
+	color: #fff;
+	background-position: 0 -35px
+}
+#nav ul .active a {
+	padding: 4px 0 0;
+	font: 25px/30px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif
+}
+#nav ul li:first-child {
+	margin: 0 -2px 0 0
+}
+#nav ul li:first-child a {
+	width: 192px;
+	background-position: 0 -70px
+}
+#nav ul .active:first-child a, #nav ul li:first-child a:hover {
+	text-decoration: none;
+	color: #fff;
+	background-position: 0 -105px
+}
+#main {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 99;
+	padding-top: 59px
+}
+.section1 {
+	background: url(https://www.zozi.com/assets/bg-section1-12ae6658e49a1277c9426442aa88ebb2.gif);
+	z-index: -1
+}
+.section1-frame {
+	background: url(https://www.zozi.com/assets/bg-shadow-8ecbaceafe137ae21a479d94c470f647.png) repeat-x
+}
+.section1-frame2 {
+	width: 995px;
+	padding: 47px 0 45px;
+	margin: 0 auto
+}
+.promotional-banner {
+	padding-top: 10px
+}
+.main-heading {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 0 29px
+}
+.main-heading .heading-holder {
+	position: relative;
+	float: left;
+	left: 50%
+}
+.main-heading .heading-frame {
+	position: relative;
+	float: left;
+	left: -50%
+}
+.main-heading h2 {
+	float: left;
+	margin: 20px 20px 0 0;
+	font: 32px/38px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #171a34;
+	font-weight: normal
+}
+.main-heading .button {
+	float: left;
+	width: 150px;
+	padding: 0 33px 0 22px;
+	font: 16px/40px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #151933;
+	background: url(https://www.zozi.com/assets/bg-button-269adf35ad5ec133f184430427f5db60.png) no-repeat
+}
+.section1 .container, .section2 .container {
+	width: 995px
+}
+.section1 .container:after, .section2 .container:after {
+	content: '';
+	display: block;
+	clear: both
+}
+.section1 .grid1 {
+	float: left;
+	width: 315px;
+	margin: 0 25px 0 0
+}
+.section1 .grid2 {
+	float: left;
+	width: 655px;
+	margin: 0 25px 0 0
+}
+.section1 .grid3 {
+	float: left;
+	width: 995px
+}
+.container .block {
+	position: relative;
+	margin: 0 0 25px;
+	text-align: center;
+	background: #fff;
+	box-shadow: 0 1px 2px 0 #b7b5b1;
+	-webkit-box-shadow: 0 1px 2px 0 #b7b5b1;
+	-moz-box-shadow: 0 1px 2px 0 #b7b5b1;
+	-o-box-shadow: 0 1px 2px 0 #b7b5b1
+}
+.section1 .block.gray {
+	background: #f1f1f1
+}
+.section1 .block.image {
+	background: url(https://www.zozi.com/assets/bg-block-image-d59eaeb58e2aa42f11e75aef387c6cd0.jpg) no-repeat
+}
+.section1 .block.image .area {
+	padding: 47px 20px 0;
+	color: #fff
+}
+.block-heading {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 0 10px
+}
+.block-heading .heading-holder {
+	position: relative;
+	float: left;
+	left: 50%
+}
+.block-heading .heading-frame {
+	position: relative;
+	float: left;
+	left: -50%
+}
+.block-heading img {
+	float: left;
+	margin: 0 10px 0 0
+}
+.block-heading span {
+	float: left;
+	font: 15px/30px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	color: #fff
+}
+.container .block.image h3 {
+	margin: 0 0 41px;
+	text-align: center;
+	font: 20px/24px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #fff
+}
+.container .block.image h3 a {
+	color: #fff;
+	text-shadow: 0 1px 0 #2c170b
+}
+.container .block.image h3 a:hover {
+	color: #181937;
+	text-shadow: 0 1px 0 #fff
+}
+.container .block.image .photo {
+	text-align: center;
+	margin: 0 0 10px
+}
+.container .block.image .title {
+	display: block;
+	font: 15px/16px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif
+}
+.container .block.image p {
+	margin: 0
+}
+.section1 .block.add .block-add {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 9px 0;
+	font: 15px/18px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	border-top: 1px solid #e5e5e5
+}
+.block .info .icn_getaways {
+	padding: 0 0 0 40px;
+	background: url(https://www.zozi.com/assets/icn_getaways-095fd298c3d23a709ab0bd32871d1da8.png) no-repeat 0 50%
+}
+.block .info .icn_guru {
+	padding: 0 0 0 45px;
+	background: url(https://www.zozi.com/assets/icn_guru-89e4a6565cae05d2a9b0058d5f6a802f.png) no-repeat 0 50%
+}
+.block .info .icn_local {
+	padding: 0 0 0 41px;
+	background: url(https://www.zozi.com/assets/icn_local-b458584f08a899602aa01062f4125887.png) no-repeat 0 50%
+}
+.block .info .icn_gear {
+	padding: 0 0 0 45px;
+	background: url(https://www.zozi.com/assets/icn_gear-dbf8ef7965e96d5580b08b88f8e56d04.png) no-repeat 0 50%
+}
+.section1 .block.add .block-add a {
+	padding: 0 0 0 17px;
+	background: url(https://www.zozi.com/assets/bg-add-2826dac4a5b745600bd560a84c590edd.png) no-repeat 0 2px
+}
+.section1 .grid1 .block {
+	min-height: 310px
+}
+.section1 .grid2 .block {
+	min-height: 645px
+}
+.block .mark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 15px;
+	font: 15px/18px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background: #6c3;
+	text-shadow: 0 1px 0 #478e24
+}
+.container .block img {
+	vertical-align: top
+}
+.container .block .area {
+	text-align: center;
+	padding: 27px 20px 0
+}
+.container .block.add .area {
+	padding: 17px 20px 0
+}
+.container .block .area2 {
+	text-align: center;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 33px 20px 0
+}
+.container .block .area2 .block-heading {
+	padding: 0 0 23px
+}
+.container .block .btn-read {
+	display: block;
+	margin: 0 auto;
+	padding: 2px 2px 0;
+	width: 113px;
+	text-align: center;
+	font: 15px/30px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background: #ff9933;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOTkzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMTc3M2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f93), color-stop(100%, #f1773a));
+	background: -webkit-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -o-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -ms-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: linear-gradient(to bottom, #ff9933 0%, #f1773a 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9933', endColorstr='#f1773a', GradientType=0 );
+	box-shadow: 0 1px 0 #848484;
+	-o-box-shadow: 0 1px 0 #848484;
+	-webkit-box-shadow: 0 1px 0 #848484;
+	-moz-box-shadow: 0 1px 0 #848484;
+	text-shadow: 0 1px 0 #478e24;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px
+}
+.container .block .btn-read:hover {
+	background: #f1773a;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxNzczYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjk5MzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1773a), color-stop(100%, #f93));
+	background: -webkit-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -o-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -ms-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: linear-gradient(to bottom, #f1773a 0%, #ff9933 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1773a', endColorstr='#ff9933', GradientType=0 );
+	text-decoration: none
+}
+.container .block .area2 p {
+	margin: 0 0 20px
+}
+.container .block h3 {
+	margin: 0 0 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font: 20px/19px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #181937
+}
+.container .block h3 a {
+	color: #181937
+}
+.container .block h3 a:hover {
+	text-decoration: none;
+	color: #f1773a
+}
+.section1 .block h3.two-line, .section2 .block h3.two-line {
+	margin: -10px 0 6px
+}
+.container .block .price {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 16px
+}
+.container .block .info {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	overflow: hidden
+}
+.container .block .price .holder, .container .block .info .holder {
+	position: relative;
+	float: left;
+	left: 50%
+}
+.container .block .price .frame, .container .block .info .frame {
+	position: relative;
+	float: left;
+	left: -50%
+}
+.block .price span {
+	float: left;
+	margin: 0 2px 0 0;
+	font: 13px/19px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	color: #5b8cdf
+}
+.block .price span.old, .block .price strong.old {
+	color: #999;
+	text-decoration: line-through
+}
+.block .price span.old {
+	font: 9px/19px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif
+}
+.block .price span.new {
+	color: #6c3
+}
+.block .price strong {
+	float: left;
+	margin: 0 6px 0 0;
+	font: 19px/22px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #5b8cdf
+}
+.block .price strong.old {
+	font: 15px/22px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif
+}
+.block .price strong.new {
+	color: #6c3
+}
+.block .info span {
+	float: left;
+	font: 15px/40px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif
+}
+.block .info .ico1 {
+	padding: 0 0 0 40px;
+	background: url(https://www.zozi.com/assets/ico-4-095fd298c3d23a709ab0bd32871d1da8.png) no-repeat 0 50%
+}
+.block .info .ico2 {
+	padding: 0 0 0 45px;
+	background: url(https://www.zozi.com/assets/ico-2-89e4a6565cae05d2a9b0058d5f6a802f.png) no-repeat 0 50%
+}
+.block .info .ico3 {
+	padding: 0 0 0 41px;
+	background: url(https://www.zozi.com/assets/ico-5-b458584f08a899602aa01062f4125887.png) no-repeat 0 50%
+}
+.block .info .ico4 {
+	padding: 0 0 0 45px;
+	background: url(https://www.zozi.com/assets/ico-3-dbf8ef7965e96d5580b08b88f8e56d04.png) no-repeat 0 50%
+}
+.section2 {
+	background: url(https://www.zozi.com/assets/bg-section2-3925179f8f532f6d40053a71673efb9c.gif)
+}
+.section2-holder {
+	width: 995px;
+	padding: 53px 0 62px;
+	margin: 0 auto;
+	height: 100%
+}
+.section2 .grid1 {
+	float: left;
+	width: 230px;
+	margin: 0 25px 0 0
+}
+.section2 .grid2 {
+	float: left;
+	width: 485px;
+	margin: 0 25px 0 0
+}
+.section2 .grid3 {
+	float: left;
+	width: 740px;
+	margin: 0 25px 0 0
+}
+.section2 .grid4 {
+	float: left;
+	width: 995px
+}
+.section2 .block {
+	min-height: 307px
+}
+.section2 .holder-button {
+	padding: 16px 0 0
+}
+.section2 .btn-more {
+	display: block;
+	margin: 0 auto;
+	padding: 2px 2px 0;
+	width: 103px;
+	text-align: center;
+	font: 20px/39px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background: #47b41d;
+	box-shadow: 0 1px 2px 0 #b7b5b1;
+	-webkit-box-shadow: 0 1px 2px 0 #b7b5b1;
+	-moz-box-shadow: 0 1px 2px 0 #b7b5b1;
+	-o-box-shadow: 0 1px 2px 0 #b7b5b1;
+	text-shadow: 0 1px 0 #478e24;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px
+}
+.section2 .btn-more:hover {
+	text-decoration: none
+}
+.section1 .last, .section2 .last {
+	margin: 0
+}
+.loading_animation {
+	text-align: center
+}
+.section3 {
+	background: url(https://www.zozi.com/assets/bg-section3-818eeb670ba8edb16dd9a06f07a36ee2.gif)
+}
+.information {
+	width: 995px;
+	padding: 55px 0 20px;
+	margin: 0 auto
+}
+.information h1 {
+	margin: 0 0 40px;
+	text-align: center;
+	font: 32px/34px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #ccc
+}
+.list-logo {
+	text-align: center;
+	padding: 0 0 155px;
+	margin: 0;
+	list-style: none;
+	vertical-align: middle
+}
+.list-logo li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 0;
+	letter-spacing: -4px
+}
+*+html .list-logo li {
+	display: inline;
+	padding: 0 20px
+}
+.list-logo li img {
+	vertical-align: middle
+}
+.list-logo li:first-child {
+	margin: 0
+}
+.list-logo li:hover {
+	position: relative
+}
+.list-logo li:hover .arrow, .list-logo li:hover .drop {
+	display: block !important
+}
+.list-logo .drop {
+	display: none;
+	position: absolute;
+	top: 65px;
+	left: 0;
+	width: 445px;
+	padding: 16px 20px 14px;
+	letter-spacing: 0;
+	color: #fff;
+	background: #ccc;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-o-border-radius: 20px
+}
+.list-logo li:first-child {
+	position: relative
+}
+.list-logo li:first-child .arrow, .list-logo li:first-child .drop {
+	display: block
+}
+.list-logo:hover li:first-child .arrow, .list-logo:hover li:first-child .drop {
+	display: none
+}
+.list-logo .drop.right {
+	left: auto;
+	right: 0
+}
+.list-logo .drop p {
+	margin: 0;
+	text-align: center;
+	font: 22px/24px 'proxima_nova_excn_rgregular', Arial, Helvetica, sans-serif
+}
+.list-logo .arrow {
+	display: none;
+	position: absolute;
+	top: 51px;
+	left: 50%;
+	width: 23px;
+	height: 14px;
+	margin: 0 0 0 -10px;
+	background: url(https://www.zozi.com/assets/bg-arrow-top-1e72e611166151cc56f3a143497c6252.png) no-repeat
+}
+.list-logo .right .arrow {
+	position: absolute;
+	top: 51px;
+	left: auto;
+	right: 74px
+}
+#footer {
+	width: 100%;
+	background-color: #171B35
+}
+.footer-frame {
+	overflow: hidden;
+	width: 995px;
+	height: 100px;
+	padding: 24px 0 0;
+	margin: 0 auto
+}
+.footer-frame .row {
+	overflow: hidden;
+	padding: 0 0 7px
+}
+.footer-frame .social-networks {
+	float: right
+}
+.social-networks .title {
+	float: left;
+	padding: 7px 6px 0 0;
+	font-weight: normal;
+	color: #fff
+}
+.social-networks ul {
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+.social-networks ul li {
+	float: left;
+	padding: 0 0 0 7px
+}
+.social-networks ul a {
+	float: left;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(https://www.zozi.com/assets/bg-socila-networks-7d515fc75207e9e8da6155f37c5c28af.png) no-repeat
+}
+.social-networks ul .facebook {
+	background-position: 0 0
+}
+.social-networks ul .twitter {
+	background-position: -38px 0
+}
+.social-networks ul .pinterest {
+	background-position: -75px 0
+}
+.footer-nav {
+	float: left
+}
+.footer-nav ul {
+	float: left;
+	padding: 3px 0 0;
+	margin: 0;
+	list-style: none;
+	font: 15px/27px 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif
+}
+.footer-nav ul li {
+	float: left;
+	margin: 0 24px 0 0
+}
+.footer-nav ul a {
+	color: #fff
+}
+.footer-frame .list {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 12px;
+	line-height: 15px;
+	color: #999
+}
+.footer-frame .list li {
+	float: left;
+	padding: 0 12px 0 0
+}
+.footer-frame .list a {
+	color: #999
+}
+.header-holder .user-account {
+	float: left;
+	display: inline;
+	list-style: none outside;
+	margin: -10px 0 0 184px;
+	border-right: 1px solid #535362;
+	padding: 2px 14px 0 14px
+}
+.header-holder .user-account:hover {
+	background-color: #0e0e26
+}
+.header-holder .user-account:hover .account-dropdown {
+	display: block
+}
+.header-holder .user-account a {
+	color: white;
+	line-height: 59px
+}
+.header-holder .user-account .account-dropdown {
+	display: none;
+	position: absolute;
+	margin: 0;
+	padding: 14px 5px 10px 5px !important;
+	width: 158px;
+	margin-left: -14px !important;
+	top: 60px;
+	background: #0e0e26;
+	background: url(/assets/background/bg-drop.png);
+	list-style: none;
+	-webkit-border-radius: 0 0 11px 11px;
+	-moz-border-radius: 0 0 11px 11px;
+	border-radius: 0 0 11px 11px
+}
+.header-holder .user-account .account-dropdown li {
+	float: left;
+	padding: 0 10px 7px 6px;
+	width: 147px;
+	height: 23px;
+	background: #0e0e26 !important;
+	background: url(https://www.zozi.com/assets/background/bg-drop-92f4c39c9e5f455734031cdda51e442f.png) !important;
+	margin-right: 10px
+}
+.header-holder .user-account .account-dropdown li a.acount-dropdown-item {
+	display: block;
+	color: #ffffff;
+	line-height: 18px;
+	font-size: 15px;
+	margin-bottom: 0;
+	text-transform: none;
+	margin-right: 10px;
+	padding: 1px 5px 1px 5px
+}
+.header-holder .user-account .account-dropdown li a.acount-dropdown-item:hover {
+	text-decoration: none;
+	background: #fff;
+	color: #f17739;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px
+}
+.application-show #header {
+	background: #171b35
+}
+.application-show .section1-holder {
+	background: transparent
+}
+.application-show .section1-frame2 {
+	padding-top: 0
+}
+.application-show .cnt h2 {
+	font: 24px/28px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #f1773a;
+	text-transform: uppercase;
+	padding-bottom: 25px;
+	margin: 0;
+	font-weight: normal
+}
+.breadcrumbs {
+	padding: 25px 0
+}
+.breadcrumbs img {
+	width: 30px;
+	height: 30px;
+	float: left;
+	display: inline;
+	padding-right: 10px
+}
+.breadcrumbs p {
+	font-size: 17px;
+	line-height: 30px;
+	color: #999;
+	margin: 0
+}
+.breadcrumbs a {
+	color: #999
+}
+.breadcrumbs a.active {
+	color: #181937
+}
+.cnt {
+	background: #fff;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	border-bottom: 1px solid #c0c0c0
+}
+.experience-slideshow {
+	padding-bottom: 35px
+}
+.large-carousel {
+	height: 369px;
+	padding-bottom: 2px;
+	position: relative
+}
+.large-carousel .slide {
+	width: 655px;
+	height: 369px;
+	float: left;
+	display: inline;
+	position: relative
+}
+.large-carousel .slide img {
+	width: 655px;
+	height: 369px;
+	display: block
+}
+.large-carousel .slide .caption {
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+	padding: 8px 27px;
+	background: rgba(91,140,223,0.8);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 999
+}
+.large-carousel .slide .caption p {
+	margin: 0;
+	padding: 0
+}
+.thumbs-carousel {
+	height: 74px;
+	position: relative
+}
+.thumbs-carousel .thumb {
+	width: 130px;
+	height: 74px;
+	float: left;
+	display: inline;
+	padding-right: 2px;
+	cursor: pointer;
+	position: relative
+}
+.thumbs-carousel .thumb img {
+	width: 130px;
+	height: 74px;
+	display: block
+}
+.thumbs-carousel a.prev-thumb, .thumbs-carousel a.next-thumb {
+	width: 34px;
+	height: 34px;
+	display: block;
+	background: url(https://www.zozi.com/assets/smallArr-afef8477c49122d29668f2334d3c28c8.png) no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 50%;
+	margin-top: -17px;
+	left: 10px
+}
+.thumbs-carousel a.next-thumb {
+	background-position: right 0;
+	left: auto;
+	right: 10px
+}
+.thumbs-carousel .thumb span.overlay {
+	width: 130px;
+	height: 74px;
+	display: block;
+	background: #000;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.thumbs-carousel .selected span.overlay {
+	display: none
+}
+.cnt-inner {
+	padding: 0 30px
+}
+.cnt-inner section:last-child {
+	border-bottom: none
+}
+.experience-tabs {
+	padding-bottom: 35px
+}
+.tabs-nav {
+	height: 41px;
+	border-bottom: 1px solid #ddd
+}
+.tabs-nav ul {
+	list-style: none outside;
+	margin: 0;
+	padding: 0
+}
+.tabs-nav ul li {
+	float: left;
+	display: inline
+}
+.tabs-nav ul li a {
+	font: 20px/24px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #171b35;
+	text-transform: uppercase;
+	padding: 9px 23px;
+	display: block;
+	position: relative
+}
+.tabs-nav ul li.active a {
+	background: #171b35;
+	color: #fff
+}
+.tabs-nav ul li a span.current {
+	width: 0;
+	height: 0;
+	display: none;
+	border-top: 9px solid #171b35;
+	border-right: 9px solid transparent;
+	border-left: 9px solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -8px
+}
+.tabs-nav ul li.active a span.current {
+	display: block
+}
+.tabs-nav ul li a:hover {
+	text-decoration: none
+}
+.tabs .tab {
+	padding-top: 45px;
+	display: none
+}
+.tabs .tab h3 {
+	font: 20px/26px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	color: #777;
+	padding-bottom: 10px;
+	margin: 0;
+	font-weight: normal
+}
+.tabs .tab p {
+	margin: 0;
+	padding-bottom: 11px
+}
+.picked-by {
+	border: 1px solid #ddd;
+	padding: 4px;
+	margin-top: 14px;
+	position: relative;
+	height: 100%;
+*zoom:1;
+	clear: both
+}
+.picked-by:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.picked-by img {
+	width: 42px;
+	height: 42px;
+	float: left;
+	display: inline
+}
+.picked-by p {
+	font-size: 16px;
+	line-height: 20px;
+	color: #171b35;
+	float: left;
+	display: inline;
+	padding: 12px 12px 11px 12px;
+	margin: 0
+}
+.picked-by p a, .picked-by p span.curator-name {
+	font-family: 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	color: #171b35
+}
+.picked-by span.arr {
+	width: 16px;
+	height: 9px;
+	display: block;
+	background: url(https://www.zozi.com/assets/pickArrow-2b8e38f9a483ecdb64fbdde9925509f8.png) no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: -9px;
+	left: 20px
+}
+.experience-snapshot {
+	padding-bottom: 35px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 32px;
+*zoom:1
+}
+.experience-snapshot:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.snapshot-box {
+	width: 243px;
+	float: left;
+	display: inline;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 20px 18px
+}
+.snapshot-box+.snapshot-box {
+	float: right
+}
+.snapshot-box h3 {
+	font: 20px/24px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #171b35;
+	text-transform: uppercase;
+	padding-bottom: 21px;
+	margin: 0;
+	font-weight: normal
+}
+.snapshot-box ul {
+	list-style: none outside;
+	margin: 0;
+	padding: 0
+}
+.snapshot-box ul li {
+	font-size: 16px;
+	line-height: 20px;
+	color: #777;
+	padding: 0 0 10px 16px;
+	background: url(https://www.zozi.com/assets/listItem-48df3a6882ef248dd1c5e1075742d8e4.png) no-repeat 0 3px
+}
+.snapshot-box.no-border {
+	border: none;
+	background: none;
+	padding: 0px 18px 0
+}
+.snapshot-box-row {
+*zoom:1
+}
+.snapshot-box-row:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.snapshot-box-entry {
+	font-size: 15px;
+	line-height: 16px;
+	color: #999;
+	float: left;
+	display: inline
+}
+.snapshot-box-entry+.snapshot-box-entry {
+	border-right: 0
+}
+.snapshot-box-entry p {
+	margin: 0;
+	padding: 0
+}
+.snapshot-box-entry+.snapshot-box-entry p {
+	text-align: center
+}
+.merchant-link {
+	color: #171b35;
+	text-decoration: none
+}
+.snapshot-info .snapshot-box-entry {
+	padding: 0px 0px 5px
+}
+.snapshot-info .snapshot-box-entry span {
+	color: #777;
+	font-weight: bold
+}
+.snapshot-info .snapshot-box-entry img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	display: inline;
+	padding: 0 12px 0 6px
+}
+.snapshot-info .snapshot-box-entry>p {
+	padding-left: 40px;
+	margin: -7px 0 7px
+}
+.snapshot-info .icn_about, .snapshot-info .icn_availability, .snapshot-info .icn_itinerary, .snapshot-info .icn_blackout_dates, .snapshot-info .icn_duration, .snapshot-info .icn_getaways, .snapshot-info .icn_local, .snapshot-info .icn_nearest_airport {
+	padding: 3px 0 0 40px;
+	display: block;
+	height: 27px
+}
+.snapshot-info .icn_about {
+	background: url(https://www.zozi.com/assets/snapshots/about-2c48f6fededdeb8dfdda1a38e69d4b74.png) no-repeat 3px 50%
+}
+.snapshot-info .icn_getaways {
+	background: url(https://www.zozi.com/assets/snapshots/getaways-478e9b7f8b736a951ae711fb8cec5932.png) no-repeat 0 50%
+}
+.snapshot-info .icn_local, .snapshot-info .icn_itinerary {
+	background: url(https://www.zozi.com/assets/snapshots/local-8f706aa149814fe1dbe287d289ecf226.png) no-repeat 0 50%
+}
+.snapshot-info .icn_availability, .snapshot-info .icn_blackout_dates {
+	background: url(https://www.zozi.com/assets/snapshots/availability-c063b159d1a5fe3c41af682789286e88.png) no-repeat 0 50%
+}
+.snapshot-info .icn_duration {
+	background: url(https://www.zozi.com/assets/snapshots/duration-c88649f51f131966df4bb28c40b5e5b5.png) no-repeat 0 50%
+}
+.snapshot-info .icn_nearest_airport {
+	background: url(https://www.zozi.com/assets/snapshots/nearest-airport-5e8f7714408f7cf53dfb68fb15a6ca02.png) no-repeat 0 50%
+}
+.snapshot-review .snapshot-box-entry+.snapshot-box-entry {
+	padding: 13px 0 12px
+}
+.snapshot-review .entry-review p {
+	font-size: 13px;
+	text-align: center
+}
+.snapshot-review p.rating {
+	width: 78px;
+	height: 15px;
+	padding: 0;
+	margin: 0 auto;
+	background: url(https://www.zozi.com/assets/rating.png) no-repeat;
+	position: relative
+}
+.snapshot-review p.rating span {
+	height: 15px;
+	display: block;
+	background: url(https://www.zozi.com/assets/rating.png) no-repeat 0 bottom;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.box-style {
+	padding: 9px 0 9px 24px
+}
+.box-style ul li {
+	float: left;
+	display: inline;
+	background: transparent;
+	padding: 13px 9px 0 0;
+	position: relative;
+	height: 100%
+}
+.box-style ul li a {
+	font-size: 10px;
+	line-height: 14px;
+	color: #999;
+	text-transform: uppercase
+}
+.box-style ul li a:hover {
+	text-decoration: none
+}
+.box-style ul li.active a {
+	font-size: 14px
+}
+.box-style ul li span {
+	width: 0;
+	height: 0;
+	border-top: 8px solid #999;
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -10px;
+	display: none
+}
+.box-style ul li.active span {
+	display: block
+}
+.box-location {
+	padding: 9px 0 10px
+}
+.box-location p {
+	text-align: center;
+	width: 140px;
+	float: left;
+	display: inline;
+	margin: 0;
+	padding-top: 6px
+}
+.box-location span {
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	width: 140px;
+	float: right;
+	display: inline
+}
+.box-availability {
+	border-bottom: 0
+}
+.box-availability p {
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	margin: 0;
+	padding: 5px 0
+}
+.experience-info {
+	padding-bottom: 35px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 32px
+}
+.experience-info p {
+	margin: 0;
+	padding-bottom: 10px
+}
+.experience-info blockquote {
+	font-size: 20px;
+	line-height: 26px;
+	color: #171a34;
+	padding: 0 0 0 20px;
+	border-left: 4px solid #eee;
+	margin: 0 0 30px 0
+}
+.experience-info blockquote .author {
+	font-family: 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	padding: 0
+}
+.info-box {
+	background: #f7f7f7;
+	border: 1px solid #d5d5d5;
+	padding: 20px;
+	margin-top: 25px;
+*zoom:1
+}
+.info-box:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.info-box h3 {
+	font: 20px/24px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #171b35;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	margin: 0;
+	font-weight: normal
+}
+.info-box ul {
+	list-style: none outside;
+	margin: 0;
+	padding: 0
+}
+.info-box ul+ul {
+	padding-right: 0
+}
+.info-box ul li {
+	font-size: 16px;
+	line-height: 20px;
+	color: #777;
+	padding: 0 10px 10px 16px;
+	background: url(https://www.zozi.com/assets/listItem-48df3a6882ef248dd1c5e1075742d8e4.png) no-repeat 0 3px
+}
+.return-policy {
+	padding-bottom: 30px
+}
+.return-policy p {
+	margin: 0;
+	padding-bottom: 15px
+}
+.return-policy p:last-child {
+	padding-bottom: 0px
+}
+.experience-journey {
+	padding-bottom: 35px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 32px
+}
+.experience-journey p {
+	margin: 0;
+	padding-bottom: 15px
+}
+.experience-journey img {
+	display: block;
+	width: 595px;
+	height: auto;
+	padding: 20px 0 30px
+}
+.experience-journey ul {
+	list-style: none outside;
+	background: url(https://www.zozi.com/assets/dash-44f35b7e07e190f243b3e9f54670d371.png) repeat-y;
+	margin: 0 0 0 14px;
+	padding: 0
+}
+.experience-journey ul li {
+	padding: 0 0 20px 30px;
+	position: relative;
+	height: 100%
+}
+.experience-journey ul li:last-child {
+	padding-bottom: 0
+}
+.experience-journey ul li strong {
+	font-family: 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase
+}
+.experience-journey ul li span {
+	font: 16px/20px 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	background: #fff;
+	padding: 2px 5px;
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: -7px
+}
+.experience-journey ul li.destination span {
+	width: 30px;
+	height: 100%;
+	background: #fff url(https://www.zozi.com/assets/ico-7-87f986d4e70c74a6b61658d5979976c9.png) no-repeat 0 4px;
+	padding: 4px 0 5px 0;
+	left: -13px;
+	top: -9px
+}
+.experience-journey .map {
+	width: 595px;
+	height: 416px;
+	padding: 20px 0 30px
+}
+.socials {
+	width: 120px;
+	margin-left: auto;
+	padding: 24px 0;
+*zoom:1
+}
+.socials:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.socials a.ico {
+	width: 30px;
+	height: 31px;
+	float: right;
+	display: inline;
+	margin-left: 10px;
+	background-image: url(https://www.zozi.com/assets/bg-socila-networks-7d515fc75207e9e8da6155f37c5c28af.png);
+	background-repeat: no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px
+}
+.socials a.email {
+	width: 40px;
+	margin-right: 5px;
+	background: url(https://www.zozi.com/assets/ico-11-aa7cbe0e21af10dd5b3689e11b9cfeab.png) no-repeat
+}
+.socials a.facebook {
+	background-position: 0 0
+}
+.socials a.twitter {
+	background-position: center 0
+}
+.socials a.pinterest {
+	background-position: right 0
+}
+.socials a.email:hover {
+	background-position: 0 bottom
+}
+.socials a.facebook:hover {
+	background-position: 0 bottom
+}
+.socials a.twitter:hover {
+	background-position: center bottom
+}
+.socials a.pinterest:hover {
+	background-position: right bottom
+}
+.booking-section {
+	border: 1px solid #e6e6e6;
+	border-bottom-color: #bbb;
+	border-top: 0;
+	background: url(https://www.zozi.com/assets/stripe01-6d24c1992c3a8ae350ba54ca0c484216.png);
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+	-o-box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+	margin-bottom: 24px
+}
+.experience-overview {
+	background: #fff;
+	padding: 25px 16px 13px 21px;
+	border-bottom: 1px solid #ddd
+}
+.experience-overview h3 {
+	font: 24px/28px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #181937;
+	text-transform: uppercase;
+	padding-bottom: 7px;
+	margin: 0;
+	font-weight: normal
+}
+.experience-overview p {
+	font-size: 16px;
+	line-height: 24px;
+	color: #999;
+	margin: 0;
+	padding-bottom: 12px
+}
+.experience-overview .discontinued {
+	font-size: 13px;
+	margin-top: -5px;
+	font-style: italic
+}
+.experience-overview .price {
+*zoom:1
+}
+.experience-overview .price:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.experience-overview .price strong {
+	font: 28px/30px 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	color: #5b8cdf;
+	float: left;
+	display: inline
+}
+.sale-price {
+	padding-bottom: 0
+}
+.sale-price .price strong {
+	color: #66cc33
+}
+.experience-overview .price strong span.old-price {
+	font-size: 16px;
+	line-height: 20px;
+	color: #999;
+	text-decoration: line-through;
+	position: relative;
+	top: -4px;
+	padding-right: 5px
+}
+.experience-overview .price strong span.old-price small {
+	font-size: 10px;
+	position: relative;
+	top: -2px
+}
+.experience-overview .price span.new-price {
+	color: #66cc33
+}
+.experience-overview .price strong small {
+	font-size: 16px;
+	position: relative;
+	top: -3px
+}
+label.check {
+	position: relative;
+	color: #999
+}
+label.check input {
+	display: none
+}
+label.check span {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(https://www.zozi.com/assets/checks-29f2656df74f3d6c4578c6b42658c949.png) no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 5px;
+	left: 0
+}
+label.checked span {
+	background-position: right 0
+}
+.experience-overview .price label.check {
+	float: right;
+	display: inline;
+	padding: 5px 15px 0 20px;
+	position: relative;
+	color: #999
+}
+#wrapper span.tooltip-init {
+	width: 11px;
+	height: 11px;
+	background: url(https://www.zozi.com/assets/tooltip-976bc2af41a1bfb7ef9d5165d4fa1f35.png) no-repeat;
+	left: auto;
+	cursor: pointer
+}
+.experience-overview .price label.check span.tooltip-init {
+	right: 0;
+	top: 8px
+}
+.item-cnt .actions label.check span.tooltip-init {
+	right: -15px;
+	top: 3px
+}
+.gear .zozi-promises span.tooltip-init {
+	right: 125px;
+	top: 17px
+}
+#wrapper small.tooltip {
+	color: #fff;
+	position: absolute;
+	padding: 10px;
+	background: #5b8cdf;
+	border-radius: 14px;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-o-border-radius: 14px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	display: none
+}
+.experience-overview .price label.check small.tooltip {
+	bottom: 100%;
+	right: -30px;
+	width: 193px
+}
+.form-buttons small.tooltip {
+	bottom: 70px;
+	right: 0px
+}
+.item-cnt .actions small.tooltip {
+	bottom: 23px;
+	right: -46px;
+	width: 193px
+}
+.gear .zozi-promises small.tooltip {
+	bottom: 92%;
+	right: 94px;
+	width: 175px
+}
+#wrapper small.tooltip strong {
+	font-family: 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+	text-transform: uppercase;
+	display: block;
+	float: none;
+	padding-bottom: 6px
+}
+#wrapper small.tooltip em {
+	display: block;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.5)
+}
+#wrapper small.tooltip span.arrow {
+	width: 0;
+	height: 0;
+	display: block;
+	border-top: 8px solid #5b8cdf;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 100%;
+	right: 28px;
+	left: auto
+}
+.experience-dates {
+	padding: 19px 20px 15px 20px;
+	border-bottom: 1px solid #ddd
+}
+.experience-dates h4 {
+	font: 16px/ 18px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin: 0
+}
+.experience-dates label.check {
+	padding-left: 25px
+}
+.experience-dates label.check span {
+	top: 0
+}
+.datepick {
+	height: 27px;
+	padding: 6px 5px 5px 5px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1) inset;
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1) inset;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1) inset;
+	-o-box-shadow: 0px 1px 1px rgba(0,0,0,0.1) inset;
+	margin-bottom: 10px
+}
+.datepick a {
+	font: 16px/27px 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif;
+	color: #181937;
+	padding-left: 47px;
+	display: block;
+	background: url(https://www.zozi.com/assets/ico-8-5dd7434c406d03296fbfbf7208cb0860.png) no-repeat
+}
+.return-date a {
+	background-position: 0 bottom
+}
+.experience-stay-options h4 {
+	font: 16px/ 18px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin: 0
+}
+.radios {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px
+}
+.radios label.radio {
+	color: #171a34;
+	padding: 10px 30px;
+	display: block;
+	position: relative;
+	height: 100%;
+	border-top: 1px solid #ddd
+}
+.radios label.radio:first-child {
+	border-top: 0
+}
+.radios label.radio+label.radio {
+	border-bottom: 0
+}
+.radios label.radio input {
+	display: none
+}
+.radios label.radio span {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(https://www.zozi.com/assets/radios-d00a4022109b7ef54ad731d5beb83274.png) no-repeat 0 bottom;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 10px;
+	left: 10px
+}
+.radios label.radio-selected {
+	font-family: 'proxima_nova_cn_rgbold', Arial, Helvetica, sans-serif
+}
+.radios label.radio-selected span {
+	background-position: 0 0
+}
+.booking-section .form-buttons {
+	position: relative;
+	padding: 20px;
+*zoom:1
+}
+.warning-tooltip-init {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999
+}
+.booking-section .form-buttons:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.booking-section .form-buttons input.submit, #show_more .form-buttons input.submit {
+	width: 126px;
+	padding: 8px;
+	display: inline;
+	border: 0;
+	cursor: pointer
+}
+.booking-section .form-buttons input.submit {
+	float: right
+}
+#show_more .form-buttons {
+	text-align: center
+}
+#show_more .form-buttons input.submit {
+	margin-top: 26px
+}
+.green-btn {
+	font: 20px/ 24px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+	text-transform: uppercase;
+	text-align: center;
+	background: #65cb32;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY1Y2IzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0OGI1MWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #65cb32 0%, #48b51e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #65cb32), color-stop(100%, #48b51e));
+	background: -webkit-linear-gradient(top, #65cb32 0%, #48b51e 100%);
+	background: -o-linear-gradient(top, #65cb32 0%, #48b51e 100%);
+	background: -ms-linear-gradient(top, #65cb32 0%, #48b51e 100%);
+	background: linear-gradient(to bottom, #65cb32 0%, #48b51e 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#65cb32', endColorstr='#48b51e', GradientType=0 );
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+	-o-box-shadow: 0px 0px 3px rgba(0,0,0,0.4)
+}
+.green-btn:hover {
+	background: #48b51e;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4YjUxZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NWNiMzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #48b51e 0%, #65cb32 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48b51e), color-stop(100%, #65cb32));
+	background: -webkit-linear-gradient(top, #48b51e 0%, #65cb32 100%);
+	background: -o-linear-gradient(top, #48b51e 0%, #65cb32 100%);
+	background: -ms-linear-gradient(top, #48b51e 0%, #65cb32 100%);
+	background: linear-gradient(to bottom, #48b51e 0%, #65cb32 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#48b51e', endColorstr='#65cb32', GradientType=0 );
+	text-decoration: none;
+	cursor: pointer
+}
+.green-btn[disabled], .green-btn-disabled, .green_btn[disabled]:hover, .green-btn-disabled:hover {
+	background: #bebebe;
+	background: -moz-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bebebe), color-stop(100%, #898989));
+	background: -webkit-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -o-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -ms-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: linear-gradient(to bottom, #bebebe 0%, #898989 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bebebe', endColorstr='#898989', GradientType=0 );
+	cursor: default !important
+}
+.green-btn.large-promo {
+	padding: 22px 38px 18px 38px;
+	font-size: 42px;
+	float: right;
+	position: relative;
+	top: 90px;
+	left: 80px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px
+}
+.quantity-field {
+	width: 115px;
+	float: left;
+	display: inline
+}
+.quantity-field label {
+	font: 16px/ 16px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	float: left;
+	display: inline;
+	padding: 10px 8px 10px 0
+}
+.quantity-field select {
+	width: 77px
+}
+.quantity-field .c2-sb-wrap .c2-sb-text {
+	width: 53px !important
+}
+.quantity-field .c2-sb-wrap .c2-sb-list-wrap {
+	width: 55px !important;
+	min-width: 55px !important;
+	margin: 0 10px !important
+}
+.color-field {
+	width: 230px;
+	float: left;
+	display: inline
+}
+.color-field label {
+	font: 16px/ 16px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	float: left;
+	display: inline;
+	padding: 10px 8px 10px 0
+}
+.color-field select, .landing-form-wrp .city-fieldset select {
+	width: 184px
+}
+.color-field .c2-sb-inner-wrap, .landing-form-wrp .city-fieldset .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/select-wide-331d2f946d03bafd778003572d5348f5.png) no-repeat 0px -3px
+}
+.color-field .c2-sb-wrap, .landing-form-wrp .city-fieldset .c2-sb-wrap {
+	width: 215px
+}
+.color-field .c2-sb-wrap .c2-sb-text, .landing-form-wrp .city-fieldset .c2-sb-wrap .c2-sb-text {
+	width: 200px !important
+}
+.color-field .c2-sb-wrap .c2-sb-list-wrap, .landing-form-wrp .city-fieldset .c2-sb-wrap .c2-sb-list-wrap {
+	width: 210px !important;
+	min-width: 210px !important;
+	margin: 0 10px !important
+}
+.sold-out {
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+	padding-top: .25em;
+	padding-bottom: .5em
+}
+br.reset-float {
+	clear: left
+}
+.booking-social {
+	margin-bottom: 25px;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 1px 2px rgba(0,0,0,0.3)
+}
+.booking-social-links {
+	background: #fff;
+	position: relative
+}
+.booking-social-links a, .bucket-list-btn a {
+	font: 16px/ 27px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	padding: 5px 0 11px 0;
+	display: block;
+	height: 100%;
+	position: relative
+}
+.booking-social-links a {
+	border-bottom: 1px solid #ddd;
+	padding-left: 28px
+}
+.booking-social-links a+a {
+	border-bottom: 0
+}
+.booking-social-links a span, .bucket-list-btn a span {
+	width: 27px;
+	height: 27px;
+	display: inline-block;
+	background-image: url(https://www.zozi.com/assets/ico-9-b33851847eefcfc4eebb0b80ad44d883.png);
+	background-repeat: no-repeat;
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+	top: 8px;
+	left: -8px
+}
+.booking-social-links a.bucket.item-in-bucket-list span, .bucket-list-btn a.bucket.item-in-bucket-list span {
+	background-image: url(https://www.zozi.com/assets/bucket-list-check-6bcdb0f5e2180fbc08bb013086dfacd1.png)
+}
+.booking-social-links a.fb-book span {
+	background-position: 0 bottom
+}
+.booking-social-links a:hover, .bucket-list-btn a:hover {
+	text-decoration: none
+}
+.booking-social-links a:hover span, .bucket-list-btn a:hover span {
+	top: 9px;
+	left: -7px
+}
+.booking-social-links a.item-in-bucket-list:hover span, .bucket-list-btn a.item-in-bucket-list:hover span {
+	top: 8px;
+	left: -8px
+}
+.booking-questions {
+	background: #171b35;
+	padding: 13px 20px 13px 20px;
+	font-size: 15px;
+	line-height: 24px;
+	color: #fff
+}
+.booking-questions p {
+	margin: 0
+}
+.booking-questions p strong, .booking-questions p a {
+	font-family: 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding-right: 7px
+}
+.booking-questions p a {
+	padding-left: 7px
+}
+.zozi-promises {
+	background: #fff;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	margin-bottom: 25px
+}
+.zozi-promises h3 {
+	font: 24px/40px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #777;
+	text-transform: uppercase;
+	padding: 20px 23px 0;
+	font-weight: normal
+}
+.zozi-promises h3 img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	display: inline;
+	padding-right: 13px
+}
+.zozi-promises ul {
+	list-style: none outside;
+	margin: 0;
+	padding: 0
+}
+.zozi-promises ul li {
+	font-size: 16px;
+	line-height: 20px;
+	border-top: 1px solid #eee;
+	padding: 15px 45px 15px 75px;
+	position: relative;
+	height: 100%
+}
+.zozi-promises ul li a, .zozi-promises ul li strong {
+	font: 16px/20px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #f1773a;
+	text-transform: uppercase;
+	display: block
+}
+.gear .zozi-promises ul li a {
+	font: 16px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: none;
+	display: inline
+}
+.zozi-promises ul li span {
+	width: 21px;
+	height: 22px;
+	display: block;
+	background: url(https://www.zozi.com/assets/checked-e5af965aeb10de6d6d484c679e4fde62.png) no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 30px;
+	left: 32px
+}
+#promise_return_policy {
+	display: none;
+	width: 380px;
+	background-color: #FFF
+}
+#promise_return_policy h3 {
+	color: #F1773A;
+	text-align: center;
+	padding-bottom: 0px;
+	text-transform: none;
+	font-size: 22px
+}
+#promise_return_policy p {
+	margin: 5px
+}
+#promise_return_policy strong {
+	font: 14px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif
+}
+#promise_return_policy h3+p {
+	font: 18px/20px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #000
+}
+#promise_return_policy ul {
+	margin-top: 10px
+}
+#promise_return_policy ul li {
+	font-size: 13px;
+	padding-bottom: 0
+}
+#promise_return_policy h3+p+p {
+	font-size: 15px;
+	padding-right: 20px;
+	color: #777
+}
+.fancybox-skin {
+	background-color: #8B8B8B !important
+}
+.gear-slideshow {
+	position: relative;
+	height: 490px;
+	padding-bottom: 30px
+}
+.gear-slideshow .slide {
+	width: 655px;
+	height: 490px
+}
+.gear-slideshow .product-carousel img {
+	width: 540px;
+	height: 540px;
+	display: block;
+	position: relative;
+	top: -25px;
+	left: 50px
+}
+.gear-slideshow span.zoom-opts {
+	line-height: 25px;
+	padding-left: 25px;
+	background: url(https://www.zozi.com/assets/zoomsmall-43f9c671e578aaec0e94f7c0890912db.png) no-repeat;
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	z-index: 9999
+}
+.gear-slideshow a.zoom-btn {
+	width: 30px;
+	height: 30px;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	background: url(https://www.zozi.com/assets/zoombtn-c9b425e8fe83093bd72bdfffca485d79.png) no-repeat;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	z-index: 9999
+}
+.product-thumbs {
+	width: 58px;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	z-index: 9999
+}
+.product-thumbs img {
+	width: 56px;
+	height: 56px;
+	display: block;
+	border: 1px solid #ddd;
+	margin-bottom: 10px
+}
+.product-thumbs img.selected {
+	border: 2px solid #20233c
+}
+.gear-snapshot>.snapshot-box {
+	padding: 20px 18px;
+	width: 243px
+}
+.snapshot-box ul.icons-list li {
+	padding-left: 35px;
+	position: relative;
+	height: 100%
+}
+.snapshot-box ul.icons-list li span {
+	width: 23px;
+	height: 22px;
+	display: block;
+	background-image: url(https://www.zozi.com/assets/icos-e482648dce2566738f47a46cb75cbb02.png);
+	background-repeat: no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: -2px;
+	left: 0
+}
+.snapshot-box ul.icons-list li.list-ico1 span {
+	background-position: 0 0
+}
+.snapshot-box ul.icons-list li.list-ico2 span {
+	background-position: 0 -30px
+}
+.snapshot-box ul.icons-list li.list-ico3 span {
+	background-position: 0 -61px
+}
+.snapshot-box ul.icons-list li.list-ico4 span {
+	background-position: 0 -91px
+}
+.snapshot-box ul.icons-list li.list-ico5 span {
+	background-position: 0 -122px
+}
+.snapshot-box ul.icons-list li.list-ico6 span {
+	background-position: 0 -150px
+}
+.snapshot-box ul.icons-list li.list-ico7 span {
+	background-position: 0 bottom
+}
+.experience-color-select {
+	padding: 15px 20px;
+	border-bottom: 1px solid #ddd
+}
+.experience-color-select h4 {
+	font: 16px/ 18px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #999;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin: 0
+}
+.size-select {
+	width: 262px;
+	border: 0;
+	margin: 0;
+	padding-bottom: 15px
+}
+.size-select:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.size-select label.radio {
+	width: 30px;
+	height: 30px;
+	float: left;
+	display: inline;
+	border: 0;
+	margin: 2px;
+	padding: 0
+}
+.size-select label.radio span {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #fff;
+	color: #999;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+	text-indent: 0;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ddd
+}
+.size-select label.radio-selected span {
+	border: 2px solid black;
+	color: black
+}
+.size-select label.radio-disabled span {
+	border: 1px solid #ddd;
+	background: #ddd
+}
+label.radio-disabled label {
+	color: #aaa
+}
+label.radio-disabled label strong {
+	float: right
+}
+.vendor-theme .section1-holder {
+	background-repeat: repeat;
+	background-position: 0 0
+}
+.vendor-theme .section1-frame2 {
+	position: relative;
+	margin: -75px auto 0
+}
+.featured-image {
+	text-align: center;
+	position: relative;
+	height: 356px
+}
+.featured-text {
+	width: 994px;
+	position: absolute;
+	top: 87px;
+	left: 50%;
+	margin-left: -497px;
+	text-align: left;
+	color: #fff;
+	font-size: 18px;
+	line-height: 20px
+}
+.featured-text h2 {
+	font: 46px/50px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-bottom: 5px;
+	margin: 0
+}
+.grey-section1 {
+	background: url(https://www.zozi.com/assets/stripe01-6d24c1992c3a8ae350ba54ca0c484216.png);
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd
+}
+.index-edit .container .block>img {
+	width: 315px;
+	height: 310px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0
+}
+.index-edit .container .block span.overlay {
+	width: 315px;
+	height: 310px;
+	display: block;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter: alpha(opacity=70);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1
+}
+.index-edit .container .grey-overlay span.overlay {
+	background: #999
+}
+.container .area>p {
+	background: rgba(0,0,0,0.2)
+}
+.index-edit .container .dark-overlay span.overlay {
+	background: #767694
+}
+.index-edit .container .blue-overlay span.overlay {
+	background: #7cbcfe
+}
+.index-edit .container .block .area {
+	position: relative;
+	z-index: 2;
+	min-height: 283px
+}
+.index-edit .container .block .area>p {
+	width: 100%;
+	margin: 0;
+	padding: 25px 0;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0
+}
+.index-edit .container .block .area strong.title {
+	display: block;
+	color: #fff
+}
+.index-edit .main-heading {
+	padding-left: 270px;
+	padding-bottom: 50px;
+	overflow: visible;
+*zoom:1
+}
+.index-edit .main-heading:after {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both
+}
+.index-edit .main-heading form {
+	width: 203px;
+	float: left;
+	display: inline
+}
+.index-edit .main-heading select {
+	width: 203px
+}
+.index-edit .main-heading .c2-sb-inner-wrap, .deals_filter .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/bg-button-269adf35ad5ec133f184430427f5db60.png) no-repeat
+}
+.index-edit .main-heading .c2-sb-wrap .c2-sb-button, .deals_filter .c2-sb-wrap .c2-sb-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0)
+}
+.index-edit .main-heading .c2-sb-inner-wrap, .deals_filter .c2-sb-inner-wrap {
+	padding-left: 24px;
+	height: 40px
+}
+.index-edit .main-heading .c2-sb-wrap .c2-sb-text, .deals_filter .c2-sb-wrap .c2-sb-text {
+	width: 279px !important
+}
+.index-edit .main-heading .c2-sb-wrap .c2-sb-list-wrap, .deals_filter .c2-sb-wrap .c2-sb-list-wrap {
+	width: 280px !important;
+	min-width: 280px !important;
+	margin: 0 0 0 12px !important
+}
+.index-edit .main-heading .c2-sb-open .c2-sb-inner-wrap, .deals_filter .c2-sb-open .c2-sb-inner-wrap {
+	background-position: right bottom
+}
+.index-edit .main-heading .c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item, .deals_filter .c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item {
+	padding: 5px 4px 1px 4px;
+	border-top: 1px solid #ddd
+}
+.index-edit .main-heading .c2-sb-wrap .jspTrack, .deals_filter .c2-sb-wrap .jspTrack {
+	background: transparent
+}
+.hidden {
+	display: none
+}
+.deals_filter {
+	width: 100%;
+	display: block;
+	height: 55px;
+	margin-left: 43px
+}
+.deals_filter select {
+	width: 410px
+}
+.deals_filter .c2-sb-wrap .disabled, .c2-sb-wrap .disabled {
+	color: #9c9c9c
+}
+.clearfix {
+	zoom: 1
+}
+.clearfix:before {
+	content: "";
+	display: table
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both
+}
+.offer-snippet {
+	position: relative;
+	overflow: hidden
+}
+.offer-snippet:hover {
+	cursor: pointer
+}
+.offer-snippet-title h3 a {
+	color: #181937
+}
+.offer-snippet:hover .offer-snippet-title a {
+	text-decoration: none;
+	color: #f1773a !important
+}
+.offer-snippet-img {
+	position: relative;
+	display: block
+}
+.offer-snippet-four_col_1x1 .offer-snippet-img img, .offer-snippet-four_col_1x1 .offer-snippet-img div {
+	width: 230px;
+	height: 173px
+}
+.offer-snippet-four_col_2x1 .offer-snippet-img img, .offer-snippet-four_col_2x1 .offer-snippet-img div {
+	width: 485px;
+	height: 173px
+}
+.offer-snippet-three_col_1x1 .offer-snippet-img img, .offer-snippet-three_col_1x1 .offer-snippet-img div {
+	width: 315px;
+	height: 175px
+}
+.offer-snippet-three_col_2x2 .offer-snippet-img img, .offer-snippet-three_col_2x2 .offer-snippet-img div {
+	margin-left: -12px;
+	height: 510px;
+	width: 680px
+}
+.offer-snippet-img div {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: #000;
+	z-index: 10
+}
+.offer-snippet-actions {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	background: white
+}
+.offer-snippet .area {
+	position: relative;
+	height: 118px;
+	z-index: 11;
+	background: white
+}
+.is-offer-snippet-open .area {
+	height: 117px;
+	border-bottom: 1px solid #ddd
+}
+.experience-snapshot .clear {
+	clear: both;
+	margin-bottom: 35px
+}
+.brand-carousel {
+	background: #000;
+	position: relative;
+	height: 354px;
+	overflow: hidden;
+	margin-top: 0px
+}
+.brand-carousel .slide {
+	float: left;
+	width: 1920px;
+	position: relative
+}
+.brand-carousel .slide>img {
+	height: 355px;
+	width: 1920px;
+	display: block
+}
+.brand-carousel a.slider-arr {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	background: url(https://www.zozi.com/assets/home-carousel-arr-9de0a766843ee3161bec4b74d5c62759.png) no-repeat 0 0;
+	width: 39px;
+	height: 40px
+}
+.brand-carousel a.prev-arr {
+	left: 50%;
+	margin-left: -600px;
+	background-position: 0 0
+}
+.brand-carousel a.next-arr {
+	right: 50%;
+	margin-right: -600px;
+	background-position: right 0
+}
+.home-carousel {
+	background: #000;
+	position: relative;
+	height: 450px;
+	overflow: hidden;
+	margin-top: 0px
+}
+.home-carousel .slide {
+	float: left;
+	width: 1440px;
+	position: relative
+}
+.home-carousel .slide .carousel-image {
+	height: 450px;
+	width: 1440px;
+	display: block
+}
+.home-carousel .main-slide-cnt {
+	width: 468px;
+	height: 320px;
+	position: absolute;
+	top: 0;
+	left: 75px;
+	background: url(https://www.zozi.com/assets/main-slide-cnt.png) no-repeat 0 0;
+	padding: 130px 120px 0 150px
+}
+.home-carousel .main-slide-cnt h2 {
+	font-size: 40px;
+	line-height: 44px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	text-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+	padding-bottom: 60px;
+	margin: 0
+}
+.home-carousel .main-slide-cnt h2 strong {
+	color: #f1773a;
+	font-weight: normal
+}
+.home-carousel .main-slide-cnt .featured h5 {
+	font-size: 16px;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	color: #dcdae4;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-bottom: 4px;
+	margin: 0
+}
+.home-carousel .main-slide-cnt .featured a {
+	margin-right: 5px
+}
+.home-carousel .slide-cnt {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url(https://www.zozi.com/assets/transp-1dc4d40220de6b569488b78f28ab843f.png) repeat 0 0;
+	color: #fff
+}
+.home-carousel .slide-inner {
+	background: url(https://www.zozi.com/assets/slide-cnt-inner-15f4e21e948cf4fecf534fe6588cbe55.png) repeat-y 184px 0;
+	width: 996px;
+	margin: 0 auto
+}
+.home-carousel .globe {
+	float: left;
+	background: url(https://www.zozi.com/assets/ico-4-095fd298c3d23a709ab0bd32871d1da8.png) no-repeat 0 center;
+	padding: 22px 45px 20px 43px;
+	color: #999;
+	font-size: 15px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	line-height: 18px;
+	width: 135px;
+	float: left
+}
+.home-carousel .globe strong {
+	color: #fff;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	font-weight: normal;
+	display: block
+}
+.home-carousel h3 {
+	font-size: 40px;
+	color: #fff;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	float: left;
+	line-height: 84px;
+	margin: 0;
+	background: url("slide-cnt-inner.png") repeat-y 450px 0;
+	width: 455px
+}
+.home-carousel .slide-right {
+	float: right
+}
+.home-carousel .slide-right strong {
+	float: left;
+	font-size: 40px;
+	line-height: 84px;
+	font-weight: normal;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif
+}
+.home-carousel .slide-right strong small {
+	font-size: 25px;
+	line-height: 20px;
+	position: relative;
+	top: -4px
+}
+.home-carousel .slide-right.price span.new-price {
+	color: #6C3
+}
+.home-carousel .slide-right.price span.old-price {
+	font-size: 25px;
+	line-height: 20px;
+	color: #999;
+	text-decoration: line-through;
+	position: relative;
+	top: -4px;
+	padding-right: 5px
+}
+.home-carousel .slide-right.price span.old-price small {
+	font-size: 15px;
+	position: relative;
+	top: -3px
+}
+.home-carousel .slide-right a.btn {
+	float: right;
+	background: #66cc33;
+	padding: 0 10px;
+	min-width: 95px;
+	text-align: center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	font-size: 15px;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+	height: 30px;
+	line-height: 31px;
+	margin-top: 26px;
+	margin-left: 12px
+}
+.home-carousel .slide-right a.btn:hover {
+	background-color: #55b725;
+	text-decoration: none
+}
+.home-carousel a.slider-arr {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	background: url(https://www.zozi.com/assets/home-carousel-arr-9de0a766843ee3161bec4b74d5c62759.png) no-repeat 0 0;
+	width: 39px;
+	height: 40px
+}
+.home-carousel a.prev-arr {
+	left: 50%;
+	margin-left: -600px;
+	background-position: 0 0
+}
+.home-carousel a.next-arr {
+	right: 50%;
+	margin-right: -600px;
+	background-position: right 0
+}
+#center-carousel {
+	height: 354px
+}
+#center-carousel .slide {
+	width: 1920px
+}
+#center-carousel .slide .carousel-image {
+	height: 355px;
+	width: 1920px
+}
+#center-carousel .slide-inner {
+	background: url(https://www.zozi.com/assets/slide-cnt-inner-15f4e21e948cf4fecf534fe6588cbe55.png) repeat-y 195px 0
+}
+#center-carousel .globe {
+	padding: 22px 30px 20px 43px;
+	width: 145px
+}
+#center-carousel h3 {
+	font-size: 36px;
+	background: url("slide-cnt-inner.png") repeat-y 450px 0;
+	width: 455px
+}
+#center-carousel .local-slide .globe {
+	background: url(https://www.zozi.com/assets/icn_local-b458584f08a899602aa01062f4125887.png) no-repeat 0 center
+}
+#center-carousel .getaway-slide .globe {
+	background: url(https://www.zozi.com/assets/icn_getaways-095fd298c3d23a709ab0bd32871d1da8.png) no-repeat 0 center
+}
+#center-carousel .gear-slide .globe {
+	background: url(https://www.zozi.com/assets/icn_gear-dbf8ef7965e96d5580b08b88f8e56d04.png) no-repeat 0 center
+}
+.filters-holder {
+	padding-top: 0 !important
+}
+.filters-holder .section1-frame2 {
+	padding-top: 0
+}
+#filters {
+	width: 696px;
+	padding: 16px 0 23px 300px;
+	margin: 0 auto 20px auto;
+	background: url(https://www.zozi.com/assets/filters-line.png) no-repeat 0 bottom
+}
+#filters h4 {
+	font-size: 14px;
+	color: #999;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	line-height: 23px;
+	text-transform: uppercase;
+	float: left;
+	font-weight: normal;
+	margin: 0;
+	padding-right: 20px
+}
+#filters ul {
+	list-style: none outside;
+	float: left;
+	padding: 0;
+	margin: 0
+}
+#filters ul li {
+	float: left;
+	position: relative;
+	margin-right: 26px
+}
+#filters ul li a {
+	font-size: 14px;
+	color: #999;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	line-height: 22px;
+	height: 20px;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	color: #171a34;
+	float: left;
+	padding: 0 10px;
+	text-decoration: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px
+}
+#filters ul li a:hover, #filters ul li.active a {
+	background: rgba(73,77,96,0.1);
+	border-color: #8d8d8d;
+	box-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+	-moz-box-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+	-webkit-box-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+	-o-box-shadow: 1px 1px 0px rgba(255,255,255,0.4)
+}
+#filters ul li span {
+	height: 14px;
+	width: 43px;
+	background: url(https://www.zozi.com/assets/filter-arr.png) no-repeat 0 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: 38px;
+	left: 50%;
+	margin-left: -21px;
+	display: none
+}
+#filters ul li.active span {
+	display: block
+}
+.do-selects {
+	width: 996px;
+	margin: 0 auto;
+	padding: 25px 0 18px
+}
+.do-selects h3 {
+	font-size: 25px;
+	line-height: 28px;
+	color: #393939;
+	text-transform: uppercase;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	font-weight: normal;
+	text-align: center;
+	margin: 0;
+	padding-bottom: 10px
+}
+.do-selects select {
+	width: 282px
+}
+.do-selects input.green-btn {
+	width: 97px;
+	height: 40px;
+	border: 0;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	-o-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	position: relative;
+	top: 5px;
+	float: right
+}
+.tr-selects .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/c2-left-457d8ffa4e3942645ae8245b63117965.png) no-repeat 0 0;
+	height: 52px;
+	padding-left: 26px;
+	margin-right: 15px
+}
+.tr-selects .c2-sb-wrap .c2-sb-text {
+	background: url(https://www.zozi.com/assets/c2-center-767227685c84684386b75ad2f70ce016.png) repeat-x 0 0;
+	height: 30px;
+	line-height: 30px !important;
+	font-size: 18px
+}
+.tr-selects .c2-sb-wrap .c2-sb-button {
+	height: 52px;
+	width: 39px;
+	background: url(https://www.zozi.com/assets/c2-right-00e5688dc32f51c8b2ee7a93322e70d8.png) no-repeat 0 0;
+	float: left;
+	right: 0;
+	position: static
+}
+.tr-selects .c2-sb-wrap .c2-sb-list-wrap {
+	left: 13px;
+	right: 28px;
+	width: auto;
+	min-width: 0 !important;
+	top: 39px
+}
+.social-footer {
+	height: 194px;
+	background: #171b35 url(https://www.zozi.com/assets/social-footer.jpg) no-repeat center 0
+}
+.social-footer-shell {
+	width: 996px;
+	margin: 0 auto;
+	position: relative;
+	padding: 25px 0 0 0;
+	height: 169px
+}
+.social-footer span.free-circle {
+	height: 50px;
+	width: 62px;
+	background: url(https://www.zozi.com/assets/free-circle.png) no-repeat 0 0;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	font-family: 'proxima_nova_excn_thbold', arial, serif;
+	text-align: center;
+	position: absolute;
+	text-transform: uppercase;
+	padding: 12px 0 0 0;
+	top: 65px;
+	right: 88px
+}
+.social-footer a.close-footer {
+	height: 33px;
+	width: 33px;
+	background: url(https://www.zozi.com/assets/social-footer-close.png) no-repeat 0 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: -20px;
+	right: 0
+}
+.social-footer h2 {
+	font-size: 26px;
+	line-height: 32px;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	color: #fff;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 28px 0
+}
+.social-footer h2 strong {
+	color: #f1773a;
+	font-weight: normal
+}
+.social-footer a.facebook-connect {
+	height: 44px;
+	width: 122px;
+	background: url(https://www.zozi.com/assets/facebook-link.png) no-repeat 0 0;
+	display: block;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 25px;
+	line-height: 44px;
+	padding-left: 46px;
+	text-align: center;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	text-shadow: -1px -1px 0px rgba(0,0,0,0.4)
+}
+.social-footer a.dont-show-again {
+	font-size: 15px;
+	color: #999;
+	position: absolute;
+	bottom: 7px;
+	right: 0
+}
+.center-carousel+#main {
+	padding-top: 0 !important
+}
+.center-creative {
+	background: url(https://www.zozi.com/assets/bg-section1-12ae6658e49a1277c9426442aa88ebb2.gif);
+	z-index: -1
+}
+.center-creative img {
+	display: block;
+	margin: 0 auto
+}
+.order-page, .order-confirmation-page {
+	background: url(https://www.zozi.com/assets/order-page-9e4ede7e3712ba82f8fb1b5ad688bbb8.png) repeat 0 0
+}
+.order-page *, .order-confirmation-page * {
+	margin: 0;
+	padding: 0;
+	outline: none
+}
+.purchase-process {
+	padding: 20px 0;
+	border-bottom: 2px solid rgba(204,204,204,0.4);
+	margin-bottom: 60px
+}
+.purchase-process ul {
+	width: 795px;
+	margin: 0 auto;
+	list-style: none outside;
+*zoom:1;
+	padding-bottom: 30px;
+	background: url(https://www.zozi.com/assets/process-bg-b2c301029928225d2c2e617c6769613c.png) no-repeat center bottom
+}
+.purchase-process ul:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.purchase-process ul li {
+	float: left;
+	width: 250px;
+	font-size: 18px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	text-align: center;
+	font-weight: normal;
+	color: #ccc;
+	position: relative
+}
+.purchase-process ul li+li {
+	padding-left: 24px
+}
+.purchase-process ul li+li+li {
+	padding-left: 58px;
+	width: 210px
+}
+.purchase-process ul li.passed {
+	color: #171933
+}
+.purchase-process ul li.active {
+	color: #171933;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif
+}
+.purchase-process ul li span {
+	position: absolute;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	background: url(https://www.zozi.com/assets/process-bg-active-bb9181f165b2dd9b7427e155fef828ea.png) no-repeat 0 0;
+	height: 18px;
+	top: 29px;
+	display: none
+}
+.purchase-process ul li.active span, .purchase-process ul li.passed span {
+	display: block
+}
+.purchase-process ul li.step1 span {
+	width: 18px;
+	background-position: 0 0;
+	left: 100px
+}
+.purchase-process ul li.step2 span {
+	width: 290px;
+	background-position: -18px 0;
+	left: -132px
+}
+.purchase-process ul li.step3 span {
+	width: 286px;
+	background-position: right 0;
+	left: -116px
+}
+.order-confirmation-page .purchase-process {
+	margin-bottom: 30px
+}
+.order-confirmation-page .segment header h3 {
+	float: none;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 10px
+}
+.order-confirmation-page .segment header p {
+	float: none;
+	text-align: center
+}
+.order-confirmation-page .confirmation-code span {
+	color: #000;
+	font-size: 24px;
+	font-weight: bold
+}
+.order-confirmation-page .confirmation-code span.code {
+	color: #FC7734
+}
+.order-confirmation-page .confirmation-code p {
+	margin-top: 5px;
+	margin-bottom: -15px
+}
+.order-confirmation-page .confirmation-code .tleft {
+	float: left;
+	width: 450px
+}
+.order-confirmation-page .cart-segment .confirmation-code .tbody ul li.index2 {
+	font-size: 15px;
+	line-height: 18px
+}
+.order-confirmation-page .cart-segment .confirmation-code .tbody ul li.index3 {
+	font-size: 15px;
+	line-height: 18px;
+	color: #999;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif
+}
+.order-confirmation-page .cart-segment .box .box-inner {
+	padding-top: 0px
+}
+.order-confirmation-page .cart-segment .box .item-holder .item-cnt span img {
+	position: relative;
+	top: 5px
+}
+.order-confirmation-page .cart-segment .box .item-holder .item-cnt span strong.gift-message {
+	color: #000;
+	font-weight: normal
+}
+.order-confirmation-page .cart-segment .box .item-holder .item-cnt span p {
+	font-size: 13px;
+	margin-left: 25px
+}
+.order-confirmation-page .cart-segment .box .item-holder .tbody ul li.index1 strong {
+	font-size: 28px;
+	color: #181937;
+	line-height: 42px
+}
+.shell {
+	width: 996px;
+	margin: 0 auto
+}
+.segment {
+	padding-bottom: 20px
+}
+.segment * {
+	margin: 0;
+	padding: 0
+}
+.segment header {
+*zoom:1;
+	padding: 0 10px 12px 10px
+}
+.segment header:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.segment header h3 {
+	font-size: 32px;
+	line-height: 38px;
+	color: #171933;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	float: left;
+	position: relative;
+	padding-left: 50px
+}
+.segment header h3 span {
+	height: 36px;
+	width: 36px;
+	background: url(https://www.zozi.com/assets/segment-num-aa52c76b38ff5555d5eb633b5b25fc09.png) no-repeat 0 0;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.segment header .thead {
+	float: right;
+	font-size: 16px;
+	line-height: 38px
+}
+.segment header .thead ul {
+	list-style: none outside
+}
+.segment header .thead ul li {
+	float: left;
+	padding-left: 10px
+}
+.segment header .thead ul li.index1 {
+	width: 90px
+}
+.segment header .thead ul li.index2 {
+	width: 100px
+}
+.segment header .thead ul li.index3 {
+	width: 70px
+}
+.segment .cards-ico {
+	float: left;
+	padding: 7px 0 0 30px
+}
+.segment .cards-ico img {
+	margin-right: 4px
+}
+.segment .box {
+	background: #fff;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	border: 1px solid rgba(204,204,204,0.5)
+}
+.segment .box.account-box {
+	background: #fff url(https://www.zozi.com/assets/account-box-e132a32f84ba1ba6cc538205e82c60f2.png) repeat-y right 0
+}
+.segment .box-inner {
+	padding: 30px;
+*zoom:1
+}
+.segment .box-inner:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.segment .box-payment-errors {
+	padding-bottom: 30px
+}
+.segment .box-payment-errors>ul {
+	color: red;
+	margin-left: 16px
+}
+.segment label.check {
+	padding-left: 28px;
+	cursor: pointer
+}
+.segment label.check span {
+	height: 16px;
+	width: 19px;
+	background: url(https://www.zozi.com/assets/order-custom-check-36b234d122227f2ae98b72f5e47c5e4f.png) no-repeat 0 bottom;
+	top: 1px
+}
+.segment label.checked {
+	color: #181937
+}
+.segment label.checked span {
+	background-position: 0 0
+}
+.booking-section label.check {
+	padding-left: 28px;
+	cursor: pointer
+}
+.booking-section label.check span {
+	height: 16px;
+	width: 19px;
+	background: url(https://www.zozi.com/assets/order-custom-check-36b234d122227f2ae98b72f5e47c5e4f.png) no-repeat 0 bottom
+}
+.booking-section label.checked {
+	color: #181937
+}
+.booking-section label.checked span {
+	background-position: 0 0
+}
+.cart-segment .item {
+	padding: 30px 0 30px 30px;
+*zoom:1
+}
+.cart-segment .item:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.cart-segment .item+.item {
+	border-top: 1px solid #e5e5e5
+}
+.cart-segment .item .img {
+	width: 142px;
+	float: left;
+	padding-right: 20px
+}
+.cart-segment .item .img a, .cart-segment .item .img img {
+	display: block
+}
+.cart-segment .item .item-cnt {
+	width: 360px;
+	padding-right: 100px;
+	float: left
+}
+.cart-segment .item h4 {
+	font-size: 24px;
+	color: #181937;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	line-height: 26px;
+	position: relative;
+	margin-top: -2px;
+	padding-bottom: 7px
+}
+.cart-segment .item h4 a {
+	color: #181937
+}
+.cart-segment .item .actions {
+*zoom:1;
+	font-size: 15px
+}
+.cart-segment .item .actions:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.cart-segment .item .actions label.check {
+	margin-right: 15px;
+	float: left
+}
+.cart-segment .item .actions a.remove-ico {
+	float: left;
+	position: relative;
+	padding-left: 18px
+}
+.cart-segment .item .actions a.remove-ico span {
+	height: 11px;
+	width: 11px;
+	background: url(https://www.zozi.com/assets/remove-ico-74c18491771b89643d8b30da9af44adf.png) no-repeat 0 0;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px
+}
+.cart-segment .item .tbody {
+	float: right;
+	width: 320px
+}
+.cart-segment .item .tbody ul {
+	list-style: none outside
+}
+.cart-segment .item .tbody ul li {
+	float: left;
+	padding-top: 14px
+}
+.cart-segment .item .tbody ul li.index1 {
+	width: 125px
+}
+.cart-segment .item .tbody ul li.index2 {
+	width: 100px;
+	font-size: 28px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	line-height: 42px
+}
+.cart-segment .item .tbody ul li.index2 span {
+	font-size: 15px;
+	position: relative;
+	top: -8px;
+	margin-right: 3px
+}
+.cart-segment .item .tbody ul li.index3 {
+	font-size: 28px;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	color: #181937;
+	line-height: 42px
+}
+.cart-segment .item .tbody ul li.index3 span {
+	font-size: 15px;
+	position: relative;
+	top: -8px;
+	margin-right: 3px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif
+}
+.cart-segment .item .tbody select {
+	width: 90px
+}
+.cart-segment .item .inner-box {
+	margin-right: 20px;
+	position: relative;
+	margin-left: -12px
+}
+.cart-segment .form label {
+	color: #171a34 !important
+}
+.cart-segment .item .inner-box {
+	padding-bottom: 10px
+}
+.cart-segment .item h3 {
+	font-size: 24px;
+	line-height: 26px;
+	color: #5b8cdf;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	padding-bottom: 20px
+}
+.order-page .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/c2-min-tr-left-2be89833249ce5537f3c8317f95af7dd.png) no-repeat 0 0;
+	height: 42px;
+	padding-left: 18px;
+	margin-right: 0
+}
+.order-page .c2-sb-wrap .c2-sb-text {
+	background: url(https://www.zozi.com/assets/c2-min-tr-center-a6540a6396e8499fbbb31fd8fc36f30c.png) repeat-x 0 0;
+	height: 20px;
+	line-height: 20px !important;
+	font-size: 16px
+}
+.order-page .c2-sb-wrap .c2-sb-button {
+	height: 42px;
+	width: 30px;
+	background: url(https://www.zozi.com/assets/c2-min-tr-right-aadeedac0a73d28c174c8be39a21ec34.png) no-repeat 0 0;
+	float: left;
+	right: 0;
+	position: static
+}
+.order-page .c2-sb-wrap .c2-sb-list-wrap {
+	left: 10px;
+	right: 10px;
+	width: auto;
+	min-width: 0 !important;
+	top: 30px
+}
+.order-page .total, .order-confirmation-page .total {
+	padding: 25px 10px 0 10px;
+	font-size: 16px;
+	line-height: 20px
+}
+.order-page .total .info, .order-confirmation-page .total .info {
+	width: 490px;
+	float: left
+}
+.order-page .total .info h5, .order-confirmation-page .total .info h5 {
+	font-size: 16px;
+	padding-bottom: 3px
+}
+.total-nums {
+	width: 265px;
+	float: right;
+	color: #777;
+	padding-bottom: 25px
+}
+.total-nums h4 {
+	font-size: 18px;
+	padding-bottom: 10px
+}
+.total-nums ul {
+	list-style: none outside
+}
+.total-nums li {
+*zoom:1;
+	padding-bottom: 4px
+}
+.total-nums li:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.total-nums li span.left {
+	float: left;
+	width: 110px
+}
+.total-nums li span.right {
+	width: 130px;
+	float: right;
+	text-align: right
+}
+.total-nums li p {
+	clear: both;
+	font-size: 14px;
+	color: #999
+}
+.total-nums li.total-row {
+	padding-top: 10px;
+	margin-top: 8px;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	font-size: 18px;
+	border-top: 1px solid #dadada
+}
+.total-nums li.total-row {
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	font-size: 18px
+}
+.total-nums li.total-row span.left {
+	position: relative;
+	top: 7px
+}
+.total-nums li.total-row span.right {
+	font-size: 30px;
+	color: #009900;
+	line-height: 30px
+}
+.total-nums li.total-row em {
+	font-size: 18px;
+	font-style: normal;
+	position: relative;
+	top: -7px;
+	margin-right: 4px
+}
+.total-nums small {
+	font-size: 12px;
+	color: #999;
+	line-height: 16px
+}
+.total-nums small a {
+	color: #999;
+	text-decoration: underline
+}
+.total-nums small a:hover {
+	text-decoration: none
+}
+.total-nums .credit-card-message {
+	padding-bottom: 10px
+}
+.total-nums .promo-code span.left {
+	line-height: 40px
+}
+.total-nums .promo-code span.right {
+	width: 150px
+}
+.total-nums .promo-code .coupon-code-go {
+	margin-left: 10px;
+	padding: 4px 10px 4px 10px
+}
+.total-nums .promo-code p.error {
+	color: red
+}
+.bottom-options-holder {
+	padding-bottom: 8px
+}
+.bottom-options-holder span.secured-ico {
+	float: left;
+	height: 23px;
+	width: 87px;
+	background: url(https://www.zozi.com/assets/secure-ico-eca34d35e0b43e8c0c05dd8513f67d95.png) no-repeat 0 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	margin-top: 8px
+}
+.bottom-options-holder input.submit {
+	width: 150px;
+	float: right;
+	height: 40px;
+	border: 0;
+	cursor: pointer
+}
+.box .total {
+	border-top: 2px solid #ebebeb;
+	padding: 30px 25px 15px 25px
+}
+.box .total .info p {
+	padding-bottom: 15px
+}
+.box .total .total-nums {
+	font-size: 28px;
+	line-height: 30px
+}
+.box .total .total-nums span.right {
+	font-size: 29px;
+	color: #181937;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif
+}
+.box .total-nums {
+	font-size: 20px;
+	padding-bottom: 0
+}
+.box .total-nums h4 {
+	font-size: 24px
+}
+.box .total-nums li {
+	padding-bottom: 10px
+}
+.box .total-nums li strong {
+	color: #000;
+	font-weight: normal
+}
+.box .total-nums li .rounded {
+	border: 1px solid #ccc;
+	background: #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	width: auto;
+	padding: 4px 4px 3px 8px;
+	color: #171b35;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	position: relative;
+	top: -2px
+}
+.box .total-nums li.total-row span.left {
+	font-size: 30px
+}
+.box .bottom-options-holder input.submit {
+	float: none;
+	display: block;
+	width: 100%
+}
+ul.card-list {
+	list-style: none outside;
+	padding-bottom: 18px;
+	width: 560px;
+	float: left
+}
+ul.card-list li {
+	margin-bottom: 10px;
+	background: #f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	position: relative;
+	padding: 20px 20px 20px 60px;
+	position: relative
+}
+ul.card-list li span.radio-custom {
+	height: 16px;
+	width: 16px;
+	background: url(https://www.zozi.com/assets/custom-radios-9de4c76d0f4fc98b25494ec92f1b313d.png) no-repeat 0 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -11px;
+	left: 23px;
+	cursor: pointer
+}
+ul.card-list li span.radio-custom.checked {
+	background-position: 0 bottom
+}
+ul.card-list li span.radio-custom input {
+	display: none
+}
+ul.card-list li h5 {
+	font-size: 18px;
+	color: #181937;
+	font-family: 'proxima_nova_cn_rgbold', arial, serif;
+	font-weight: normal;
+	padding-bottom: 4px
+}
+ul.card-list li h5 span {
+	color: #999;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	padding-left: 2px
+}
+ul.card-list li p {
+	font-size: 18px;
+	color: #181937
+}
+.with_cards {
+	width: 60%
+}
+.add-section .heading {
+	font-size: 16px;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif
+}
+.add-section .heading a {
+	color: #999;
+	font-weight: normal;
+	padding-left: 35px;
+	position: relative
+}
+.add-section .heading a span {
+	height: 27px;
+	width: 27px;
+	background: url(https://www.zozi.com/assets/add-ico-8dc592fe4030fb5fa31009196ebe13f2.png) no-repeat 0 bottom;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	position: absolute;
+	top: -5px;
+	left: 0
+}
+.add-section .heading a.exp span {
+	background-position: 0 0
+}
+.add-section .inner-box {
+	background: white !important
+}
+.segment .inner-box {
+	background: #f5f5f5 url(https://www.zozi.com/assets/box-inner-arr-94f47f6f9fa17df97b88c27fcc337a64.png) no-repeat 170px 0;
+	padding: 30px 40px;
+	margin-top: 14px
+}
+.segment .form .row {
+*zoom:1
+}
+.segment .form .row:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.segment .form fieldset {
+	margin-bottom: 15px
+}
+.segment .form label {
+	font-size: 16px;
+	color: #999;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	display: block;
+	padding-bottom: 5px
+}
+.segment .form input.field {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	font-size: 12px;
+	height: 15px;
+	padding: 12px 10px;
+	width: 490px
+}
+.segment .form textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	font-size: 12px;
+	height: 65px;
+	padding: 12px 10px;
+	width: 490px;
+	resize: none
+}
+.segment .form .row fieldset {
+	width: 246px;
+	float: left
+}
+.segment .form .row fieldset+fieldset {
+	padding-left: 20px
+}
+.segment .form .row fieldset input.field {
+	width: 224px
+}
+.segment .form .row fieldset.min {
+	width: 149px
+}
+.segment .form .row fieldset.min input.field {
+	width: 127px
+}
+.segment .form .row fieldset.big {
+	width: 299px
+}
+.segment .form .row fieldset.big input.field {
+	width: 277px
+}
+.segment .form .row fieldset.cvv-field {
+	width: 76px
+}
+.segment .form .row fieldset.cvv-field input.field {
+	width: 54px
+}
+.segment .form .row fieldset.billing-field {
+	width: 126px
+}
+.segment .form .row fieldset.billing-field input.field {
+	width: 104px
+}
+.segment .form fieldset.select {
+	width: 77px
+}
+.segment .form fieldset.select select {
+	width: 77px
+}
+.segment .form fieldset.date-selects {
+	width: 180px
+}
+.segment .form fieldset.date-selects select {
+	width: 85px
+}
+.segment .form fieldset.date-selects select+.c2-sb-wrap+select+.c2-sb-wrap {
+	margin-left: 10px
+}
+.segment .form label.check {
+	font-family: 'proxima_nova_cn_rgregular', arial, serif
+}
+.segment .form label.check span {
+	top: 0
+}
+.card-list-heads {
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	padding-bottom: 12px
+}
+.card-list-heads span {
+	float: left;
+	padding-left: 4px
+}
+.card-list-heads span.index1 {
+	width: 330px
+}
+.card-list-heads span.index2 {
+	width: 245px
+}
+.card-list-heads span.index3 {
+	width: 260px
+}
+.card-list.table-view li {
+*zoom:1;
+	padding-top: 30px;
+	padding-bottom: 30px
+}
+.card-list.table-view li:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.card-list.table-view h5 {
+	width: 225px;
+	padding-right: 5px;
+	float: left
+}
+.card-list.table-view span.index2 {
+	float: right;
+	width: 200px;
+	padding-right: 5px;
+	font-size: 18px;
+	color: #181937
+}
+.card-list.table-view span.index3 {
+	float: left;
+	width: 170px;
+	padding-right: 5px;
+	font-size: 18px;
+	color: #181937
+}
+img.csv-code {
+	float: left;
+	margin: 28px 32px 0 16px
+}
+.form span.cards-ico {
+	padding-top: 28px
+}
+.segment .form .c-radios label {
+	float: left;
+	position: relative;
+	padding-left: 23px;
+	margin-right: 24px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	cursor: pointer
+}
+.segment .form .c-radios label span {
+	height: 16px;
+	width: 16px;
+	background: url(https://www.zozi.com/assets/custom-radios-9de4c76d0f4fc98b25494ec92f1b313d.png) no-repeat 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer
+}
+.segment .form .c-radios label.active {
+	font-family: 'proxima_nova_cn_rgbold', arial, serif
+}
+.segment .form .c-radios label.active span {
+	background-position: 0 bottom
+}
+.segment .form .c-radios label input {
+	display: none
+}
+.big-total .total-nums {
+	font-size: 26px;
+	line-height: 28px;
+	width: 330px
+}
+.big-total .total-nums span.left {
+	width: 180px
+}
+.big-total .total-nums .total-row {
+	padding-top: 15px
+}
+.big-total .total-nums .total-row span.left {
+	font-size: 30px;
+	top: 0
+}
+.big-total .total-nums .total-row span.right {
+	font-size: 30px
+}
+.account-box h3 {
+	font-size: 24px;
+	color: #171933;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	padding-bottom: 20px
+}
+.account-box .box-inner {
+*zoom:1
+}
+.account-box .box-inner:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.account-box .left-form {
+	width: 530px;
+	float: left
+}
+.account-box .signup-form {
+	width: 340px;
+	float: right
+}
+.account-box .signup-form fieldset {
+*zoom:1
+}
+.account-box .signup-form fieldset:after {
+	width: 100%;
+	content: '';
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	clear: both;
+	display: block
+}
+.account-box .signup-form label {
+	width: 80px;
+	padding: 0 4px 0 0;
+	line-height: 42px;
+	float: left
+}
+.account-box .signup-form input.field {
+	width: 232px;
+	float: right
+}
+.account-box .signup-form .actions {
+	width: 254px;
+	margin-left: auto
+}
+.account-box .signup-form input.submit, .account-box .left-form input.submit {
+	border: 0;
+	cursor: pointer;
+	display: block;
+	width: 254px;
+	height: 40px;
+	text-align: center;
+	font: 20px/40px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background: #ff9933;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOTkzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMTc3M2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f93), color-stop(100%, #f1773a));
+	background: -webkit-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -o-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: -ms-linear-gradient(top, #f93 0%, #f1773a 100%);
+	background: linear-gradient(to bottom, #ff9933 0%, #f1773a 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9933', endColorstr='#f1773a', GradientType=0 );
+	box-shadow: 0 1px 0 #848484;
+	-o-box-shadow: 0 1px 0 #848484;
+	-webkit-box-shadow: 0 1px 0 #848484;
+	-moz-box-shadow: 0 1px 0 #848484;
+	text-shadow: 0 1px 0 #478e24;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px
+}
+.account-box .signup-form input.submit:hover {
+	background: #f1773a;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxNzczYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjk5MzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1773a), color-stop(100%, #f93));
+	background: -webkit-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -o-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: -ms-linear-gradient(top, #f1773a 0%, #f93 100%);
+	background: linear-gradient(to bottom, #f1773a 0%, #ff9933 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1773a', endColorstr='#ff9933', GradientType=0 );
+	text-decoration: none
+}
+.account-box .signup-form p.or {
+	text-align: center;
+	padding: 4px 0
+}
+.account-box .signup-form a.fb-connect {
+	height: 35px;
+	width: 253px;
+	background: url(https://www.zozi.com/assets/signup-form-fb-btn-cf9e68001e84aa609ab48bdc6674a0c6.png) no-repeat 0 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4000px;
+	display: block
+}
+.has-total {
+	width: 560px;
+	float: left
+}
+form #applied_credits {
+	max-width: 100px;
+	float: right;
+	text-align: right;
+	height: 20px
+}
+#flash_notice p, #flash_error p {
+	margin: 0 auto;
+	width: 890px;
+	padding-right: 40px
+}
+#flash_notice, #flash_error {
+	padding: 10px 0;
+	font-size: 1.3em;
+	overflow: hidden;
+	z-index: 999;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	filter: alpha(opacity=95);
+	opacity: 0.95
+}
+#flash_notice {
+	background: #86ae65
+}
+#flash_error {
+	background: #b0423e
+}
+.close_flash {
+	float: right;
+	background: url(https://www.zozi.com/assets/shared/close_flash_icon-7e8c1decd37597c209eb63df6007716d.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: 0 -40px 0 0
+}
+input.field_with_errors {
+	border: 1px solid red !important
+}
+.shipping_info {
+	color: #5b8cdf
+}
+.footer-pop-up {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	background: #fff;
+	display: relative
+}
+.footer-pop-up-content {
+	margin: 0 auto;
+	min-height: 100px
+}
+.footer-pop-up-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url(https://www.zozi.com/assets/shared/close_flash_icon-7e8c1decd37597c209eb63df6007716d.png) no-repeat center center;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 0
+}
+.footer-pop-up-ignore {
+	position: absolute;
+	bottom: 20px;
+	right: 20px
+}
+.footer-pop-up-cta-btn {
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	font-size: 18px;
+	padding: 9px 18px;
+	margin-left: 340px
+}
+.footer-pop-up-content-image {
+	background: #171b35 no-repeat top center;
+	width: 100%;
+	height: 194px;
+	position: relative
+}
+.footer-pop-up-content-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%
+}
+.landing-section1 {
+	background: url(https://www.zozi.com/assets/landing_pages/bg-1c617267313906cb55e57db4d6bd9a74.png) no-repeat center center;
+	height: 537px;
+	background-color: #171B35
+}
+.landing-center-content {
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 10px solid rgba(19,27,53,0.2);
+	width: 368px;
+	min-height: 293px;
+	margin: 0 auto 0
+}
+.landing-form-wrp {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto 0;
+	background-color: rgba(19,27,53,0.6);
+	width: 368px;
+	min-height: 293px;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#99131b35', endColorstr='#99131b35')
+}
+.landing-form-wrp ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0
+}
+.landing-form-wrp ul li {
+	padding: 6px 0 0 0
+}
+.landing-form-wrp ul li.city-selector {
+	display: inline-block;
+	padding: 0
+}
+.landing-form-wrp h1 {
+	font: 30px/30px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif;
+	padding: 13px 13px 7px;
+	margin-bottom: 0;
+	margin-top: 0;
+	color: #fff
+}
+.landing-form-wrp .line {
+	width: 348px;
+	height: 3px;
+	opacity: .4;
+	-moz-border-radius: 348px 0 / 1px 0;
+	-webkit-border-radius: 348px 0 / 1px 0;
+	border-radius: 348px 0 / 1px 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #999;
+	margin-left: 10px
+}
+.landing-section1 a.continue {
+	padding: 12px 30px;
+	display: block;
+	width: 60px;
+	height: 18px;
+	border: 0;
+	cursor: pointer;
+	color: white;
+	margin: 2px auto
+}
+.landing-bg {
+	width: 1200px;
+	height: 428px;
+	margin-top: 63px;
+	margin-left: -103px
+}
+.landing-overlay {
+	width: 100%;
+	height: 371px;
+	padding-top: 57px;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(48,48,48,0) 0%, rgba(17,17,17,0) 65%, rgba(2,2,2,0.7) 95%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(48,48,48,0)), color-stop(65%, rgba(17,17,17,0)), color-stop(95%, rgba(2,2,2,0.7)), color-stop(100%, rgba(0,0,0,0.7)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(48,48,48,0) 0%, rgba(17,17,17,0) 65%, rgba(2,2,2,0.7) 95%, rgba(0,0,0,0.7) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(48,48,48,0) 0%, rgba(17,17,17,0) 65%, rgba(2,2,2,0.7) 95%, rgba(0,0,0,0.7) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(48,48,48,0) 0%, rgba(17,17,17,0) 65%, rgba(2,2,2,0.7) 95%, rgba(0,0,0,0.7) 100%);
+	background: radial-gradient(ellipse at center, rgba(48,48,48,0) 0%, rgba(17,17,17,0) 65%, rgba(2,2,2,0.7) 95%, rgba(0,0,0,0.7) 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00303030', endColorstr='#b3000000', GradientType=1 )
+}
+.landing-form-wrp label {
+	color: #999;
+	font: 14px/14px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif
+}
+.landing-form-wrp .city-fieldset .c2-sb-wrap {
+	text-align: left
+}
+.landing-form-wrp .city-fieldset .c2-sb-wrap .c2-sb-list-wrap {
+	width: 185px !important;
+	min-width: 185px !important;
+	margin: 0 13px !important
+}
+.landing-form-wrp .zip-code-fieldset {
+	display: none
+}
+.landing-form-wrp .show-cities-fieldset {
+	display: none
+}
+.landing-form-wrp .continue-fieldset {
+	padding: 20px 0
+}
+.landing-form-wrp .email-section {
+	display: none
+}
+.landing-form-wrp .email-section .email-fieldset {
+	padding: 10px 0
+}
+.landing-form-wrp .privacy-policy {
+	font: 13px/13px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif;
+	margin-right: 10px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	float: right
+}
+.landing-form-wrp input.field {
+	background: #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	font-size: 12px;
+	height: 12px;
+	padding: 12px 10px;
+	width: 230px
+}
+.landing-form-wrp .zip-code {
+	width: 120px !important
+}
+.landing-form-wrp .facebook_button {
+	background: #5f78ab url(https://www.zozi.com/assets/shared/auth/facebook_connect_sprite-d4533d1ec620908d083a35788dacc860.png) no-repeat left -140px;
+	border-bottom: 1px solid #1a356e;
+	border-top: 1px solid #879ac0;
+	border-right: 1px solid #879ac0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: white;
+	display: block;
+	padding: 3px 6px 3px 30px;
+	text-shadow: none;
+	text-transform: none
+}
+.landing-form-wrp .facebook_button {
+	font-family: "Verdana", "sans-serif";
+	width: 86px;
+	font-size: 8px;
+	padding: 1px 5px 1px 29px;
+	background-position: left -141px;
+	margin-left: 123px;
+	text-decoration: none
+}
+.landing-form-wrp .facebook-fieldset span {
+	float: left;
+	margin-left: 93px;
+	font: 13px/22px 'proxima_nova_cn_rgregular', Arial, Helvetica, sans-serif
+}
+.landing-form-wrp .error-label {
+	color: red;
+	display: none
+}
+.landing-form-wrp .green-btn {
+	font: 18px/18px 'proxima_nova_excn_rgbold', Arial, Helvetica, sans-serif
+}
+.deal-badge-mark {
+	font: 16px/20px 'proxima_nova_excn_thbold', Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	padding: 6px 16px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9
+}
+.deal-badge-mark-blue {
+	background: #06afed
+}
+.deal-badge-mark-orange {
+	background: #f2773b
+}
+.deal-badge-mark-green {
+	background: #66cc33
+}
+.deal-badge-mark-promo-free {
+	background: #336619
+}
+.deal-badge-mark-promo-free::before {
+	background-color: #66cc33;
+	content: 'free';
+	text-transform: uppercase;
+	position: relative;
+	padding: 5px 8px;
+	left: -6px
+}
+.deal-badge-mark-grey {
+	background: #CC0C00;
+	text-shadow: 0 1px 0 rgba(180,0,0,0.5)
+}
+.deal-badge-promo {
+	padding: 0 0 0 6px;
+	line-height: 28px
+}
+.deal-badge-promo::after {
+	content: '\F005';
+	position: relative;
+	font-family: 'FontAwesome';
+	font-size: 12px;
+	padding: 0 6px 0 3px;
+	top: -1px
+}
+#gift-filters {
+	padding-top: 20px;
+	padding-bottom: 95px;
+	width: 1020px
+}
+.search-filter-select {
+	float: left;
+	width: 230px;
+	padding-right: 25px
+}
+.search-filter-select.large {
+	width: 320px;
+	padding-right: 25px
+}
+.search-filter-select.large.last {
+	width: 305px
+}
+.search-filter-select label {
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 24px
+}
+#search-filtered-items {
+	width: 1020px
+}
+#show_more {
+	clear: left
+}
+.gift-item {
+	padding-right: 25px;
+	margin: 0;
+	width: 230px;
+	height: 330px;
+	overflow: hidden;
+	float: left
+}
+.gift-item.visible {
+	display: block
+}
+.search-filter-select .c2-sb-wrap {
+	float: none;
+	display: block
+}
+.search-filter-select .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/gift-filter-button-52966b77c7dfa92a77c294c519c4f15b.png) no-repeat
+}
+.search-filter-select.large .c2-sb-inner-wrap {
+	background: url(https://www.zozi.com/assets/bg-button-269adf35ad5ec133f184430427f5db60.png) no-repeat
+}
+.search-filter-select .c2-sb-wrap .c2-sb-button {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0)
+}
+.search-filter-select .c2-sb-inner-wrap {
+	padding-left: 24px;
+	height: 40px
+}
+.search-filter-select .c2-sb-wrap .c2-sb-text {
+	width: 175px !important
+}
+.search-filter-select.large .c2-sb-wrap .c2-sb-text {
+	width: 275px !important
+}
+.search-filter-select .c2-sb-wrap .c2-sb-list-wrap {
+	width: 200px !important;
+	min-width: 200px !important;
+	margin: 0 0 0 12px !important;
+	max-height: 230px
+}
+.search-filter-select.large .c2-sb-wrap .c2-sb-list-wrap {
+	width: 320px !important;
+	min-width: 320px !important
+}
+.search-filter-select .c2-sb-open .c2-sb-inner-wrap {
+	background-position: left bottom
+}
+.search-filter-select .c2-sb-wrap .c2-sb-list-wrap .c2-sb-list .c2-sb-list-item {
+	padding: 5px 4px 1px 4px;
+	border-top: 1px solid #ddd
+}
+.search-filter-select .c2-sb-wrap .jspTrack {
+	background: transparent
+}
+.drop_down_loader {
+	display: none;
+	float: right;
+	margin-right: -50px;
+	margin-top: 45px
+}
+.refer-section {
+	background: #171b35;
+	position: relative;
+	height: 100%;
+	margin-top: -21px;
+	padding-top: 92px
+}
+.refer-section.promo {
+	background: url(https://www.zozi.com/assets/promotions/Bear_Confirmation_Page_996x470-480a4dc5df52082ac1a3c92189ed4358.jpg);
+	min-height: 378px
+}
+.refer-section span.center-arr {
+	width: 114px;
+	height: 56px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -57px;
+	background: url(https://www.zozi.com/assets/arr-down-8f61e5bb9bbc0c86da559f15e0af0ad7.png) no-repeat 0 0
+}
+.refer-section h2 {
+	text-align: center;
+	padding-bottom: 22px;
+	font-size: 40px;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	color: #fff;
+	line-height: 40px;
+	text-transform: uppercase
+}
+.refer-section h2 span {
+	color: #f1773a
+}
+.refer-section p {
+	color: #999999;
+	text-align: center;
+	padding-bottom: 28px;
+	font-size: 19px;
+	line-height: 20px
+}
+.refer-section .socials-boxes {
+	width: 395px;
+	height: 111px;
+	margin: 0 auto;
+	padding-bottom: 40px
+}
+.refer-section .socials-boxes ul {
+	list-style: none;
+	list-style-position: outside
+}
+.refer-section .socials-boxes ul li {
+	float: left;
+	width: 112px;
+	height: 112px;
+	padding-right: 19px
+}
+.refer-section .socials-boxes ul li a {
+	color: #fff;
+	width: 111px;
+	height: 33px;
+	padding-top: 78px;
+	font-size: 20px;
+	color: #999999;
+	display: block;
+	background: url(https://www.zozi.com/assets/socials-boxes-477b112ceb32e5776d4380f6e62672d0.png) no-repeat 0 0;
+	text-align: center
+}
+.refer-section .socials-boxes ul li a.mail-ico {
+	background-position: 0px 0
+}
+.refer-section .socials-boxes ul li a.facebook-ico {
+	background-position: -132px 0
+}
+.refer-section .socials-boxes ul li a.twitter-ico {
+	background-position: -264px 0
+}
+.refer-section .refer-cnt {
+	width: 630px;
+	margin: 0 auto
+}
+.shell .bottom_section {
+	background: #31344b;
+	height: 137px
+}
+.shell .bottom_section .bottom-frame {
+	padding-top: 37px
+}
+.shell .bottom_section .bottom-frame .left-section {
+	width: 330px;
+	float: left;
+	padding-left: 58px
+}
+.shell .bottom_section .bottom-frame h4 {
+	margin: 0 0 0 0;
+	line-height: 20px;
+	font-size: 20px;
+	color: #999999;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif;
+	font-weight: normal;
+	padding-bottom: 12px;
+	text-transform: uppercase
+}
+.shell .bottom_section .bottom-frame p {
+	margin: 0 0 0 0;
+	font-size: 16px
+}
+.copy-link {
+	float: right;
+	width: 435px;
+	margin-right: 62px;
+	padding-top: 12px
+}
+.copy-link span.field {
+	line-height: 40px;
+	font-size: 20px;
+	font-family: 'proxima_nova_cn_rgregular', arial, serif;
+	color: #8f8f91;
+	padding: 0px 10px;
+	overflow: hidden;
+	width: 283px;
+	height: 40px;
+	float: left;
+	margin-right: 11px;
+	background: url(https://www.zozi.com/assets/power-code-field-89e955f67174700078a16acbc39eef1a.png) no-repeat 0 0
+}
+.copy-link #clippy {
+	margin-right: -40px;
+	float: right;
+	opacity: 0;
+	margin-top: -50px
+}
+.copy-link p {
+	background: url(https://www.zozi.com/assets/copy-btn-7f94843cdc7f17b8dccea84ed2d99f1b.png) no-repeat 0 0;
+	width: 121px;
+	height: 42px;
+	float: left;
+	color: #fff;
+	font-size: 20px;
+	text-shadow: rgba(0,0,0,0.7) 0px 1px 0px;
+	text-align: center;
+	line-height: 42px;
+	text-transform: uppercase;
+	font-family: 'proxima_nova_excn_rgbold', arial, serif
+}
+.copy-link p.hovering {
+	background-position: 0 -43px;
+	color: #eee
+}
+.purchase-process ul li.active.normal {
+	font-family: 'proxima_nova_cn_rgregular', arial, serif
+}
+.relative-flash {
+	position: relative;
+	z-index: 100
+}
+#header .info-block {
+	margin-right: 50px
+}
+#gifts-link {
+	float: left;
+	margin-left: 10px
+}
+.no-padding {
+	padding: 0px !important
+}
+#shopping-cart {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: 50px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 8px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	text-align: right;
+	width: 40px
+}
+#shopping-cart #cart-icon {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	max-height: 30px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: right;
+	width: 40px
+}
+#shopping-cart #cart-icon a {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0,0,0,0);
+	background: url(/assets/header/cart.png) no-repeat;
+	background-origin: padding-box;
+	background-size: auto;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: auto;
+	direction: ltr;
+	display: block;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	max-height: 30px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: right;
+	text-decoration: none;
+	width: 40px
+}
+#shopping-cart #cart-modal {
+	border-bottom-color: #ddd;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: none;
+	float: right;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	max-height: 368px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 10px;
+	margin-left: -245px;
+	margin-right: 0px;
+	margin-top: 0px;
+	overflow: hidden;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: absolute;
+	text-align: right;
+	top: 75%;
+	max-width: 400px
+}
+#shopping-cart #cart-modal .cart-items {
+	overflow-y: scroll;
+	max-height: 229px;
+	width: 400px
+}
+#shopping-cart #cart-modal .arrow {
+	width: 0px;
+	height: 0px;
+	float: right;
+	margin-right: 123px;
+	border-style: solid;
+	border-width: 0 11px 8px 11px;
+	border-color: transparent transparent #ffffff transparent;
+	-webkit-transform: rotate(360deg)
+}
+#shopping-cart #cart-modal ul {
+	border-left-color: #ddd;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #ddd;
+	border-right-style: solid;
+	border-right-width: 1px;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: circle;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: right;
+	width: 100%
+}
+#shopping-cart #cart-modal ul li.top {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #fff;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-color: #ddd;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: 40px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	text-align: left;
+	width: 100%
+}
+#shopping-cart #cart-modal ul li.top span.count {
+	box-sizing: border-box;
+	color: #ff8e42;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	height: auto;
+	line-height: 23px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	text-transform: uppercase;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.top a {
+	box-sizing: border-box;
+	color: #999;
+	cursor: auto;
+	direction: ltr;
+	display: block;
+	float: right;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-right: 10px;
+	text-align: left;
+	text-decoration: none;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item:nth-child(odd) {
+	background-color: #EAEAEA !important
+}
+#shopping-cart #cart-modal ul li.item:last-child {
+	border-bottom: none
+}
+#shopping-cart #cart-modal ul li.item {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #fff;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-color: #ddd;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	text-align: left;
+	width: 100%
+}
+#shopping-cart #cart-modal ul li.item .row {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	max-width: none;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .img {
+	padding: 0 10px 0 0
+}
+#shopping-cart #cart-modal ul li.item .row .large-3 {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-top: 0px;
+	position: relative;
+	text-align: left;
+	width: 25%
+}
+#shopping-cart #cart-modal ul li.item .row .large-3 .qty {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: right;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	height: auto;
+	line-height: 21px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	padding-top: 15px;
+	text-align: left;
+	width: auto;
+	margin-right: 15px
+}
+#shopping-cart #cart-modal ul li.item .row .large-3 img {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: inline-block;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	max-width: 100%;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: relative;
+	text-align: left;
+	width: 58.33%
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price {
+	box-sizing: border-box;
+	color: #6c3;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 48px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .original {
+	box-sizing: border-box;
+	color: #999;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 28px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	position: relative;
+	text-align: left;
+	text-decoration: line-through;
+	top: -4px;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .original small {
+	box-sizing: border-box;
+	color: #999;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 18px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	position: relative;
+	text-align: left;
+	top: -1px;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .original span {
+	box-sizing: border-box;
+	color: #999;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 28px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .current {
+	box-sizing: border-box;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 48px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .current small {
+	box-sizing: border-box;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 28px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	position: relative;
+	text-align: left;
+	top: -2px;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .price .current span {
+	box-sizing: border-box;
+	direction: ltr;
+	display: inline;
+	font-family: proxima_nova_cn_rgbold, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: 48px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .large-7 .blue {
+	color: #5b8cdf !important
+}
+#shopping-cart #cart-modal ul li.item .row .large-9 {
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: right;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: relative;
+	text-align: left;
+	width: 70%
+}
+#shopping-cart #cart-modal ul li.item .row .title {
+	box-sizing: border-box;
+	color: #181937;
+	direction: ltr;
+	display: block;
+	font-family: proxima_nova_excn_thbold, Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 18px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	text-align: left;
+	text-transform: uppercase;
+	width: auto
+}
+#shopping-cart #cart-modal ul li.item .row .title a {
+	color: #181937;
+	text-decoration: none;
+	display: block
+}
+#shopping-cart #cart-modal ul li.item .row .title small {
+	color: #999;
+	font-size: 60%
+}
+#shopping-cart #cart-modal ul li.item .row .row .large-3 {
+	float: right
+}
+#shopping-cart #cart-modal ul li.bottom {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #fff;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-top: 1px solid #ddd;
+	border-bottom-color: #555;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	box-sizing: border-box;
+	color: #555;
+	direction: ltr;
+	display: block;
+	float: left;
+	font-family: proxima_nova_cn_rgregular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: 90px;
+	line-height: 25px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 25px;
+	text-align: left;
+	width: 100%
+}
+#shopping-cart #cart-modal ul li.bottom a {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	-webkit-box-shadow: rgba(0,0,0,0.4) 0px 0px 3px 0px;
+	-webkit-transition-delay: 0s;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-property: background-color;
+	-webkit-transition-timing-function: ease-out;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0,0,0,0);
+	background-image: linear-gradient(#65cb32 0%, #48b51e 100%);
+	background: -moz-linear-gradient(#65cb32 0%, #48b51e 100%);
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-color: #fff;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	border-left-color: #fff;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-color: #fff;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-top-color: #fff;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top-style: none;
+	border-top-width: 0px;
+	box-shadow: rgba(0,0,0,0.4) 0px 0px 3px 0px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	direction: ltr;
+	display: inline-block;
+	font-family: proxima_nova_excn_thbold, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: normal;
+	height: 40px;
+	line-height: 20px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 35%;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: uppercase;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-property: background-color;
+	transition-timing-function: ease-out;
+	width: 120px
+}
+#shopping-cart #cart-modal ul li.bottom a.disabled {
+	background: #bebebe;
+	background: -moz-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bebebe), color-stop(100%, #898989));
+	background: -webkit-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -o-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: -ms-linear-gradient(top, #bebebe 0%, #898989 100%);
+	background: linear-gradient(to bottom, #bebebe 0%, #898989 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bebebe', endColorstr='#898989', GradientType=0 );
+	cursor: default !important
+}
+@media screen and (min-width: 950px) and (max-width: 1120px) {
+#shopping-cart #cart-modal .arrow {
+	margin-right: 85px
+}
+}
