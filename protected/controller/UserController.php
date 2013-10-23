@@ -5,8 +5,9 @@ class UserController extends CoreController {
 	 * logout
 	 */
 	public function logout() {
-		unset ( $_SESSION ['user'] );
-		session_destroy ();
+		$this->session->user = null;
+		$this->session->auth = null;
+		setcookie ( $this->cookieName, "", time () - 3600, '/' );
 		return Q::conf ()->APP_URL;
 	}
 	
@@ -165,16 +166,16 @@ class UserController extends CoreController {
 						'limit' => 1 
 				) );
 				if ($user) {
-					if (isset ( $_SESSION ['user'] )) {
-						unset ( $_SESSION ['user'] );
-					}
-					$_SESSION ['user'] = array (
+					$auth = $this->authcode ( $user->id . "\t" . $user->pwd, 'ENCODE' );
+					$this->session->user = array (
 							'id' => $user->id,
 							'username' => $user->username,
 							'email' => $user->email,
 							'vip' => $user->vip,
 							'group' => $user->group 
 					);
+					$this->session->auth = $auth;
+					setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
 					if (isset ( $_POST ['referrer'] ) && empty ( $_POST ['referrer'] )) {
 						return $_POST ['referrer'];
 					} else {

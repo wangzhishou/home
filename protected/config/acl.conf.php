@@ -1,6 +1,7 @@
 <?php
 $acl ['admin'] ['allow'] = '*';
 
+//flash upload nocookie bug
 $acl ['anonymous'] ['allow'] = array (
 		'AdminController' => array (
 				'imageUp',
