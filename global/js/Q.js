@@ -3,7 +3,7 @@
  * @name Q
  * @namespace Q
  * @version 0.0.1
- * @description  Q来自QQ的简写，更少的字符，方便书写。
+ * @description  Q更少的字符，方便书写。
  * @param {string | HTMLElement} element 页面元素对象或元素对象的id
  * @return {Element} dom元素
  */
