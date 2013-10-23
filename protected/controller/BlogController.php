@@ -1,41 +1,13 @@
 <?php
-Q::loadController ( "MainController" );
-class BlogController extends Controller {
+Q::loadController ( "CoreController" );
+class BlogController extends CoreController {
 	/**
 	 * temp var
 	 *
 	 * @var unknown
 	 */
-	private $data = array ();
 	public $sortField = 'createtime';
 	public $orderType = 'desc';
-	public static $tags;
-	
-	/**
-	 * start check
-	 *
-	 * @see Controller::beforeRun()
-	 */
-	public function beforeRun($resource, $action) {
-		session_start ();
-		if (isset ( $_SESSION ['user'] )) {
-			$this->data ['user'] = $_SESSION ['user'];
-		} else {
-			$this->data ['user'] = null;
-		}
-		$this->data ['baseurl'] = Q::conf ()->APP_URL;
-		$this->data ['siteTitle'] = Q::conf ()->siteTitle;
-		$this->data ['head'] = '';
-		$this->data ['randomTags'] = MainController::getRandomTags ();
-		$this->data ['menu'] = MainController::getMenu ();
-		// if not login, group = anonymous
-		$role = (isset ( $_SESSION ['user'] ['group'] )) ? $_SESSION ['user'] ['group'] : 'anonymous';
-		$rs = "";
-		$rs == $this->acl ()->process ( $role, $resource, $action );
-		if (! empty ( $rs )) {
-			return $rs;
-		}
-	}
 	
 	/**
 	 * 根据分类获取文章
@@ -226,7 +198,7 @@ class BlogController extends Controller {
 		if ($p->find ( array (
 				'limit' => 1,
 				'select' => 'id' 
-		) ) == Null) {
+		) ) == null) {
 			return '文章id不存在！';
 		}
 	}
@@ -242,7 +214,7 @@ class BlogController extends Controller {
 				'limit' => 1,
 				'select' => 'id',
 				'where' => 'vip > 0' 
-		) ) == Null) {
+		) ) == null) {
 			return '对不起，此用户不存在或权限不够！';
 		}
 	}

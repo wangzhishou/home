@@ -1,5 +1,6 @@
 <?php
-class DatabaseController extends Controller {
+Q::loadController ( 'CoreController' );
+class DatabaseController extends CoreController {
 	/**
 	 * start check
 	 *

@@ -1,43 +1,10 @@
 <?php
-Q::loadController ( "MainController" );
-class AdminController extends Controller {
-	/**
-	 * temp var
-	 *
-	 * @var unknown
-	 */
-	private $data = array ();
+Q::loadController ( 'CoreController' );
+class AdminController extends CoreController {
 	public $sortField = 'createtime';
 	public $orderType = 'desc';
 	public static $tags;
 	public static $cats;
-	
-	/**
-	 * start check
-	 *
-	 * @see Controller::beforeRun()
-	 */
-	public function beforeRun($resource, $action) {
-		if (! isset ( $_SESSION )) {
-			session_start ();
-		}
-		if (isset ( $_SESSION ['user'] )) {
-			$this->data ['user'] = $_SESSION ['user'];
-		} else {
-			$this->data ['user'] = null;
-		}
-		$this->data ['baseurl'] = Q::conf ()->APP_URL;
-		$this->data ['siteTitle'] = Q::conf ()->siteTitle;
-		$this->data ['head'] = '';
-		$this->data ['randomTags'] = MainController::getRandomTags ();
-		$this->data ['menu'] = MainController::getMenu ();
-		// if not login, group = anonymous
-		$role = (isset ( $_SESSION ['user'] ['group'] )) ? $_SESSION ['user'] ['group'] : 'anonymous';
-		$rs = $this->acl ()->process ( $role, $resource, $action );
-		if (isset ( $rs )) {
-			return $rs;
-		}
-	}
 	
 	/**
 	 * 编辑文章
@@ -59,14 +26,12 @@ class AdminController extends Controller {
 			} else {
 				$this->data ['tags'] [] = $t->name;
 			}
- 		}
-// 		$this->data ['tags'] = implode ( ',', $this->data ['tags'] );
-// 		$this->data ['cats'] = implode ( ',', $this->data ['cats'] );
+		}
 		$this->render ( 'edit_post', $this->data );
 	}
 	
 	/**
-	 * Save changes made in Post editing
+	 * 保存编辑文章内容
 	 */
 	function savePostChanges() {
 		$data = $this->data;
@@ -77,7 +42,7 @@ class AdminController extends Controller {
 		$validator->checkMode = Validator::CHECK_SKIP;
 		$error = $validator->validate ( $_POST, 'post_edit.rules' );
 		if (isset ( $error )) {
-			MainController::jsonError ( '<p style="color:#ff0000;">' . $error . '</p>' );
+			$this->jsonError ( '<p style="color:#ff0000;">' . $error . '</p>' );
 		} else {
 			Q::loadModel ( 'Post' );
 			Q::loadModel ( 'Tag' );
@@ -105,7 +70,7 @@ class AdminController extends Controller {
 					$a [] = $tg;
 				}
 			}
-
+			
 			// 文章分类
 			if (self::$cats != null) {
 				foreach ( self::$cats as $t ) {
@@ -120,7 +85,7 @@ class AdminController extends Controller {
 			} else {
 				$id = $p->update ();
 			}
-			MainController::jsonSuccess ( '<p style="color:#ff0000;">编辑文章成功</p>' );
+			$this->jsonSuccess ( '<p style="color:#ff0000;">编辑文章成功</p>' );
 		}
 	}
 	
@@ -154,15 +119,15 @@ class AdminController extends Controller {
 				$gd->thumbSuffix = '';
 				$f = $gd->createThumb ( $uploadImg, Q::conf ()->thumbWidth, Q::conf ()->thumbHeight );
 				if ($f) {
-					MainController::jsonSuccess ( "上传成功!", $data ["baseurl"] . $f, true );
+					$this->jsonSuccess ( "上传成功!", $data ["baseurl"] . $f, true );
 				} else {
-					MainController::jsonError ( '创建缩略图失败！', '', true );
+					$this->jsonError ( '创建缩略图失败！', '', true );
 				}
 			} else {
-				MainController::jsonError ( '上传失败！', '', true );
+				$this->jsonError ( '上传失败！', '', true );
 			}
 		} else {
-			MainController::jsonError ( '文件不是图片文件！', '', true );
+			$this->jsonError ( '文件不是图片文件！', '', true );
 		}
 	}
 	/**
@@ -219,7 +184,7 @@ class AdminController extends Controller {
 		$validator->checkMode = Validator::CHECK_SKIP;
 		$error = $validator->validate ( $_POST, 'post_create.rules' );
 		if (isset ( $error )) {
-			MainController::jsonError ( '<p style="color:#ff0000;">' . $error . '</p>' );
+			$this->jsonError ( '<p style="color:#ff0000;">' . $error . '</p>' );
 		} else {
 			Q::loadModel ( 'Post' );
 			Q::loadModel ( 'Tag' );
@@ -264,7 +229,7 @@ class AdminController extends Controller {
 			} else {
 				$id = $p->insert ();
 			}
-			MainController::jsonSuccess ( '<p style="color:#ff0000;">文章发布成功</p>' );
+			$this->jsonSuccess ( '<p style="color:#ff0000;">文章发布成功</p>' );
 		}
 	}
 	

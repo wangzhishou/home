@@ -1,41 +1,6 @@
 <?php
-Q::loadController ( "MainController" );
-class UserController extends Controller {
-	/**
-	 * temp var
-	 *
-	 * @var unknown
-	 */
-	private $data = array ();
-	
-	/**
-	 * start check
-	 *
-	 * @see Controller::beforeRun()
-	 */
-	public function beforeRun($resource, $action) {
-		if (! isset ( $_SESSION )) {
-			session_start ();
-		}
-		if (isset ( $_SESSION ['user'] )) {
-			$this->data ['user'] = $_SESSION ['user'];
-		} else {
-			$this->data ['user'] = null;
-		}
-		$this->data ['baseurl'] = Q::conf ()->APP_URL;
-		$this->data ['siteTitle'] = Q::conf ()->siteTitle;
-		$this->data ['head'] = '';
-		$this->data ['randomTags'] = MainController::getRandomTags ();
-		$this->data ['menu'] = MainController::getMenu ();
-		// if not login, group = anonymous
-		$role = (isset ( $_SESSION ['user'] ['group'] )) ? $_SESSION ['user'] ['group'] : 'anonymous';
-		$rs = "";
-		$rs == $this->acl ()->process ( $role, $resource, $action );
-		if (! empty ( $rs )) {
-			return $rs;
-		}
-	}
-	
+Q::loadController ( "CoreController" );
+class UserController extends CoreController {
 	/**
 	 * logout
 	 */
@@ -96,32 +61,6 @@ class UserController extends Controller {
 	}
 	
 	/**
-	 * jsonError
-	 */
-	private function jsonError($msg) {
-		$json = array (
-				'status' => 1,
-				'msg' => $msg 
-		);
-		if ($this->isAjax ()) {
-			echo json_encode ( $json );
-		}
-	}
-	
-	/**
-	 * jsonSuccess
-	 */
-	private function jsonSuccess($msg) {
-		$json = array (
-				'status' => 0,
-				'msg' => $msg 
-		);
-		if ($this->isAjax ()) {
-			echo json_encode ( $json );
-		}
-	}
-	
-	/**
 	 * register
 	 */
 	public function reg() {
@@ -142,39 +81,16 @@ class UserController extends Controller {
 			if ($id) {
 				$flag = $this->sendRegMail ( $_POST ['email'], $token );
 				if ($flag) {
-					$this->regSuccess ( "注册成功，请到登录邮箱激活帐号" );
+					$this->renderSuccess ( "注册成功，请到登录邮箱激活帐号" );
 				} else {
-					$this->regSuccess ( "注册邮件发送失败。" );
+					$this->renderSuccess ( "注册邮件发送失败。" );
 				}
 			} else {
-				$this->regSuccess ( "注册失败。" );
+				$this->renderSuccess ( "注册失败。" );
 			}
 		} else {
 			$this->view ()->render ( 'reg', $data );
 		}
-	}
-	
-	/**
-	 * reg success
-	 */
-	public function regSuccess($msg = "") {
-		Q::loadHelper ( "TextHelper" );
-		$data = $this->data;
-		$data ['content'] = $msg;
-		$data ['title'] = '';
-		$data ['status'] = 'success';
-		$this->view ()->render ( 'msg', $data );
-	}
-	
-	/**
-	 * reg success
-	 */
-	public function regFail($msg = "") {
-		$data = $this->data;
-		$data ['content'] = $msg;
-		$data ['title'] = '';
-		$data ['status'] = 'error';
-		$this->view ()->render ( 'msg', $data );
 	}
 	
 	/**
