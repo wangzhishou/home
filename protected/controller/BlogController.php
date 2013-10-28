@@ -92,6 +92,16 @@ class BlogController extends CoreController {
 					'asc' => 'createtime' 
 			) );
 		}
+		$this->data ['title'] = $this->data ['post']->title;
+		$this->data ['description'] = $this->data ['post']->summary;
+		if (isset ( $this->data ['post']->Tag )) {
+			$tagObject = $this->data ['post']->Tag;			
+			foreach ( $tagObject as $k1 => $v1 ) :
+				$a [] = $v1->name;
+			endforeach
+			;
+			$this->data ['keywords'] = implode ( ', ', $a );
+		}
 		$this->getRandomTags ();
 		$this->render ( 'content', $this->data );
 	}

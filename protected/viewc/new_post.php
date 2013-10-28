@@ -93,7 +93,7 @@ var G = {
 
 <script type="text/javascript">
 var ue = UM.getEditor('editor', {
-	imageUrl:"<?php echo $data['baseurl']; ?>post/imageUp",
+	imageUrl:"<?php echo $data['baseurl']; ?>/post/imageUp",
 	imagePath:"",
 	lang:/^zh/.test(navigator.language || navigator.browserLanguage || navigator.userLanguage) ? 'zh-cn' : 'en',
 	langPath:UMEDITOR_CONFIG.UMEDITOR_HOME_URL + "lang/",

@@ -7,8 +7,7 @@
         <?php else: ?>
         <li> <a href="<?php echo $data['baseurl']; ?>" class="selected">首页</a> </li>        
         <?php endif; ?>         
-        <?php if( $data['menu'] ): ?>
-        <!-- <?php echo debug($data['menu']); ?> -->  
+        <?php if( $data['menu'] ): ?> 
         <?php foreach($data['menu'] as $k1=>$v1): ?>          
         <?php if( isset($data['pinyin']) && $v1->pinyin == $data['pinyin'] ): ?>
         <li> <a href="<?php echo $data['baseurl']; ?>cat/<?php echo $v1->pinyin; ?>" class="selected"><?php echo $v1->name; ?></a> </li>

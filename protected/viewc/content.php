@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
+<title><?php echo $data['title']; ?></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>haotebie</title>
+<meta name="keywords" content="<?php echo $data['keywords']; ?>" />
+<meta name="description" content="<?php echo $data['description']; ?>" />
 <?php echo $data['head']; ?>
 <link rel="Shortcut Icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />

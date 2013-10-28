@@ -23,8 +23,10 @@ class CoreController extends Controller {
 	 */
 	public function __construct() {
 		$this->data ['baseurl'] = Q::conf ()->APP_URL;
-		$this->data ['siteTitle'] = Q::conf ()->siteTitle;
 		$this->data ['head'] = '';
+		$this->data ['title'] = Q::conf ()->title;
+		$this->data ['keywords'] = Q::conf ()->keywords;
+		$this->data ['description'] = Q::conf ()->description;
 		$this->session = Q::session ( "website" );
 	}
 	
@@ -42,7 +44,7 @@ class CoreController extends Controller {
 				setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
 			}
 		} else {
-			$auth = $_COOKIE [$this->cookieName];
+			$auth = isset($_COOKIE [$this->cookieName]) ? $_COOKIE [$this->cookieName] : NULL;
 			if ($auth) {
 				$auth = $this->clean ( explode ( "\t", $this->authcode ( $auth, 'DECODE' ) ), 1 );
 				if ($auth && count ( $auth ) > 0) {

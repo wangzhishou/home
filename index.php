@@ -3,6 +3,7 @@ include './protected/config/common.conf.php';
 include './protected/config/routes.conf.php';
 include './protected/config/db.conf.php';
 include './protected/config/acl.conf.php';
+include './protected/config/site.conf.php';
 
 #Just include this for production mode
 //include $config['BASE_PATH'].'deployment/deploy.php';

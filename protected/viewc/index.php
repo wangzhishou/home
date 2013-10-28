@@ -15,7 +15,7 @@
   <div class="section1">
     <div class="grid3 block"> 
       <a href="<?php echo $data['baseurl']; ?>post/create" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="<?php echo $data['baseurl']; ?>post/create" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
-      <h4>标签 :</h4>
+      <h4>标签 :</h4> 
       <div class="tag-box"> 
         <?php if (!Q::cache('front')->getPart('randomTag', 300)): ?>
 <?php Q::cache('front')->start('randomTag'); ?> 

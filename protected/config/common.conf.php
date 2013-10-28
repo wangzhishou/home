@@ -25,11 +25,12 @@ $config ['SUBFOLDER'] = str_replace ( $_SERVER ['DOCUMENT_ROOT'], '', str_replac
 if (strpos ( $config ['SUBFOLDER'], DIRECTORY_SEPARATOR ) !== 0) {
 	$config ['SUBFOLDER'] = '/' . $config ['SUBFOLDER'];
 }
-$config ['APP_URL'] = 'http://' . $_SERVER ['HTTP_HOST'] . $config ['SUBFOLDER'];
+$config ['APP_URL'] =  str_replace ( '\\', "/", 'http://' . $_SERVER ['HTTP_HOST'] . $config ['SUBFOLDER'] );
 // $config['AUTOROUTE'] = TRUE;
 $config ['DEBUG_ENABLED'] = TRUE;
 
 // $config['TEMPLATE_COMPILE_ALWAYS'] = TRUE;
+$config ['TEMPLATE_ALLOW_PHP'] = true;
 
 // register functions to be used with your template files
 // $config['TEMPLATE_GLOBAL_TAGS'] = array('url', 'url2', 'time', 'isset', 'empty');
@@ -97,9 +98,3 @@ $config ['ERROR_404_ROUTE'] = '/error';
  * you can include self defined config, retrieved via Q::conf()->variable
  * Use lower case for you own settings for future Compability with PHP
  */
-$config['pagesize'] = 10;
-$config ['TEMPLATE_ALLOW_PHP'] = true;
-$config ['siteTitle'] = "test";
-$config ['siteAdminEmail'] = "admin@haotebie.com";
-$config ['thumbWidth'] = 315;
-$config ['thumbHeight'] = 236;
