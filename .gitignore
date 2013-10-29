@@ -16,6 +16,8 @@ local.properties
 .settings/
 .loadpath
 upload/
+protected/cache/
+protected/viewc/
 db.profile.xml
 
 # External tool builders

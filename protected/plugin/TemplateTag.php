@@ -16,9 +16,10 @@ Q::conf ()->TEMPLATE_GLOBAL_TAGS = array (
 		'isset',
 		'empty',
 		'formatDate',
+		'formatDate2',
 		'shorten',
 		'urlencode',
-		'urldecode'
+		'urldecode' 
 );
 
 /**
@@ -53,7 +54,7 @@ function function_deny($var = null) {
 }
 
 // Build URL based on route id
-function url($id, $param = null, $addRootUrl = false) {
+function url2($id, $param = null, $addRootUrl = false) {
 	Q::loadHelper ( 'UrlBuilder' );
 	// param pass in as string with format
 	// 'param1=>this_is_my_value, param2=>something_here'
@@ -72,7 +73,7 @@ function url($id, $param = null, $addRootUrl = false) {
 }
 
 // Build URL based on controller and method name
-function url2($controller, $method, $param = null, $addRootUrl = false) {
+function url($controller, $method, $param = null, $addRootUrl = false) {
 	Q::loadHelper ( 'UrlBuilder' );
 	// param pass in as string with format
 	// 'param1=>this_is_my_value, param2=>something_here'
@@ -90,7 +91,37 @@ function url2($controller, $method, $param = null, $addRootUrl = false) {
 	return UrlBuilder::url2 ( $controller, $method, null, $addRootUrl );
 }
 function formatDate($date, $format = 'jS F, Y h:i:s A') {
-	return date ( $format, strtotime ( $date ) );
+	$date = strtotime ( $date );
+	$result = '';
+	$time = time () - $date;
+	if ($time < 60) {
+		$result = $time . '秒前';
+	} else if ($time < 1800) {
+		$result = floor ( $time / 60 ) . '分钟前';
+	} else if ($time < 3600) {
+		$result = '半小时前';
+	} else if ($time < 86400) {
+		$result = floor ( $time / 3600 ) . '小时前';
+	} else {
+		$zt = strtotime ( date ( 'Y-m-d 00:00:00' ) );
+		$qt = strtotime ( date ( 'Y-m-d 00:00:00', strtotime ( "-1 day" ) ) );
+		$st = strtotime ( date ( 'Y-m-d 00:00:00', strtotime ( "-2 day" ) ) );
+		$bt = strtotime ( date ( 'Y-m-d 00:00:00', strtotime ( "-7 day" ) ) );
+		if ($date < $bt) {
+			$result = date ( 'Y-m-d H:i:s', $date );
+		} else if ($date < $st) {
+			$result = floor ( $time / 86400 ) . '天前';
+		} else if ($date < $qt) {
+			$result = "前天" . date ( 'H:i', $date );
+		} else {
+			$result = '昨天' . date ( 'H:i', $date );
+		}
+	}
+	return $result;
+}
+function formatDate2($date, $format = 'Y年m月d日') {
+	$date = strtotime ( $date );
+	return date ( $format, $date );
 }
 function shorten($str, $limit = 120) {
 	Q::loadHelper ( 'TextHelper' );

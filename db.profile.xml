@@ -1,6 +1,6 @@
 
-<!-- Generate on 2013-10-28 14:13:00 -->
-<dbprofile><id>website</id><date>2013-10-28 14:13:00</date><access_uri><![CDATA[/]]></access_uri><duration>0.019093036651611</duration><memory>222880</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-10-29 16:55:48 -->
+<dbprofile><id>website</id><date>2013-10-29 16:55:48</date><access_uri><![CDATA[/]]></access_uri><duration>0.020313024520874</duration><memory>227096</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -16,496 +16,4 @@
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:13:01 -->
-<dbprofile><id>website</id><date>2013-10-28 14:13:01</date><access_uri><![CDATA[/cat/tejia]]></access_uri><duration>0.018277883529663</duration><memory>229632</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='30' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=30  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='30' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=30 AND post.status='1' AND post.id IN (10448847,10448846,10448845,10448844)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:13:05 -->
-<dbprofile><id>website</id><date>2013-10-28 14:13:05</date><access_uri><![CDATA[/cat/xinxian]]></access_uri><duration>0.017274856567383</duration><memory>229504</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='29' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=29  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='29' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=29 AND post.status='1' AND post.id IN (10448845,10448841)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:13:16 -->
-<dbprofile><id>website</id><date>2013-10-28 14:13:16</date><access_uri><![CDATA[/cat/tejia]]></access_uri><duration>0.020211935043335</duration><memory>229632</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='30' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=30  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='30' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=30 AND post.status='1' AND post.id IN (10448847,10448846,10448845,10448844)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:13:17 -->
-<dbprofile><id>website</id><date>2013-10-28 14:13:17</date><access_uri><![CDATA[/]]></access_uri><duration>0.019928932189941</duration><memory>222880</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:28:14 -->
-<dbprofile><id>website</id><date>2013-10-28 14:28:14</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.049437999725342</duration><memory>297168</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:28:20 -->
-<dbprofile><id>website</id><date>2013-10-28 14:28:20</date><access_uri><![CDATA[/]]></access_uri><duration>0.03202486038208</duration><memory>223176</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:40 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:40</date><access_uri><![CDATA[/tag/nihao]]></access_uri><duration>0.099565982818604</duration><memory>352472</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
-SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.name='nihao' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.name='nihao'  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='24' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.name='nihao' AND post.status='1' AND post.id IN (10448840)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         
-SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:42 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:42</date><access_uri><![CDATA[/]]></access_uri><duration>0.031316995620728</duration><memory>223368</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:43 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:43</date><access_uri><![CDATA[/cat/tejia]]></access_uri><duration>0.023642778396606</duration><memory>229632</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='30' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=30  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='30' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=30 AND post.status='1' AND post.id IN (10448847,10448846,10448845,10448844)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:44 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:44</date><access_uri><![CDATA[/cat/xinxian]]></access_uri><duration>0.020126819610596</duration><memory>229504</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='29' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=29  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='29' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=29 AND post.status='1' AND post.id IN (10448845,10448841)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:44 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:44</date><access_uri><![CDATA[/]]></access_uri><duration>0.024706840515137</duration><memory>223128</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:46 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:46</date><access_uri><![CDATA[/article/10448846]]></access_uri><duration>0.053889989852905</duration><memory>236936</memory><sql><![CDATA[SELECT post.id FROM post WHERE post.id='10448846' AND post.status='1'  LIMIT 1
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.id='10448846' AND post.status='1' AND post.id IN (10448846)
-						
-                        
-                        ORDER BY  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:49 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:49</date><access_uri><![CDATA[/]]></access_uri><duration>0.023041009902954</duration><memory>223128</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:50 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:50</date><access_uri><![CDATA[/article/10448847]]></access_uri><duration>0.011682033538818</duration><memory>217464</memory><sql><![CDATA[SELECT post.id FROM post WHERE post.id='10448847' AND post.status='1'  LIMIT 1
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.id='10448847' AND post.status='1' AND post.id IN (10448847)
-						
-                        
-                        ORDER BY  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:51 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:51</date><access_uri><![CDATA[/]]></access_uri><duration>0.029560089111328</duration><memory>223128</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:53 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:53</date><access_uri><![CDATA[/article/10448842]]></access_uri><duration>0.019767999649048</duration><memory>217456</memory><sql><![CDATA[SELECT post.id FROM post WHERE post.id='10448842' AND post.status='1'  LIMIT 1
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.id='10448842' AND post.status='1' AND post.id IN (10448842)
-						
-                        
-                        ORDER BY  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 14:39:54 -->
-<dbprofile><id>website</id><date>2013-10-28 14:39:54</date><access_uri><![CDATA[/]]></access_uri><duration>0.018401861190796</duration><memory>223128</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.status='1' AND post.id IN (10448847,10448846,10448845,10448844,10448843,10448842,10448841,10448840,10448839)
-						
-                        
-                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 18:45:58 -->
-<dbprofile><id>website</id><date>2013-10-28 18:45:57</date><access_uri><![CDATA[/article/10448847]]></access_uri><duration>0.26574015617371</duration><memory>217416</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
-SELECT post.id FROM post WHERE post.id='10448847' AND post.status='1'  LIMIT 1
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE post.id='10448847' AND post.status='1' AND post.id IN (10448847)
-						
-                        
-                        ORDER BY  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
-                         
-SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 18:49:50 -->
-<dbprofile><id>website</id><date>2013-10-28 18:49:50</date><access_uri><![CDATA[/cat/tejia]]></access_uri><duration>0.09650707244873</duration><memory>229632</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='30' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=30  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='30' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=30 AND post.status='1' AND post.id IN (10448847,10448846,10448845,10448844)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
-                         ]]></sql></dbprofile>
-
-<!-- Generate on 2013-10-28 18:49:50 -->
-<dbprofile><id>website</id><date>2013-10-28 18:49:50</date><access_uri><![CDATA[/cat/xinxian]]></access_uri><duration>0.031885862350464</duration><memory>229504</memory><sql><![CDATA[SELECT COUNT(tag.id) AS total, tag.id AS _tag__id, post.id AS _post__id, tag.status AS _tag__status, post.status AS _post__status, post_tag.post_id, post_tag.tag_id
-                        ,post_tag.post_id AS _post__tag_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        FROM tag
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON tag.id = post_tag.tag_id
-                        LEFT OUTER JOIN post
-                        ON post.id = post_tag.post_id
-                        WHERE tag.id='29' AND post.id IS NOT NULL AND tag.id IS NOT NULL
-						
-                        
-                        ORDER BY   post_tag.post_id,post_tag.tag_id ASC
-                         
-SELECT tag.id FROM tag WHERE tag.id=29  LIMIT 1
-SELECT post_tag.post_id FROM post_tag WHERE post_tag.tag_id='29' ORDER BY post_tag.post_id DESC
-SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC  LIMIT  0,4
-SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
-                        ,post_tag.tag_id AS _tag__post_id
-                        ,post_tag.post_id AS _post__tag_id
-                        FROM post
-						
-						
-                        LEFT OUTER JOIN post_tag
-                        ON post.id = post_tag.post_id
-                        LEFT OUTER JOIN tag
-                        ON tag.id = post_tag.tag_id
-                        WHERE tag.id=29 AND post.status='1' AND post.id IN (10448845,10448841)
-						
-                        
-                        ORDER BY post.createtime DESC,   post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>

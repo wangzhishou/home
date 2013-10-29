@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <title>haotebie</title>
 <?php echo $data['head']; ?>
-<link rel="Shortcut Icon" href="<?php echo $data['baseurl']; ?>/global/img/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>/global/css/style.css" media="screen" />
-<script src="<?php echo $data['baseurl']; ?>/global/js/Q.js"></script>
+<link rel="Shortcut Icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />
+<script src="<?php echo $data['baseurl']; ?>global/js/Q.js"></script>
 </head><body>
 <div class="wrap">
 <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>

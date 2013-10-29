@@ -13,14 +13,14 @@
   <div class="content">
     <div class="box left"> 
       <?php foreach($data['posts'] as $k1=>$v1): ?>
-      <h2><a href="<?php echo $data['baseurl']; ?>article/<?php echo $v1->id; ?>"><?php echo $v1->title; ?></a></h2>
+      <h2><?php echo $v1->title; ?></h2>
       <div class="articles"> <?php echo shorten($v1->content); ?>
         <div class="tagContainer"> <strong>Tags: </strong> 
           <?php foreach($v1->Tag as $k2=>$v2): ?> 
           <span class="tag"><a href="<?php echo $data['baseurl']; ?>tag/<?php echo $v2->name; ?>"><?php echo $v2->name; ?></a></span> 
           <?php endforeach; ?> 
         </div>
-        <em class="datePosted">&nbsp;<a href="<?php echo $data['baseurl']; ?>article/<?php echo $v1->id; ?>#comments" style="text-decoration:none;">Comments (<?php echo $v1->totalcomment; ?>)</a> | Posted on <?php echo formatDate($v1->createtime); ?></em> </div>
+        <em class="datePosted">&nbsp;<a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>#comments" style="text-decoration:none;">Comments (<?php echo $v1->totalcomment; ?>)</a> | Posted on <?php echo formatDate($v1->createtime); ?></em> </div>
       <hr class="divider"/>
       <?php endforeach; ?>
       <div><?php echo $data['pager']; ?></div>

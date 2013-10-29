@@ -535,3 +535,7 @@ a.current:hover {
 	font-size:12px;
 }
 
+/** 编辑栏目 **/
+.admin-bar {
+	margin-top:15px;
+}

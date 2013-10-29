@@ -13,14 +13,14 @@
   <div class="content">
     <div class="box left"> 
       <!-- loop posts -->
-      <h2><a href="{{baseurl}}article/{{posts' value.@id}}">{{posts' value.@title}}</a></h2>
+      <h2>{{posts' value.@title}}</h2>
       <div class="articles"> {{shorten(posts' value.@content)}}
         <div class="tagContainer"> <strong>Tags: </strong> 
           <!-- loop posts' value.@Tag --> 
           <span class="tag"><a href="{{baseurl}}tag/{{posts' v' v.@name}}">{{posts' v' v.@name}}</a></span> 
           <!-- endloop --> 
         </div>
-        <em class="datePosted">&nbsp;<a href="{{baseurl}}article/{{posts' value.@id}}#comments" style="text-decoration:none;">Comments ({{posts' value.@totalcomment}})</a> | Posted on {{formatDate(posts' value.@createtime)}}</em> </div>
+        <em class="datePosted">&nbsp;<a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>#comments" style="text-decoration:none;">Comments ({{posts' value.@totalcomment}})</a> | Posted on {{formatDate(posts' value.@createtime)}}</em> </div>
       <hr class="divider"/>
       <!-- endloop -->
       <div>{{pager}}</div>

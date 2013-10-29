@@ -35,9 +35,9 @@
       <?php } else { ?>
       <div class="grid1">
         <?php } ?>
-        <article class="block offset"> <a href="{{baseurl}}article/{{posts' value.@id}}" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+        <article class="block offset"> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
           <div class="intro">
-            <h3> <a href="{{baseurl}}article/{{posts' value.@id}}">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
+            <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
             <div class="tagList"> 
               <!-- loop posts' value.@Tag --> 
               <a href="{{baseurl}}tag/{{urlencode(posts' v' v.@name)}}">{{posts' v' v.@name}}</a> 

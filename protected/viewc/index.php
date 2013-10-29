@@ -38,9 +38,9 @@
       <?php } else { ?>
       <div class="grid1">
         <?php } ?>
-        <article class="block offset"> <a href="<?php echo $data['baseurl']; ?>article/<?php echo $v1->id; ?>" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
+        <article class="block offset"> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
           <div class="intro">
-            <h3> <a href="<?php echo $data['baseurl']; ?>article/<?php echo $v1->id; ?>"><?php echo $v1->title; ?> </a> <span class="price"><?php echo $v1->price; ?>元</span></h3>
+            <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>"><?php echo $v1->title; ?> </a> <span class="price"><?php echo $v1->price; ?>元</span></h3>
             <div class="tagList"> 
               <?php foreach($v1->Tag as $k2=>$v2): ?> 
               <a href="<?php echo $data['baseurl']; ?>tag/<?php echo urlencode($v2->name); ?>"><?php echo $v2->name; ?></a> 

@@ -44,7 +44,7 @@ class CoreController extends Controller {
 				setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
 			}
 		} else {
-			$auth = isset($_COOKIE [$this->cookieName]) ? $_COOKIE [$this->cookieName] : NULL;
+			$auth = isset ( $_COOKIE [$this->cookieName] ) ? $_COOKIE [$this->cookieName] : NULL;
 			if ($auth) {
 				$auth = $this->clean ( explode ( "\t", $this->authcode ( $auth, 'DECODE' ) ), 1 );
 				if ($auth && count ( $auth ) > 0) {
@@ -68,22 +68,33 @@ class CoreController extends Controller {
 						setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
 						$this->data ['user'] = $this->session->get ( 'user' );
 					} else {
-						$this->data ['user'] = array ();
+						$this->data ['user'] = $this->getAnonymousUser ();
 					}
 				}
 			} else {
-				$this->data ['user'] = array ();
+				$this->data ['user'] = $this->getAnonymousUser ();
 			}
 		}
 		$this->data ['randomTags'] = $this->getRandomTags ();
 		$this->data ['menu'] = $this->getMenu ();
-		// if not login, group = anonymous
-		$role = (isset ( $this->data  ['group'] )) ? $this->data  ['group'] : 'anonymous';
 		$rs = "";
-		$rs == $this->acl ()->process ( $role, $resource, $action );
-		if (! empty ( $rs )) {
+		$rs == $this->acl ()->process ( $this->data ['user'] ['group'], $resource, $action );
+		if (! $rs) {
 			return $rs;
 		}
+	}
+	
+	/**
+	 * 生成一个匿名用户
+	 */
+	public function getAnonymousUser() {
+		return array (
+				'id' => 0,
+				'username' => "游客",
+				'email' => Q::conf ()->siteAdminEmail,
+				'vip' => - 1,
+				'group' => 'anonymous' 
+		);
 	}
 	
 	/**

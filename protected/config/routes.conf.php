@@ -66,14 +66,14 @@ $route ['*'] ['/cat/:pinyin'] = array (
 
 $route ['*'] ['/cat/:pinyin/page/:pindex'] = array (
 		'BlogController',
-		'getTag'
+		'getCat'
 );
 
 $route ['*'] ['/clear'] = array (
 		'MainController',
 		'clearCache' 
 );
-$route ['*'] ['/article/:postId'] = array (
+$route ['*'] ['/a/:postId'] = array (
 		'BlogController',
 		'getArticle' 
 );
