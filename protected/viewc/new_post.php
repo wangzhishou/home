@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>haotebie</title>
+<title><?php echo $data['title']; ?></title>
 <?php echo $data['head']; ?>
 <link rel="Shortcut Icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />

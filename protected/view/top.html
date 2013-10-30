@@ -10,9 +10,9 @@
         <!-- if {{menu}} --> 
         <!-- loop menu -->          
         <!-- if {{isset(pinyin)}} && {{menu' value.@pinyin}} == {{pinyin}} -->
-        <li> <a href="{{baseurl}}cat/{{menu' value.@pinyin}}/" class="selected">{{menu' value.@name}}</a> </li>
+        <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>" class="selected">{{menu' value.@name}}</a> </li>
         <!-- else --> 
-        <li> <a href="{{baseurl}}cat/{{menu' value.@pinyin}}/">{{menu' value.@name}}</a> </li>
+        <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>">{{menu' value.@name}}</a> </li>
         <!-- endif --> 
         <!-- endloop --> 
         <!-- endif --> 

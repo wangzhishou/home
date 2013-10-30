@@ -76,8 +76,7 @@ function url2($id, $param = null, $addRootUrl = false) {
 function url($controller, $method, $param = null, $addRootUrl = false) {
 	Q::loadHelper ( 'UrlBuilder' );
 	// param pass in as string with format
-	// 'param1=>this_is_my_value, param2=>something_here'
-	
+	// 'param1=>this_is_my_value, param2=>something_here'	
 	if ($param != null) {
 		$param = explode ( ', ', $param );
 		$param2 = null;
@@ -86,8 +85,7 @@ function url($controller, $method, $param = null, $addRootUrl = false) {
 			$param2 [$splited [0]] = $splited [1];
 		}
 		return UrlBuilder::url2 ( $controller, $method, $param2, $addRootUrl );
-	}
-	
+	}	
 	return UrlBuilder::url2 ( $controller, $method, null, $addRootUrl );
 }
 function formatDate($date, $format = 'jS F, Y h:i:s A') {

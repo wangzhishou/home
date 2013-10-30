@@ -97,6 +97,33 @@ class AdminController extends CoreController {
 	}
 	
 	/**
+	 * 发布链接
+	 */
+	public function createLink() {
+		$this->render ( 'link_in', $this->data );
+	}
+	
+	/**
+	 * 保存爆料
+	 */
+	public function saveLink() {
+		foreach ( $_POST as $k => $v ) {
+			$_POST [$k] = trim ( strip_tags ( $v ) );
+		}
+		Q::loadModel ( 'Info' );
+		$c = new Info ( $_POST );
+		$error = $c->validate ();
+		if (isset ( $error )) {
+			$this->jsonError ( '文章发布错误', $error );
+		} else {
+			Q::autoload ( 'DbExpression' );
+			$c->createtime = new DbExpression ( 'NOW()' );
+			$c->insert ();
+			$this->jsonSuccess ( '文章发布成功' );
+		}
+	}
+	
+	/**
 	 * 缩略图上传
 	 */
 	public function thumbUp() {

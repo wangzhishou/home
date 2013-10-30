@@ -3,19 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>haotebie</title>
+<title><?php echo $data['title']; ?></title>
 <?php echo $data['head']; ?>
 <link rel="shortcut icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />
 <script src="<?php echo $data['baseurl']; ?>global/js/Q.js"></script>
 </head><body>
-<div class="wrap"> 
+<div class="wrap">
 <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
 <div class="content">
   <div class="section1">
-    <div class="grid3 block"> 
-      <a href="<?php echo $data['baseurl']; ?>post/create" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="<?php echo $data['baseurl']; ?>post/create" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
-      <h4>标签 :</h4> 
+    <div class="grid3 block"> <a href="<?php echo url('AdminController', 'createLink'); ?>" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="<?php echo url('AdminController', 'createPost'); ?>" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
+      <h4>标签 :</h4>
       <div class="tag-box"> 
         <?php if (!Q::cache('front')->getPart('randomTag', 300)): ?>
 <?php Q::cache('front')->start('randomTag'); ?> 
@@ -50,10 +49,10 @@
         </article>
       </div>
       <?php $i++; ?>
-      <?php endforeach; ?>      
+      <?php endforeach; ?>
       <div class="clear">&nbsp;</div>
       <div><?php echo $data['pager']; ?></div>
-      <?php endif; ?>       
+      <?php endif; ?> 
     </div>
   </div>
   <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 

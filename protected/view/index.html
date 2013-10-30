@@ -3,19 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>haotebie</title>
+<title>{{title}}</title>
 {{head}}
 <link rel="shortcut icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
 <script src="{{baseurl}}global/js/Q.js"></script>
 </head><body>
-<div class="wrap"> 
+<div class="wrap">
 <!-- include 'top' -->
 <div class="content">
   <div class="section1">
-    <div class="grid3 block"> 
-      <a href="{{baseurl}}post/create" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="{{baseurl}}post/create" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
-      <h4>标签 :</h4> 
+    <div class="grid3 block"> <a href="{{url('AdminController','createLink')}}" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="{{url('AdminController','createPost')}}" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
+      <h4>标签 :</h4>
       <div class="tag-box"> 
         <!-- cache('randomTag', 300) --> 
         <!-- loop randomTags --> 
@@ -47,10 +46,10 @@
         </article>
       </div>
       <?php $i++; ?>
-      <!-- endloop -->      
+      <!-- endloop -->
       <div class="clear">&nbsp;</div>
       <div>{{pager}}</div>
-      <!-- endif -->       
+      <!-- endif --> 
     </div>
   </div>
   <!-- include 'bottom' --> 

@@ -59,14 +59,17 @@ $route ['*'] ['/'] = array (
 		'MainController',
 		'home' 
 );
-$route ['*'] ['/cat/:pinyin'] = array (
+$route ['*'] ['/c/:pinyin'] = array (
 		'BlogController',
-		'getCat'
+		'getCat',
+		'extension' => array (
+				'.html' 
+		) 
 );
 
 $route ['*'] ['/cat/:pinyin/page/:pindex'] = array (
 		'BlogController',
-		'getCat'
+		'getCat' 
 );
 
 $route ['*'] ['/clear'] = array (
@@ -75,7 +78,10 @@ $route ['*'] ['/clear'] = array (
 );
 $route ['*'] ['/a/:postId'] = array (
 		'BlogController',
-		'getArticle' 
+		'getArticle',
+		'extension' => array (
+				'.html' 
+		) 
 );
 
 $route ['*'] ['/debug/:filename'] = array (
@@ -105,10 +111,19 @@ $route ['*'] ['/tag/:name/page/:pindex'] = array (
 		'getTag' 
 );
 
-
 $route ['*'] ['/post/create'] = array (
 		'AdminController',
 		'createPost' 
+);
+
+$route ['post'] ['/post/link'] = array (
+		'AdminController',
+		'createLink'
+);
+
+$route ['post'] ['/post/saveLink'] = array (
+		'AdminController',
+		'saveLink'
 );
 
 $route ['post'] ['/post/saveNew'] = array (
@@ -118,12 +133,12 @@ $route ['post'] ['/post/saveNew'] = array (
 
 $route ['post'] ['/post/save'] = array (
 		'AdminController',
-		'savePostChanges'
+		'savePostChanges' 
 );
 
 $route ['*'] ['/post/edit/:pid'] = array (
 		'AdminController',
-		'editPost'
+		'editPost' 
 );
 
 $route ['post'] ['/post/imageUp'] = array (

@@ -77,9 +77,8 @@ class CoreController extends Controller {
 		}
 		$this->data ['randomTags'] = $this->getRandomTags ();
 		$this->data ['menu'] = $this->getMenu ();
-		$rs = "";
-		$rs == $this->acl ()->process ( $this->data ['user'] ['group'], $resource, $action );
-		if (! $rs) {
+		$rs = $this->acl ()->process ( $this->data ['user'] ['group'], $resource, $action );
+		if ($rs) {
 			return $rs;
 		}
 	}

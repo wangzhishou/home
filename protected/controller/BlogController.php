@@ -95,7 +95,7 @@ class BlogController extends CoreController {
 		$this->data ['title'] = $this->data ['post']->title;
 		$this->data ['description'] = $this->data ['post']->summary;
 		if (isset ( $this->data ['post']->Tag )) {
-			$tagObject = $this->data ['post']->Tag;			
+			$tagObject = $this->data ['post']->Tag;
 			foreach ( $tagObject as $k1 => $v1 ) :
 				$a [] = $v1->name;
 			endforeach
@@ -156,14 +156,10 @@ class BlogController extends CoreController {
 	 */
 	public function newComment() {
 		foreach ( $_POST as $k => $v ) {
-			$_POST [$k] = trim ( $v );
-		}
-		if (! empty ( $_POST ['content'] )) {
-			$_POST ['content'] = strip_tags ( $_POST ['content'] );
+			$_POST [$k] = trim ( strip_tags ( $v ) );
 		}
 		Q::loadModel ( 'Comment' );
 		$c = new Comment ( $_POST );
-		$this->prepareSidebar ();
 		$error = $c->validate ( 'skip' );
 		if (isset ( $error )) {
 			$this->data ['status'] = 'error';
@@ -176,7 +172,7 @@ class BlogController extends CoreController {
 			$c->createtime = new DbExpression ( 'NOW()' );
 			$c->status = 1;
 			if (isset ( $this->data ['user'] )) {
-				if ($this->data ['user'] ['vip'] == 100) {
+				if ($this->data ['user'] ['group'] == "admin") {
 					$c->status = 1;
 				}
 			}

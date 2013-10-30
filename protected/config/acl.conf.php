@@ -1,11 +1,11 @@
 <?php
 $acl ['admin'] ['allow'] = '*';
+$acl ['anonymous'] ['allow'] = '*';
 
-//flash upload nocookie bug
-$acl ['anonymous'] ['allow'] = array (
+$acl ['anonymous'] ['deny'] = array (
 		'AdminController' => array (
-				'imageUp',
-				'thumbUp' 
+				'createPost',
+				'saveNewPost' 
 		) 
 );
 

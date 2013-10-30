@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/ui.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+<script src="{{baseurl}}global/js/ui.js"></script>
+</head><body>
+<div class="wrap"> 
+  <!-- include 'top' -->
+  <div class="content">
+    <div class="left mbox f">
+      <div class="post-box">
+        <h2>爆料信息</h2>
+        <form method="POST" action="{{url('AdminController','saveLink')}}" id="AjaxForm">
+          <div class="field"> <strong>标题：</strong>
+            <input type="text" size="60" name="title" class="input"/>
+          </div>
+          <div class="field"> <strong>价格: </strong>
+            <input type="text" size="60" name="price" class="input" style="width:100px;" />
+            元 </div>
+          <div class="field"> <strong>商家: </strong>
+            <input type="text" size="60" name="business" class="input"/>
+          </div>
+          <div class="field"> <strong>购买链接： </strong>
+            <input type="text" size="60" name="sourceurl" class="input"/>
+          </div>
+          <div class="field"> <strong>描述: </strong>
+            <textarea class="textarea" name="description"></textarea>
+          </div>
+          <div class="field">
+          	<input type="hidden" name="uid" value="{{user.id}}"/>
+            <input type="submit" name="submit" value="确认爆料"  class="btn btn-big" id="SubmitBtn" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="right"> </div>
+    <div class="clear">&nbsp;</div>
+  </div>
+  <!-- include 'bottom' --> 
+</div>
+</body>
+</html>

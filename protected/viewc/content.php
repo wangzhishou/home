@@ -96,7 +96,6 @@ document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static
 <?php endif; ?> 
       </div>
       <div style="text-align:center">
-        <iframe allowtransparency="true" frameborder="0" height="250" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame2" scrolling="no" src="http://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8328040831814117&amp;output=html&amp;h=250&amp;slotname=2843773429&amp;adk=2215773636&amp;w=250&amp;lmt=1382113387&amp;flash=11.8.800&amp;url=http%3A%2F%2Fwww.smzdm.com%2Fyouhui%2F328367%2F5%23comments&amp;dt=1382142187008&amp;bpp=3&amp;bdt=231&amp;shv=r20131015&amp;cbv=r20130906&amp;saldr=sa&amp;prev_slotnames=5541414173&amp;correlator=1382142187132&amp;frm=20&amp;ga_vid=1208351133.1379146440&amp;ga_sid=1382140851&amp;ga_hid=589907683&amp;ga_fc=1&amp;u_tz=480&amp;u_his=4&amp;u_java=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=32&amp;u_nplug=36&amp;u_nmime=88&amp;dff=arial&amp;dfs=12&amp;adx=1186&amp;ady=1141&amp;biw=1903&amp;bih=955&amp;eid=317150313&amp;oid=3&amp;ref=http%3A%2F%2Fwww.smzdm.com%2Fyouhui%2F328367%2F2&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1040%2C1920%2C955&amp;vis=1&amp;fu=0&amp;ifi=2&amp;dtd=373&amp;xpc=8LVtEanaaK&amp;p=http%3A//www.smzdm.com" vspace="0" width="250"></iframe>
       </div>
     </div>
     <div class="clear">&nbsp;</div>
