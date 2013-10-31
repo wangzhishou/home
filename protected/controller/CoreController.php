@@ -47,7 +47,7 @@ class CoreController extends Controller {
 			$auth = isset ( $_COOKIE [$this->cookieName] ) ? $_COOKIE [$this->cookieName] : NULL;
 			if ($auth) {
 				$auth = $this->clean ( explode ( "\t", $this->authcode ( $auth, 'DECODE' ) ), 1 );
-				if ($auth && count ( $auth ) > 0) {
+				if ($auth && count ( $auth ) > 0 && isset ( $auth [2] ) && time () - $auth [2] < $this->cookieExpiresTime) {
 					Q::loadModel ( 'User' );
 					$user = new User ();
 					$user->id = intval ( $auth [0] );
@@ -56,7 +56,7 @@ class CoreController extends Controller {
 							'limit' => 1 
 					) );
 					if ($user) {
-						$auth = $this->authcode ( $user->id . "\t" . $user->pwd, 'ENCODE' );
+						$auth = $this->authcode ( $user->id . "\t" . $user->pwd . "\t" . time (), 'ENCODE' );
 						$this->session->user = array (
 								'id' => $user->id,
 								'username' => $user->username,

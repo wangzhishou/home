@@ -166,7 +166,7 @@ class UserController extends CoreController {
 						'limit' => 1 
 				) );
 				if ($user) {
-					$auth = $this->authcode ( $user->id . "\t" . $user->pwd, 'ENCODE' );
+					$auth = $this->authcode ( $user->id . "\t" . $user->pwd . "\t" . time (), 'ENCODE' );
 					$this->session->user = array (
 							'id' => $user->id,
 							'username' => $user->username,
