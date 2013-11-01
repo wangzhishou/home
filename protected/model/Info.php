@@ -54,7 +54,7 @@ class Info extends Model {
 	 * @var tinyint Max length is 1. unsigned.
 	 */
 	public $status;
-	public $_table = 'comment';
+	public $_table = 'info';
 	public $_primarykey = 'id';
 	public $_fields = array (
 			'id',

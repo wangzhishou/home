@@ -337,6 +337,9 @@ a.label:hover {
 .post-box .field {
 	margin-bottom: 15px;
 }
+.post-box .field .label-red {
+	display:none;
+}
 .post-box .field strong {
 	display: block;
 	margin-bottom: 5px;
@@ -354,6 +357,10 @@ a.label:hover {
 .post-box .textarea {
 	width: 652px;
 	height: 100px;
+}
+
+.link-in .input,.link-in .textarea {
+	width:500px;
 }
 .post-box input.btn {
 	border: 0px;

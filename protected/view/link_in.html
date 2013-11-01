@@ -14,12 +14,12 @@
   <!-- include 'top' -->
   <div class="content">
     <div class="left mbox f">
-      <div class="post-box">
+      <div class="post-box link-in">
         <h2>爆料信息</h2>
         <form method="POST" action="{{url('AdminController','saveLink')}}" id="AjaxForm">
           <div class="field"> <strong>标题：</strong>
             <input type="text" size="60" name="title" class="input"/>
-            <div class="label label-red"></div>
+            <div class="label label-red">错误提示</div>
           </div>
           <div class="field"> <strong>价格: </strong>
             <input type="text" size="60" name="price" class="input" style="width:100px;" />
@@ -40,7 +40,7 @@
           </div>
           <div class="field">
           	<input type="hidden" name="uid" value="{{user.id}}"/>
-            <input type="submit" name="submit" value="确认爆料"  class="btn btn-big" id="AjaxSubmitBtn" />
+            <input type="submit" name="submit" value="确认提交"  class="btn btn-big" id="AjaxSubmitBtn" />
           </div>
         </form>
       </div>
