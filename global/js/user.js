@@ -13,12 +13,12 @@ var user = {
 	 * 绑定事件
 	 */
 	addEvent : function() {
-		var email = Q("Email");
+		var email = Q("#Email");
 		if(email) {
 			Q.on(email, "blur", this.checkInput);
 		}
 
-		var password = Q("Password");
+		var password = Q("#Password");
 		if(password) {
 			Q.on(password, "blur", this.checkInput);
 		}

@@ -70,6 +70,8 @@ class CoreController extends Controller {
 					} else {
 						$this->data ['user'] = $this->getAnonymousUser ();
 					}
+				} else {
+					$this->data ['user'] = $this->getAnonymousUser ();
 				}
 			} else {
 				$this->data ['user'] = $this->getAnonymousUser ();

@@ -19,22 +19,28 @@
         <form method="POST" action="{{url('AdminController','saveLink')}}" id="AjaxForm">
           <div class="field"> <strong>标题：</strong>
             <input type="text" size="60" name="title" class="input"/>
+            <div class="label label-red"></div>
           </div>
           <div class="field"> <strong>价格: </strong>
             <input type="text" size="60" name="price" class="input" style="width:100px;" />
-            元 </div>
+            元
+            <div class="label label-red"></div>
+          </div>
           <div class="field"> <strong>商家: </strong>
             <input type="text" size="60" name="business" class="input"/>
+            <div class="label label-red"></div>
           </div>
           <div class="field"> <strong>购买链接： </strong>
             <input type="text" size="60" name="sourceurl" class="input"/>
+            <div class="label label-red"></div>
           </div>
           <div class="field"> <strong>描述: </strong>
             <textarea class="textarea" name="description"></textarea>
+            <div class="label label-red"></div>
           </div>
           <div class="field">
           	<input type="hidden" name="uid" value="{{user.id}}"/>
-            <input type="submit" name="submit" value="确认爆料"  class="btn btn-big" id="SubmitBtn" />
+            <input type="submit" name="submit" value="确认爆料"  class="btn btn-big" id="AjaxSubmitBtn" />
           </div>
         </form>
       </div>
@@ -44,5 +50,6 @@
   </div>
   <!-- include 'bottom' --> 
 </div>
+<script src="{{baseurl}}global/js/h.js"></script>
 </body>
 </html>

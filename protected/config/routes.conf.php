@@ -121,7 +121,7 @@ $route ['*'] ['/post/link'] = array (
 		'createLink'
 );
 
-$route ['post'] ['/post/saveLink'] = array (
+$route ['*'] ['/post/saveLink'] = array (
 		'AdminController',
 		'saveLink'
 );

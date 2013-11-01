@@ -10,17 +10,17 @@ var post = {
 	 * 绑定事件
 	 */
 	addEvent : function() {
-		var catBox = Q("CatBox");
+		var catBox = Q("#CatBox");
 		if(catBox) {
 			Q.on(catBox, "click", this.catBoxClick);
 		}
 
-		var tagBox = Q("TagBox");
+		var tagBox = Q("#TagBox");
 		if(tagBox) {
 			Q.on(tagBox, "click", this.tagBoxClick);
 		}
 				
-		var submitBtn = Q("SubmitBtn");
+		var submitBtn = Q("#SubmitBtn");
 		if(submitBtn) {
 			Q.on(submitBtn, "click", this.ajaxFromHandler);
 		}		
@@ -34,7 +34,7 @@ var post = {
 		var element = Q.getTarget(event);
 		Q.stopBubble(event);
 		Q.preventDefault(event);
-		Q.ajaxForm("AjaxForm", {
+		Q.ajaxForm("#AjaxForm", {
 			/**
 			 * 检测成功以后
 			 */
@@ -58,7 +58,7 @@ var post = {
 			 * 检测失败
 			 */
 			onError: function() {
-				user.showError(target, "系统错误，请稍后重试！");
+				alert("系统错误，请稍后重试！");
 			}
 		});
 	},
@@ -78,8 +78,8 @@ var post = {
 	 * 选择分类
 	 */
 	catsInput : function() {		
-		var catsInput = Q("CatsInput");		
-		var catBox = Q("CatBox");
+		var catsInput = Q("#CatsInput");		
+		var catBox = Q("#CatBox");
 		var listInput = catBox.getElementsByTagName("input");
 		var data = [];
 		for(var i = 0, n = listInput.length; i < n; i++) {
@@ -112,12 +112,12 @@ var post = {
 	 * 选择分类
 	 */
 	tagsInput : function(target) {		
-		var tagsInput = Q("TagsInput");	
+		var tagsInput = Q("#TagsInput");	
 		if(!tagsInput) {
 			return;
 		}
 		var tagsValue = Q.trim(tagsInput.value).replace("，", ",");	
-		var tagBox = Q("TagBox");
+		var tagBox = Q("#TagBox");
 		var list = tagBox.getElementsByTagName("a");
 		var data = [];
 		if(tagsValue.length > 0) {

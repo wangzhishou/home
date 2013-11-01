@@ -129,7 +129,7 @@ Q.Box.prototype = {
 	 * 动态创建控件所需HTML
 	 */
 	appendHTML : function(options) {
-		var box = Q(this.id);
+		var box = Q("#" + this.id);
 		if (!box && document.body) {
 			var styleNone = "display:none";
 			var tag = Q.tag;
@@ -228,20 +228,20 @@ Q.Box.prototype = {
 	 * 给元素绑定事件
 	 */
 	addBindings : function(options) {
-		var box = Q(this.id);
+		var box = Q("#" + this.id);
 		var self = this;
 		if (box) {
 			if (!this.inited) {
-				var closeBtn = Q(this.closeBtn);
+				var closeBtn = Q("#" + this.closeBtn);
 				Q.on(closeBtn, "click", this.closeBoxHandle(options));
 
 
 				if (options.maskClick) {
-					var overlay = Q(this.overlay);
+					var overlay = Q("#" + this.overlay);
 					Q.on(overlay, "click", this.closeBoxHandle(options));
 				}
 				
-				var content = Q(this.content);
+				var content = Q("#" + this.content);
 				Q.on(content, "click", function(e){
 					Q.call(options.onclick);				
 				});
@@ -253,9 +253,9 @@ Q.Box.prototype = {
 	 * 关闭浮出层
 	 */
 	closeBox : function(options) {
-		var box = Q(this.id);
+		var box = Q("#" + this.id);
 		if (box) {
-			Q.hide(this.overlay, this.id);
+			Q.hide("#" + this.overlay, "#" + this.id);
 			if (options && options.onclose) {
 				var callBack = options.onclose;
 				Q.call(callBack);
@@ -312,7 +312,7 @@ Q.Box.prototype = {
 	 */
 	getLoadedContentOffset : function(options) {
 		var tmp        = {};
-		var loadingTmp = Q(this.loadingTmp);	
+		var loadingTmp = Q("#" + this.loadingTmp);	
 		tmp.w          = parseInt(options.width || loadingTmp.offsetWidth);
 		tmp.h          = parseInt(options.height || loadingTmp.offsetHeight);	
 		return tmp;
@@ -325,8 +325,8 @@ Q.Box.prototype = {
 		var tmp           = {};
 		tmp.w             = 0;
 		tmp.h             = 0;
-		var content       = Q(this.content);
-		var loadedContent = Q(this.loadedContent);
+		var content       = Q("#" + this.content);
+		var loadedContent = Q("#" + this.loadedContent);
 		function getSize(element, v) {
 			var val = parseInt(Q.css(element, v), 10);
 			return isNaN(val) ? 0 : val;
@@ -349,15 +349,15 @@ Q.Box.prototype = {
 	 * 显示浮层内容的状态
 	 */
 	setContentStyle : function(options) {
-		var content                 = Q(this.content);
-		var loadedContent           = Q(this.loadedContent);
-		var loadingTmp              = Q(this.loadingTmp);
-		var title 					= Q(this.title);
+		var content                 = Q("#" + this.content);
+		var loadedContent           = Q("#" + this.loadedContent);
+		var loadingTmp              = Q("#" + this.loadingTmp);
+		var title 					= Q("#" + this.title);
 		content.style.cssText       = "";
 		loadedContent.innerHTML     = loadingTmp.innerHTML;
-		Q.show(this.overlay, this.id);
-		Q.hide(this.loadingGraphic, this.loadingOverlay);
-		Q.show(this.title);
+		Q.show("#" + this.overlay, "#" + this.id);
+		Q.hide("#" + this.loadingGraphic, "#" + this.loadingOverlay);
+		Q.show("#" + this.title);
 		loadedContent.style.cssText = Q.format("width:{0}px;height:{1}px;display:block", options.w, options.h);
 		content.style.cssText       = "";	
 		loadingTmp.innerHTML        = "";
@@ -373,14 +373,14 @@ Q.Box.prototype = {
 	 */
 	showContentBox : function(options) {
 		var self                = this;
-		var loadingTmp          = Q(this.loadingTmp);
-		var content             = Q(this.content);
-		var loadedContent       = Q(this.loadedContent);
-		var loadingGraphic      = Q(this.loadingGraphic);
-		var loadingOverlay      = Q(this.loadingOverlay);
+		var loadingTmp          = Q("#" + this.loadingTmp);
+		var content             = Q("#" + this.content);
+		var loadedContent       = Q("#" + this.loadedContent);
+		var loadingGraphic      = Q("#" + this.loadingGraphic);
+		var loadingOverlay      = Q("#" + this.loadingOverlay);
 		var title               = this.title;
-		var overlay             = Q(this.overlay);
-		var id                  = Q(this.id);
+		var overlay             = Q("#" + this.overlay);
+		var id                  = Q("#" + this.id);
 		var loadedContentOffset = this.getLoadedContentOffset(options);
 		options.w               = loadedContentOffset.w;
 		options.h               = loadedContentOffset.h;
@@ -414,25 +414,25 @@ Q.Box.prototype = {
 	 * 显示loading过程
 	 */
 	showLoadingBox : function(options) {
-		Q.hide(this.title, this.current, this.next, this.previous, this.slideshow);
+		Q.hide("#" + this.title, "#" + this.current, "#" + this.next, "#" + this.previous, "#" + this.slideshow);
 		if (!options.isLoading) {
 			return false;
 		}
 		var w = this.width;
 		var h = this.height;
 		var format = Q.format;
-		var loadedContent = Q(this.loadedContent);
+		var loadedContent = Q("#" + this.loadedContent);
 		loadedContent.style.cssText = "width: 0px; height: 0px; overflow: hidden;";
-		Q.show(this.overlay, this.id, this.loadingGraphic, this.loadingOverlay);
+		Q.show("#" + this.overlay, "#" + this.id, "#" + this.loadingGraphic, "#" + this.loadingOverlay);
 		if (options.showClose) {
-			Q.show(this.closeBtn);
+			Q.show("#" + this.closeBtn);
 		}
-		Q(this.content).style.cssText = format("width:{0}px;height:{1}px;", w, h);	
+		Q("#" + this.content).style.cssText = format("width:{0}px;height:{1}px;", w, h);	
 		var clientWidth = Q.clientWidth(); 
 		var clientHeight = Q.clientHeight(); 
 		var left = Math.max(Math.floor(clientWidth / 2 - 300 / 2), 0);
 		var top = Math.max(Math.floor(clientHeight / 2 - 200 / 2), 0);
-		Q(this.id).style.cssText = Q.format("left:{0}px;top:{1}px;width:300;height:200", left, top);
+		Q("#" + this.id).style.cssText = Q.format("left:{0}px;top:{1}px;width:300;height:200", left, top);
 		this.autoCenter(w, h);
 	},
 
@@ -440,7 +440,7 @@ Q.Box.prototype = {
 	 * 弹出层自动居中显示
 	 */
 	autoCenter : function(w, h) {
-		var box = Q(this.id);
+		var box = Q("#" + this.id);
 		var h = w || box.offsetHeight;
 		var w = h || box.offsetWidth;
 		var doc = document.body || document.documentElement;
@@ -448,7 +448,7 @@ Q.Box.prototype = {
 		var clientHeight = Q.clientHeight(); 
 		var left = Math.max(Math.floor(clientWidth / 2 - w / 2), 0);
 		var top = Math.max(Math.floor(clientHeight / 2 - h / 2) + doc.scrollTop, 0);
-		Q(this.id).style.cssText = Q.format("left:{0}px;top:{1}px;", left, top);
+		Q("#" + this.id).style.cssText = Q.format("left:{0}px;top:{1}px;", left, top);
 	},
 
 	/**
@@ -510,11 +510,10 @@ Q.Box.prototype = {
 	 */
 	showContent : function(content, options) {
 		this.showLoadingBox(options);
-		Q(this.loadingTmp).innerHTML = content;
+		Q("#" + this.loadingTmp).innerHTML = content;
 		this.showContentBox(options);
 	}
 };
-
 /**
  * 弹出确认框
  * @name Q.alert
@@ -535,7 +534,7 @@ Q.alert = function(message, options) {
 	options.buttons   = {
 		"确定" : {
 			"id" : "QalertSubmit",
-			"className" : "btn btn-small gray-btn",
+			"className" : "button green",
 			"callBack" : {
 				"click" : function() {
 					_this.box.closeBox();
@@ -546,7 +545,6 @@ Q.alert = function(message, options) {
 	var html = '<div id="QalertMessage">' + message + '</div>';
 	return this.box.show(html, options);
 };
-
 /**
  * 信息提示框，默认2秒后消失
  * @name Q.tip
@@ -559,15 +557,14 @@ Q.tip = function(message, options) {
 	}
 	var _this = this;
 	var options       = {};
-	options.id        = "QTips";
+	options.id        = "Qalert";
 	options.title     = null;
 	options.showClose = false;
 	options.maskClick = false;
 	options.isEffect  = false;
-	var html = '<div id="QTipsMessage">' + message + '</div>';
+	var html = '<div id="QalertMessage">' + message + '</div>';
 	return this.box.show(html, options);
 };
-
 /**
  * 弹出确认框
  * @name Q.confirm
@@ -586,9 +583,9 @@ Q.confirm = function(message, acceptFun, cancelFun) {
 	options.isEffect  = false;
 	options.buttons   = {
 		"确定" : {
-			id : "QconfirmSubmit",
-			class : "button green",
-			callBack : {
+			"id" : "QconfirmSubmit",
+			"class" : "button green",
+			"callBack" : {
 				"click" : function() {
 					box.closeBox();
 					acceptFun && acceptFun();
@@ -596,9 +593,9 @@ Q.confirm = function(message, acceptFun, cancelFun) {
 			}
 		},
 		"取消" : {
-			id : "QconfirmCancel",
-			class : "button blue",
-			callBack : {
+			"id" : "QconfirmCancel",
+			"class" : "button blue",
+			"callBack" : {
 				"click" : function() {
 					box.closeBox();
 					cancelFun && cancelFun();
