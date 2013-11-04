@@ -42,7 +42,7 @@
   <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 </div>
 <script language="javascript" type="text/javascript">
-var referrer = Q("Referrer");
+var referrer = Q("#Referrer");
 if(referrer) {
 	referrer.value = document.referrer;
 }

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+{{head}}
+<link rel="Shortcut Icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<script src="{{baseurl}}global/js/Q.js"></script>
+</head><body>
+<div class="wrap" style="margin-top:100px">
+<!-- if {{isset(status)}} -->
+<div class="message message-{{status}}"> 
+  <!-- else -->
+  <div class="message message-success"> 
+    <!-- endif --> 
+    <span class="close"></span> 
+    <!-- if {{isset(title)}} -->
+    <p>
+    <h2><header>{{title}}</header></h2>
+    </p>
+    <!-- endif --> 
+    {{content}} </div>
+</div>
+</div>
+</body>
+</html>

@@ -5,7 +5,11 @@ $acl ['anonymous'] ['allow'] = '*';
 $acl ['anonymous'] ['deny'] = array (
 		'AdminController' => array (
 				'createPost',
-				'saveNewPost' 
+				'saveNewPost',
+				'clearCache' 
+		),
+		'DatabaseController' => array (
+				'dropDatabase' 
 		) 
 );
 

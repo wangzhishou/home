@@ -2,13 +2,11 @@
 Q::loadController ( 'CoreController' );
 class ErrorController extends CoreController {
 	public function index() {
-		echo '<h1>ERROR 404 not found</h1>';
-		echo '<p>This is handler by an internal Route as defined in common.conf.php $config[\'ERROR_404_ROUTE\']</p>
-                
-<p>Your error document needs to be more than 512 bytes in length. If not IE will display its default error page.</p>
-
-<p>Give some helpful comments other than 404 :(
-Also check out the links page for a list of URLs available in this demo.</p>';
+		$this->data ['status'] = 'error';
+		$this->data ['title'] = '访问错误：';
+		$this->data ['content'] = '<p style="color:#ff0000;">网页没找到或暂无内容！</p>';
+		$this->data ['content'] .= '<p><a href="' . $this->data ['baseurl'] . '">网站首页</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.back();">返回</a>.</p>';
+		$this->render ( 'error', $this->data );
 	}
 }
 ?>

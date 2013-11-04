@@ -95,7 +95,7 @@ class UserController extends CoreController {
 	}
 	
 	/**
-	 * send active mail
+	 * 发送激活邮件
 	 */
 	private function sendRegMail($email, $token) {
 		$mfilename = Q::conf ()->SITE_PATH . Q::conf ()->PROTECTED_FOLDER . "view/mail.html";
@@ -118,7 +118,7 @@ class UserController extends CoreController {
 	}
 	
 	/**
-	 * forget
+	 * 忘记密码 
 	 */
 	public function forget() {
 	}
@@ -176,7 +176,7 @@ class UserController extends CoreController {
 					);
 					$this->session->auth = $auth;
 					setcookie ( $this->cookieName, $auth, time () + $this->cookieExpiresTime, '/' );
-					if (isset ( $_POST ['referrer'] ) && empty ( $_POST ['referrer'] )) {
+					if (isset ( $_POST ['referrer'] ) && ! empty ( $_POST ['referrer'] )) {
 						return $_POST ['referrer'];
 					} else {
 						return Q::conf ()->APP_URL;

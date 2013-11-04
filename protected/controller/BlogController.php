@@ -19,7 +19,6 @@ class BlogController extends CoreController {
 		
 		$this->data ['pinyin'] = $this->params ['pinyin'];
 		$catId = $this->getCurrentId ();
-		
 		$p = new Post ();
 		$p->status = 1;
 		
@@ -35,8 +34,7 @@ class BlogController extends CoreController {
 		if ($totalPosts < 1) {
 			return 404;
 		}
-		
-		$pager = new Pager ( Q::conf ()->APP_URL . "cat/$tag->pinyin/page", $totalPosts, 4, 10 );
+		$pager = new Pager ( Q::conf ()->APP_URL . "c/" . $this->data ['pinyin'] . "/p", $totalPosts, 4, 10 );
 		if (isset ( $this->params ['pindex'] )) {
 			$pager->paginate ( intval ( $this->params ['pindex'] ) );
 		} else {
@@ -191,6 +189,17 @@ class BlogController extends CoreController {
 			$this->data ['content'] = '<p>点击 <a href="javascript:history.back();">返回</a> 文章.</p>';
 			$this->render ( 'msg', $this->data );
 		}
+	}
+	
+	/**
+	 * url跳转
+	 */
+	public function gotoUrl() {	
+		Q::loadClass ( "Crypt" );
+		$url = "http://www.baidu.com";
+		$key = "wangzhishou@qq.com";
+		$this->data["cryptUrl"] = Crypt::en($url, $key);
+		$this->render ( 'go', $this->data );
 	}
 	
 	/**
