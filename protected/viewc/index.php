@@ -44,6 +44,8 @@
               <?php foreach($v1->Tag as $k2=>$v2): ?> 
               <a href="<?php echo $data['baseurl']; ?>tag/<?php echo urlencode($v2->name); ?>"><?php echo $v2->name; ?></a> 
               <?php endforeach; ?> 
+              <span class="like" pid="<?php echo $v2->id; ?>">喜欢</span>
+              <span class="fav" pid="<?php echo $v2->id; ?>">收藏</span>
             </div>
           </div>
         </article>

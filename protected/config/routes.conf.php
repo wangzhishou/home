@@ -79,7 +79,7 @@ $route ['*'] ['/post/saveLink'] = array (
 		'saveLink' 
 );
 
-$route ['post'] ['/post/saveNew'] = array (
+$route ['*'] ['/post/saveNew'] = array (
 		'AdminController',
 		'saveNewPost' 
 );
