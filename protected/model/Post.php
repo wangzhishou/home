@@ -66,7 +66,13 @@ class Post extends Model {
 	 *
 	 * @var smallint Max length is 11. unsigned.
 	 */
-	public $totaldigg;
+	public $totaldigg;	
+
+	/**
+	 *
+	 * @var totalfav Max length is 11. unsigned.
+	 */
+	public $totalfav;
 	
 	/**
 	 * table
@@ -86,7 +92,8 @@ class Post extends Model {
 			'price',
 			'status',
 			'totalcomment',
-			'totaldigg' 
+			'totaldigg',
+			'totalfav'
 	);
 	
 	/**

@@ -7,7 +7,9 @@
 <?php echo $data['head']; ?>
 <link rel="shortcut icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/ui.css" media="screen" />
 <script src="<?php echo $data['baseurl']; ?>global/js/Q.js"></script>
+<script src="<?php echo $data['baseurl']; ?>global/js/ui.js"></script>
 </head><body>
 <div class="wrap">
 <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
@@ -44,8 +46,8 @@
               <?php foreach($v1->Tag as $k2=>$v2): ?> 
               <a href="<?php echo $data['baseurl']; ?>tag/<?php echo urlencode($v2->name); ?>"><?php echo $v2->name; ?></a> 
               <?php endforeach; ?> 
-              <span class="like" pid="<?php echo $v2->id; ?>">喜欢</span>
-              <span class="fav" pid="<?php echo $v2->id; ?>">收藏</span>
+              <span class="like" pid="<?php echo $v1->id; ?>">喜欢(<?php echo $v1->totaldigg; ?>)</span>
+              <span class="fav" pid="<?php echo $v1->id; ?>">收藏(<?php echo $v1->totalfav; ?>)</span>
             </div>
           </div>
         </article>
@@ -59,5 +61,13 @@
   </div>
   <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 </div>
+<script language="javascript" type="text/javascript">
+var V = {
+	likeRequest : "<?php echo $data['baseurl']; ?>post/like",
+	favRequest : "<?php echo $data['baseurl']; ?>post/fav",
+	loginRequest : "<?php echo $data['baseurl']; ?>user/login"
+};
+</script>
+<script src="<?php echo $data['baseurl']; ?>global/js/h.js"></script>
 </body>
 </html>

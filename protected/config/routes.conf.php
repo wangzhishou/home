@@ -52,6 +52,16 @@ $route ['*'] ['/tag/:name/page/:pindex'] = array (
 		'getTag' 
 );
 
+$route ['*'] ['/post/like'] = array (
+		'BlogController',
+		'likePost'
+);
+
+$route ['*'] ['/post/fav'] = array (
+		'BlogController',
+		'favPost'
+);
+
 $route ['*'] ['/go/:pid'] = array (
 		'BlogController',
 		'gotoUrl'

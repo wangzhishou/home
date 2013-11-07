@@ -7,7 +7,9 @@
 {{head}}
 <link rel="shortcut icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/ui.css" media="screen" />
 <script src="{{baseurl}}global/js/Q.js"></script>
+<script src="{{baseurl}}global/js/ui.js"></script>
 </head><body>
 <div class="wrap">
 <!-- include 'top' -->
@@ -41,8 +43,8 @@
               <!-- loop posts' value.@Tag --> 
               <a href="{{baseurl}}tag/{{urlencode(posts' v' v.@name)}}">{{posts' v' v.@name}}</a> 
               <!-- endloop --> 
-              <span class="like" pid="{{posts' v' v.@id}}">喜欢</span>
-              <span class="fav" pid="{{posts' v' v.@id}}">收藏</span>
+              <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span>
+              <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span>
             </div>
           </div>
         </article>
@@ -56,5 +58,13 @@
   </div>
   <!-- include 'bottom' --> 
 </div>
+<script language="javascript" type="text/javascript">
+var V = {
+	likeRequest : "{{baseurl}}post/like",
+	favRequest : "{{baseurl}}post/fav",
+	loginRequest : "{{baseurl}}user/login"
+};
+</script>
+<script src="{{baseurl}}global/js/h.js"></script>
 </body>
 </html>

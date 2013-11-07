@@ -93,7 +93,7 @@ class CoreController extends Controller {
 				'id' => 0,
 				'username' => "游客",
 				'email' => Q::conf ()->siteAdminEmail,
-				'vip' => - 1,
+				'vip' => 0,
 				'group' => 'anonymous' 
 		);
 	}
@@ -142,10 +142,11 @@ class CoreController extends Controller {
 	/**
 	 * jsonError
 	 */
-	public function jsonError($msg, $dt = "", $flag = false) {
+	public function jsonError($msg = "操作失败，请稍后重试！", $dt = "", $flag = false, $needlogin = false) {
 		$json = array (
 				'status' => 1,
 				'msg' => $msg,
+				'needLogin' => $needlogin,
 				'data' => $dt 
 		);
 		if ($this->isAjax () || $flag) {
@@ -156,10 +157,11 @@ class CoreController extends Controller {
 	/**
 	 * jsonSuccess
 	 */
-	public function jsonSuccess($msg, $dt = "", $flag = false) {
+	public function jsonSuccess($msg = "操作失败，请稍后重试！", $dt = "", $flag = false, $needlogin = false) {
 		$json = array (
 				'status' => 0,
 				'data' => $dt,
+				'needLogin' => $needlogin,
 				'msg' => $msg 
 		);
 		if ($this->isAjax () || $flag) {

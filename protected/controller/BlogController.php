@@ -10,6 +10,92 @@ class BlogController extends CoreController {
 	public $orderType = 'desc';
 	
 	/**
+	 * 喜欢文章
+	 */
+	public function likePost() {
+		if (isset ( $_GET ['pid'] ) && ! empty ( $_GET ['pid'] )) {
+			Q::loadModel ( 'Digg' );
+			Q::autoload ( 'DbExpression' );
+			$pid = trim ( $_GET ['pid'] );
+			$digg = new Digg ();
+			$digg->pid = $pid;
+			$digg->ip = $this->clientIP ();
+			$digg->uid = $this->data ['user'] ['id'];
+			$digg->createtime = new DbExpression ( 'NOW()' );
+			$id = $this->db ()->insert ( $digg );
+			if ($id) {
+				$json ["pid"] = $pid;
+				Q::loadModel ( 'Post' );
+				$p = new Post ();
+				$p->id = $pid;
+				$p->status = 1;
+				$p = $this->db ()->find ( $p, array (
+						'limit' => 1 
+				) );
+				if ($p) {
+					$p->totaldigg = $p->totaldigg + 1;
+					$this->db ()->update ( $p );
+				}
+				$json ["totaldigg"] = $p->totaldigg + 1;
+				$this->jsonSuccess ( "", $json );
+			} else {
+				$this->jsonError ();
+			}
+		} else {
+			$this->jsonError ( "文章id不能为空" );
+		}
+	}
+	
+	/**
+	 * 收藏文章
+	 */
+	public function favPost() {
+		if ($this->data ['user'] ['id'] == 0) {
+			return $this->jsonError ( "需要登录后才能操作", "", false, true );
+		}
+		if ($this->data ['user'] ['vip'] == 0) {
+			return $this->jsonError ( "用户未激活，请登录邮箱激活." );
+		}
+		if (isset ( $_GET ['pid'] ) && ! empty ( $_GET ['pid'] )) {
+			Q::loadModel ( 'Fav' );
+			Q::autoload ( 'DbExpression' );
+			$pid = trim ( $_GET ['pid'] );
+			$fav = new Fav ();
+			$fav->pid = $pid;
+			$fav->uid = $this->data ['user'] ['id'];		
+			$flag = $this->db ()->find ( $fav, array (
+					'limit' => 1 
+			) );
+			if ($flag) {
+				return $this->jsonError ( "已收藏！" );
+			} else {
+				$fav->createtime = new DbExpression ( 'NOW()' );	
+				$id = $this->db ()->insert ( $fav );
+			}
+			if ($id) {
+				$json ["pid"] = $pid;
+				Q::loadModel ( 'Post' );
+				$p = new Post ();
+				$p->id = $pid;
+				$p->status = 1;
+				$p = $this->db ()->find ( $p, array (
+						'limit' => 1 
+				) );
+				if ($p) {
+					$p->totalfav = $p->totalfav + 1;
+					$this->db ()->update ( $p );
+				}
+				$json ["totalfav"] = $p->totalfav + 1;
+				$this->jsonSuccess ( "收藏成功！", $json );
+			} else {
+				$this->jsonError ( "收藏失败！" );
+			}
+		} else {
+			$this->jsonError ( "文章id不能为空" );
+		}
+	}
+	
+	/**
 	 * 根据分类获取文章
 	 */
 	public function getCat() {
@@ -194,11 +280,11 @@ class BlogController extends CoreController {
 	/**
 	 * url跳转
 	 */
-	public function gotoUrl() {	
+	public function gotoUrl() {
 		Q::loadClass ( "Crypt" );
 		$url = "http://www.baidu.com";
 		$key = "wangzhishou@qq.com";
-		$this->data["cryptUrl"] = Crypt::en($url, $key);
+		$this->data ["cryptUrl"] = Crypt::en ( $url, $key );
 		$this->render ( 'go', $this->data );
 	}
 	
