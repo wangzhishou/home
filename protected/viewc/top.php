@@ -21,7 +21,7 @@
         <?php if( $data['user']['group'] == 'anonymous' ): ?> 
         <a href="<?php echo $data['baseurl']; ?>user/reg" class="join">注册</a> <a href="<?php echo $data['baseurl']; ?>user/login" id="login-link" class="btn btn-small">登录</a> 
         <?php else: ?>
-        <p class="normal">Hi, <strong><?php echo $data['user']['username']; ?></strong>，欢迎登录！<a href="<?php echo $data['baseurl']; ?>user/logout" id="login-link" class="btn btn-small">退出</a></p>
+        <p class="normal">Hi, <strong><?php echo $data['user']['username']; ?></strong>，欢迎登录！<a href="<?php echo $data['baseurl']; ?>u/index">个人中心</a>&nbsp;<a href="<?php echo $data['baseurl']; ?>user/logout" id="login-link" class="btn btn-small">退出</a></p>
         <?php endif; ?> 
       </div>
     </nav>

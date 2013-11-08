@@ -2,6 +2,12 @@
 Q::loadController ( "CoreController" );
 class UserController extends CoreController {
 	/**
+	 * user center
+	 */
+	public function index() {
+		$this->view ()->render ( 'u/index', $this->data );
+	}
+	/**
 	 * logout
 	 */
 	public function logout() {
@@ -118,7 +124,7 @@ class UserController extends CoreController {
 	}
 	
 	/**
-	 * 忘记密码 
+	 * 忘记密码
 	 */
 	public function forget() {
 	}

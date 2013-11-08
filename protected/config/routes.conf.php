@@ -122,6 +122,10 @@ $route ['*'] ['/post/saveSuccess'] = array (
 /**
  * User
  */
+$route ['*'] ['/u/index'] = array (
+		'UserController',
+		'index'
+);
 $route ['*'] ['/user/login'] = array (
 		'UserController',
 		'login' 

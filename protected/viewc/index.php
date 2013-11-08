@@ -12,7 +12,7 @@
 <script src="<?php echo $data['baseurl']; ?>global/js/ui.js"></script>
 </head><body>
 <div class="wrap">
-<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
+<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?> 
 <div class="content">
   <div class="section1">
     <div class="grid3 block"> <a href="<?php echo url('AdminController', 'createLink'); ?>" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="<?php echo url('AdminController', 'createPost'); ?>" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
