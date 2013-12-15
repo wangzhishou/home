@@ -6,7 +6,6 @@
 <?php echo $data['head']; ?>
 <link rel="Shortcut Icon" href="<?php echo $data['baseurl']; ?>global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/ui.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/ueditor/themes/default/css/umeditor.min.css" media="screen" />
 <script src="<?php echo $data['baseurl']; ?>global/js/Q.js"></script>
 <script src="<?php echo $data['baseurl']; ?>global/js/ui.js"></script>
@@ -20,8 +19,8 @@
 <script type="text/javascript" charset="utf-8" src="<?php echo $data['baseurl']; ?>global/swfupload/swfupload.js"></script>
 <script type="text/javascript" charset="utf-8" src="<?php echo $data['baseurl']; ?>global/swfupload/swfUploadHandler.js"></script>
 </head><body>
+<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
 <div class="wrap"> 
-  <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
   <div class="content">
     <div class="left mbox f">
       <div class="post-box">
@@ -82,8 +81,8 @@
     <div class="right"> </div>
     <div class="clear">&nbsp;</div>
   </div>
-  <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 </div>
+<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 <script language="javascript" type="text/javascript">
 var G = {
 	saveSuccess : "<?php echo $data['baseurl']; ?>post/saveSuccess"
@@ -124,8 +123,8 @@ var settings = new SWFUpload({
 	// Button Settings
 	button_placeholder_id : "DivButtonPlaceholder",
 	button_image_url : "<?php echo $data['baseurl']; ?>global/img/transparent.png",
-	button_width: 315,
-	button_height: 236,
+	button_width: 235,
+	button_height: 235,
 	button_text_top_padding: 2,
 	button_text_left_padding: 15,
 	button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,

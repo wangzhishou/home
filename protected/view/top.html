@@ -1,29 +1,35 @@
+<header>
 <div class="top">
-  <header>
+  <div class="header">
+    <div class="logo">
+    	<a href="{{baseurl}}"><img src="{{baseurl}}global/img/logo.png"></a>
+    </div>
     <nav>
-      <ul class="nav">      
-        <!-- if {{isset(pinyin)}} --> 
-        <li> <a href="{{baseurl}}">首页</a> </li>
+      <ul class="nav">
+        <!-- if {{isset(pinyin)}} -->
+        <li> <a href="{{baseurl}}">最新</a> </li>
         <!-- else -->
-        <li> <a href="{{baseurl}}" class="selected">首页</a> </li>        
-        <!-- endif -->         
+        <li> <a href="{{baseurl}}" class="selected">最新</a> </li>
+        <!-- endif --> 
         <!-- if {{menu}} --> 
-        <!-- loop menu -->          
+        <!-- loop menu --> 
         <!-- if {{isset(pinyin)}} && {{menu' value.@pinyin}} == {{pinyin}} -->
         <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>" class="selected">{{menu' value.@name}}</a> </li>
-        <!-- else --> 
+        <!-- else -->
         <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>">{{menu' value.@name}}</a> </li>
         <!-- endif --> 
         <!-- endloop --> 
-        <!-- endif --> 
+        <!-- endif -->
       </ul>
-      <div class="head-right"> 
-        <!-- if {{user.group}} == 'anonymous' --> 
-        <a href="{{baseurl}}user/reg" class="join">注册</a> <a href="{{baseurl}}user/login" id="login-link" class="btn btn-small">登录</a> 
-        <!-- else -->
-        <p class="normal">Hi, <strong>{{user.username}}</strong>，欢迎登录！<a href="{{baseurl}}u/index">个人中心</a>&nbsp;<a href="{{baseurl}}user/logout" id="login-link" class="btn btn-small">退出</a></p>
-        <!-- endif --> 
-      </div>
     </nav>
-  </header>
+    <div class="head-right"> 
+      <!-- if {{user.group}} == 'anonymous' --> 
+      <a href="{{baseurl}}user/reg" class="join">注册</a> <a href="{{baseurl}}user/login" id="login-link" class="btn btn-small">登录</a> 
+      <!-- else -->
+      <p class="normal">Hi, <strong>{{user.username}}</strong>，欢迎登录！<a href="{{baseurl}}u/index">个人中心</a>&nbsp;<a href="{{baseurl}}user/logout" id="login-link" class="btn btn-small">退出</a></p>
+      <!-- endif --> 
+    </div>
+    <div class="clear"></div>
+  </div>
 </div>
+</header>

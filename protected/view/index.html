@@ -7,64 +7,57 @@
 {{head}}
 <link rel="shortcut icon" href="{{baseurl}}global/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="{{baseurl}}global/css/ui.css" media="screen" />
 <script src="{{baseurl}}global/js/Q.js"></script>
 <script src="{{baseurl}}global/js/ui.js"></script>
 </head><body>
+<!-- include 'top' -->
 <div class="wrap">
-<!-- include 'top' --> 
+<div class="banner"> <a href="{{baseurl}}"><img src="{{baseurl}}global/img/banner.png"></a> </div>
 <div class="content">
-  <div class="section1">
-    <div class="grid3 block"> <a href="{{url('AdminController','createLink')}}" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="{{url('AdminController','createPost')}}" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
-      <h4>标签 :</h4>
-      <div class="tag-box"> 
-        <!-- cache('randomTag', 300) --> 
-        <!-- loop randomTags --> 
-        <a href="{{baseurl}}tag/{{randomTags' value.@name}}">{{randomTags' value.@name}}</a> 
-        <!-- endloop --> 
-        <!-- endcache --> 
-      </div>
-      <p></p>
-      <p></p>
-      <div style="text-align:center"> </div>
-    </div>
-    <!-- if {{isset(posts)}}==true -->
-    <?php $i=0; ?>
+  <div class="left"> 
+    <!-- if {{isset(posts)}}==true --> 
     <!-- loop posts -->
-    <?php if($i > 2 && ($i-3) % 3 == 0) { ?>
-    <div class="grid1 last">
-      <?php } else { ?>
-      <div class="grid1">
-        <?php } ?>
-        <article class="block offset"> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
-          <div class="intro">
-            <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
-            <div class="tagList"> 
-              <!-- loop posts' value.@Tag --> 
-              <a href="{{baseurl}}tag/{{urlencode(posts' v' v.@name)}}">{{posts' v' v.@name}}</a> 
-              <!-- endloop --> 
-              <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span>
-              <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span>
-            </div>
-          </div>
-        </article>
-      </div>
-      <?php $i++; ?>
-      <!-- endloop -->
-      <div class="clear">&nbsp;</div>
-      <div>{{pager}}</div>
-      <!-- endif --> 
+    <div class="grid">
+      <article> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+        <div class="intro">
+          <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
+          <div class="tagList"> 
+            <!-- loop posts' value.@Tag --> 
+            <a href="{{baseurl}}tag/{{urlencode(posts' v' v.@name)}}">{{posts' v' v.@name}}</a> 
+            <!-- endloop --> 
+            <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span> <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span> </div>
+        </div>
+      </article>
+    </div>
+    <!-- endloop -->
+    <div>{{pager}}</div>
+    <!-- endif --> 
+  </div>
+  <div class="right"> 
+  	<div class="box"><a href="{{url('AdminController','createLink')}}" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="{{url('AdminController','createPost')}}" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
+    </div>
+    <div class="box">
+    <h4>标签 :</h4>
+    <div class="tag-box"> 
+      <!-- cache('randomTag', 300) --> 
+      <!-- loop randomTags --> 
+      <a href="{{baseurl}}tag/{{randomTags' value.@name}}">{{randomTags' value.@name}}</a> 
+      <!-- endloop --> 
+      <!-- endcache --> 
+    </div>
     </div>
   </div>
-  <!-- include 'bottom' --> 
+  <div class="clear">&nbsp;</div>
 </div>
+</div>
+<!-- include 'bottom' --> 
 <script language="javascript" type="text/javascript">
 var V = {
 	likeRequest : "{{baseurl}}post/like",
 	favRequest : "{{baseurl}}post/fav",
 	loginRequest : "{{baseurl}}user/login"
 };
-</script>
+</script> 
 <script src="{{baseurl}}global/js/h.js"></script>
 </body>
 </html>

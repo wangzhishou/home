@@ -16,9 +16,10 @@ var Q = function(selector) {
 			result = Q.Sizzle(selector);
 		} finally {
 			if (result.length == 1 && /^(?:#([\w-]+))$/.test(selector)) {
+				result[0].length = 1;
 				return result[0];
 			} else {
-				return result.length == 0 ? null : result;
+				return result;
 			}
 		}
 	}
@@ -2293,10 +2294,6 @@ Q.ajax = function(url, options) {
     }
 	try {
 		httpRequest = getXMLHttpRequest();
-		if (data) {
-			url += (url.indexOf('?') >= 0 ? '&' : '?') + data;
-			data = null;
-		}
 		if (!cache) {
 			url += (url.indexOf('?') >= 0 ? '&' : '?') + 'q' + (+new Date) + '=Q';
 		}

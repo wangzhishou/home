@@ -130,7 +130,7 @@ Q.Box.prototype = {
 	 */
 	appendHTML : function(options) {
 		var box = Q("#" + this.id);
-		if (!box && document.body) {
+		if (box.length == 0 && document.body) {
 			var styleNone = "display:none";
 			var tag = Q.tag;
 			box = tag("div", {

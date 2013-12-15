@@ -8,8 +8,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $data['baseurl']; ?>global/css/style.css" media="screen" />
 <script src="<?php echo $data['baseurl']; ?>global/js/Q.js"></script>
 </head><body>
+<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
 <div class="wrap"> 
-  <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//top.php"; ?>
   <div class="content">
     <div class="left mbox f">
       <div class="reg-container">
@@ -39,8 +39,8 @@
     <div class="right"></div>
     <div class="clear"></div>
   </div>
-  <?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 </div>
+<?php include Q::conf()->SITE_PATH .  Q::conf()->PROTECTED_FOLDER . "viewc//bottom.php"; ?> 
 <script language="javascript" type="text/javascript">
 var referrer = Q("#Referrer");
 if(referrer) {
