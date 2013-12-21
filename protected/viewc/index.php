@@ -15,26 +15,32 @@
 <div class="banner"> <a href="<?php echo $data['baseurl']; ?>"><img src="<?php echo $data['baseurl']; ?>global/img/banner.png"></a> </div>
 <div class="content">
   <div class="left"> 
-    <?php if( isset($data['posts'])==true ): ?> 
+    <?php if( isset($data['posts'])==true ): ?>
+    <div class="grid-box">
+    <ul class="grid">
     <?php foreach($data['posts'] as $k1=>$v1): ?>
-    <div class="grid">
-      <article> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
-        <div class="intro">
-          <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>"><?php echo $v1->title; ?> </a> <span class="price"><?php echo $v1->price; ?>元</span></h3>
-          <div class="tagList"> 
-            <?php foreach($v1->Tag as $k2=>$v2): ?> 
-            <a href="<?php echo $data['baseurl']; ?>tag/<?php echo urlencode($v2->name); ?>"><?php echo $v2->name; ?></a> 
-            <?php endforeach; ?> 
-            <span class="like" pid="<?php echo $v1->id; ?>">喜欢(<?php echo $v1->totaldigg; ?>)</span> <span class="fav" pid="<?php echo $v1->id; ?>">收藏(<?php echo $v1->totalfav; ?>)</span> </div>
+      <li> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
+        <h2><a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>"><?php echo $v1->title; ?> </a> </h2> 
+        <div class="grid-bar">
+        <span class="like" pid="<?php echo $v1->id; ?>">喜欢(<?php echo $v1->totaldigg; ?>)</span> 
+        <span class="fav" pid="<?php echo $v1->id; ?>">收藏(<?php echo $v1->totalfav; ?>)</span>
+        <div class="price">￥<span><?php echo $v1->price; ?></span></div>
         </div>
-      </article>
-    </div>
+      </li>
     <?php endforeach; ?>
-    <div><?php echo $data['pager']; ?></div>
+    <div class="clear"></div>
+    </ul>
+    <div class="clear"></div>
+    </div>
+    <div class="pager"><?php echo $data['pager']; ?></div>
     <?php endif; ?> 
   </div>
   <div class="right"> 
-  	<div class="box"><a href="<?php echo url('AdminController', 'createLink'); ?>" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="<?php echo url('AdminController', 'createPost'); ?>" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
+  	<div class="box">
+    	<div class="btn-bar">
+    <a href="<?php echo url('AdminController', 'createLink'); ?>" class="btn-post-link"><i class="icon-comment"></i>我要爆料</a><a href="<?php echo url('AdminController', 'createPost'); ?>" class="btn-post-edit"><i class="icon-pencil"></i>我要投稿</a>
+    		<div class="clear"></div>
+    	</div>
     </div>
     <div class="box">
     <h4>标签 :</h4>

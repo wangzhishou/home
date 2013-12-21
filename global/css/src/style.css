@@ -126,11 +126,11 @@ h2 a {
 	margin-right: 5px;
 }
 .icon-pencil {
-	background-position: 0 -72px;
+	background-position: 0 -74px;
 }
 
 .icon-comment {
-	background-position: -240px -120px;
+	background-position: -240px -122px;
 }
 
 /** 全局布局 **/
@@ -210,7 +210,7 @@ p {
 }
 .box {
 	position: relative;
-	padding: 14px;
+	padding: 15px 14px;
 	background: #fff;
 	margin-bottom: 14px;
 	border:1px solid #e0e0e0;
@@ -222,7 +222,7 @@ p {
 	border:1px solid #e0e0e0;
 }
 .left {
-	margin-right: 240px;
+	margin-right: 236px;
 	background:#fff;
 	min-height:700px;
 	border:1px solid #e0e0e0;
@@ -237,9 +237,103 @@ p {
 	top: 0px;
 	right: 0px;
 	width: 226px;
-	margin-left: 14px;
+	margin-left: 12px;
+}
+
+/** index **/
+.btn-bar {
+	width:194px;
+	margin:0 auto;
+}
+.btn-post-link {
+	float:left;
+	color:#fff;
+	display:block;
+	background:#7fb4dd;
+	padding:7px 10px;
+	text-decoration:none;
+	border-bottom-left-radius:5px;
+	border-top-left-radius:5px;
+}
+.btn-post-link:visited {
+	color:#fff;
+}
+.btn-post-edit {
+	float:left;
+	color:#fff;
+	display:block;
+	background:#7fb4dd;	
+	padding:7px 10px;
+	border-left:1px solid #fff;
+	text-decoration:none;
+	border-bottom-right-radius:5px;
+	border-top-right-radius:5px;
+}
+.btn-post-edit:visited {
+	color:#fff;
+}
+
+.box h4 {
+	margin:0;
+}
+div.grid-box {
+	width:736px;
+	margin:12px 12px;
+	overflow:hidden;
+}
+ul.grid {
+	width:767px;
+	margin-left:-12px;
+	margin-top:-12px;		
+}
+
+ul.grid li {
+	display:block;
+	float:left;
+	padding:12px;
+	width:228px;
+	overflow:hidden;
+	border-bottom:1px solid #eeeeee;	
+	border-right:1px solid #eeeeee;
+}
+ul.grid li h2 {
+	font-size:14px;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	height:14px;
+	line-height:150%;
+	padding:5px 0;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+ul.grid li a.img img {
+	width:228px;
+	height:228px;
+}
+
+div.grid-bar {
+	position:relative;
+	font-size:12px;
+	color:#6d6d6d;
+}
+div.grid-bar div.price {
+	position:absolute;
+	right:0px;
+	bottom:-8px;
+}
+div.grid-bar div.price span {
+	font-size:24px;
+	font-family: "Verdana";
+	color:#000;
+}
+div.pager {
+	margin:20px 12px;
 }
 /** tag **/
+.tag-box {
+	padding-top:5px;
+}
 .tag-box a {
 	display: inline-block;
 	padding: 3px 5px;
@@ -391,16 +485,16 @@ a.label:hover {
 }
 .post-box .thumbnails-container {
 	position: relative;
-	width: 315px;
-	height: 236px;
+	width: 230px;
+	height: 230px;
 	margin-bottom: 10px;
 }
 .post-box .thumbnails-tips {
 	position: absolute;
-	top: 106px;
+	top: 105px;
 	left: 0;
 	height: 25px;
-	width: 235px;
+	width: 228px;
 	text-align: center;
 	line-height: 35px;
 	color: #7fb4dd;
@@ -411,15 +505,15 @@ a.label:hover {
 	top: 0;
 }
 .post-box .thumbnails {
-	width: 235px;
-	height: 235px;
+	width: 228px;
+	height: 228px;
 	border: 1px solid #dbdbdb;
 	overflow: hidden;
 	vertical-align: middle;
 	text-align: center;
 }
 .post-box .thumbnails img {
-	max-width: 315px;
+	max-width: 228px;
 }
 .post-box .tag-box a {
 	background: #333;

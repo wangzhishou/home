@@ -15,26 +15,32 @@
 <div class="banner"> <a href="{{baseurl}}"><img src="{{baseurl}}global/img/banner.png"></a> </div>
 <div class="content">
   <div class="left"> 
-    <!-- if {{isset(posts)}}==true --> 
+    <!-- if {{isset(posts)}}==true -->
+    <div class="grid-box">
+    <ul class="grid">
     <!-- loop posts -->
-    <div class="grid">
-      <article> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
-        <div class="intro">
-          <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
-          <div class="tagList"> 
-            <!-- loop posts' value.@Tag --> 
-            <a href="{{baseurl}}tag/{{urlencode(posts' v' v.@name)}}">{{posts' v' v.@name}}</a> 
-            <!-- endloop --> 
-            <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span> <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span> </div>
+      <li> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+        <h2><a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> </h2> 
+        <div class="grid-bar">
+        <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span> 
+        <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span>
+        <div class="price">￥<span>{{posts' value.@price}}</span></div>
         </div>
-      </article>
-    </div>
+      </li>
     <!-- endloop -->
-    <div>{{pager}}</div>
+    <div class="clear"></div>
+    </ul>
+    <div class="clear"></div>
+    </div>
+    <div class="pager">{{pager}}</div>
     <!-- endif --> 
   </div>
   <div class="right"> 
-  	<div class="box"><a href="{{url('AdminController','createLink')}}" class="btn blue-btn"><i class="icon-comment"></i>我要爆料</a>&nbsp;<a href="{{url('AdminController','createPost')}}" class="btn yellow-btn "><i class="icon-pencil"></i>我要投稿</a>
+  	<div class="box">
+    	<div class="btn-bar">
+    <a href="{{url('AdminController','createLink')}}" class="btn-post-link"><i class="icon-comment"></i>我要爆料</a><a href="{{url('AdminController','createPost')}}" class="btn-post-edit"><i class="icon-pencil"></i>我要投稿</a>
+    		<div class="clear"></div>
+    	</div>
     </div>
     <div class="box">
     <h4>标签 :</h4>
