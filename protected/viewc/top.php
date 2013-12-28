@@ -14,9 +14,9 @@
         <?php if( $data['menu'] ): ?> 
         <?php foreach($data['menu'] as $k1=>$v1): ?> 
         <?php if( isset($data['pinyin']) && $v1->pinyin == $data['pinyin'] ): ?>
-        <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>" class="selected"><?php echo $v1->name; ?></a> </li>
+        <li> <a href="<?php echo $data['baseurl']; ?>c/<?php echo $v1->pinyin; ?>.html" class="selected"><?php echo $v1->name; ?></a> </li>
         <?php else: ?>
-        <li> <a href="<?php echo url('BlogController', 'getCat', 'pinyin=>'.$v1->pinyin); ?>"><?php echo $v1->name; ?></a> </li>
+        <li> <a href="<?php echo $data['baseurl']; ?>c/<?php echo $v1->pinyin; ?>.html"><?php echo $v1->name; ?></a> </li>
         <?php endif; ?> 
         <?php endforeach; ?> 
         <?php endif; ?>

@@ -19,8 +19,8 @@
     <div class="grid-box">
     <ul class="grid">
     <!-- loop posts -->
-      <li> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
-        <h2><a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> </h2> 
+      <li> <a href="{{baseurl}}a/{{posts' value.@id}}.html" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+        <h2><a href="{{baseurl}}a/{{posts' value.@id}}.html">{{posts' value.@title}} </a> </h2> 
         <div class="grid-bar">
         <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span> 
         <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span>
@@ -29,7 +29,7 @@
       </li>
     <!-- endloop -->
     <div class="clear"></div>
-    </ul>
+    </ul> 
     <div class="clear"></div>
     </div>
     <div class="pager">{{pager}}</div>

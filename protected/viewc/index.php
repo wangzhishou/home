@@ -19,8 +19,8 @@
     <div class="grid-box">
     <ul class="grid">
     <?php foreach($data['posts'] as $k1=>$v1): ?>
-      <li> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
-        <h2><a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>"><?php echo $v1->title; ?> </a> </h2> 
+      <li> <a href="<?php echo $data['baseurl']; ?>a/<?php echo $v1->id; ?>.html" class="img"><img src="<?php echo $v1->thumbnails; ?>" onerror="this.src='/global/img/transparent.png'"> </a>
+        <h2><a href="<?php echo $data['baseurl']; ?>a/<?php echo $v1->id; ?>.html"><?php echo $v1->title; ?> </a> </h2> 
         <div class="grid-bar">
         <span class="like" pid="<?php echo $v1->id; ?>">喜欢(<?php echo $v1->totaldigg; ?>)</span> 
         <span class="fav" pid="<?php echo $v1->id; ?>">收藏(<?php echo $v1->totalfav; ?>)</span>
@@ -29,7 +29,7 @@
       </li>
     <?php endforeach; ?>
     <div class="clear"></div>
-    </ul>
+    </ul> 
     <div class="clear"></div>
     </div>
     <div class="pager"><?php echo $data['pager']; ?></div>

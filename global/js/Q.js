@@ -2294,6 +2294,10 @@ Q.ajax = function(url, options) {
     }
 	try {
 		httpRequest = getXMLHttpRequest();
+		if (data) {
+			url += (url.indexOf('?') >= 0 ? '&' : '?') + data;
+			data = null;
+		}
 		if (!cache) {
 			url += (url.indexOf('?') >= 0 ? '&' : '?') + 'q' + (+new Date) + '=Q';
 		}

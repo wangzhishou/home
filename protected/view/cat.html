@@ -12,36 +12,47 @@
 <!-- include 'top' -->
 <div class="wrap"> 
   <div class="content">
-    <div class="section1"> 
-      <!-- if {{isset(posts)}}==true -->
-      <?php $i=1; ?>
-      <!-- loop posts -->
-      <?php if($i > 1 && $i % 3 == 0) { ?>
-      <div class="grid1 last">
-      <?php } else { ?>
-      <div class="grid1">
-      <?php } ?>
-        <article class="block offset"> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
-          <div class="intro">
-          <h3> <a href="<?php echo url('BlogController', 'getArticle', 'postId=>'.$v1->id); ?>">{{posts' value.@title}} </a> <span class="price">{{posts' value.@price}}元</span></h3>
-          <div class="tagList">
-          <!-- loop posts' value.@Tag --> 
-          <a href="{{baseurl}}tag/{{posts' v' v.@name}}">{{posts' v' v.@name}}</a>
-          <!-- endloop -->
-          </div>
-          </div>
-        </article>
-      </div>
-      <?php $i++; ?>
-      <!-- endloop -->
-      
-      
-      <div class="clear">&nbsp;</div>
-      <div>{{pager}}</div> 
-      <!-- endif --> 
-      
+  <div class="left"> 
+    <!-- if {{isset(posts)}}==true -->
+    <div class="grid-box">
+    <ul class="grid">
+    <!-- loop posts -->
+      <li> <a href="{{baseurl}}a/{{posts' value.@id}}.html" class="img"><img src="{{posts' value.@thumbnails}}" onerror="this.src='/global/img/transparent.png'"> </a>
+        <h2><a href="{{baseurl}}a/{{posts' value.@id}}.html">{{posts' value.@title}} </a> </h2> 
+        <div class="grid-bar">
+        <span class="like" pid="{{posts' value.@id}}">喜欢({{posts' value.@totaldigg}})</span> 
+        <span class="fav" pid="{{posts' value.@id}}">收藏({{posts' value.@totalfav}})</span>
+        <div class="price">￥<span>{{posts' value.@price}}</span></div>
+        </div>
+      </li>
+    <!-- endloop -->
+    <div class="clear"></div>
+    </ul> 
+    <div class="clear"></div>
+    </div>
+    <div class="pager">{{pager}}</div>
+    <!-- endif --> 
+  </div>
+  <div class="right"> 
+  	<div class="box">
+    	<div class="btn-bar">
+    <a href="{{url('AdminController','createLink')}}" class="btn-post-link"><i class="icon-comment"></i>我要爆料</a><a href="{{url('AdminController','createPost')}}" class="btn-post-edit"><i class="icon-pencil"></i>我要投稿</a>
+    		<div class="clear"></div>
+    	</div>
+    </div>
+    <div class="box">
+    <h4>标签 :</h4>
+    <div class="tag-box"> 
+      <!-- cache('randomTag', 300) --> 
+      <!-- loop randomTags --> 
+      <a href="{{baseurl}}tag/{{randomTags' value.@name}}">{{randomTags' value.@name}}</a> 
+      <!-- endloop --> 
+      <!-- endcache --> 
+    </div>
     </div>
   </div>
+  <div class="clear">&nbsp;</div>
+</div>
 </div>
 <!-- include 'bottom' --> 
 </body>
