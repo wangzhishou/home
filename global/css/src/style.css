@@ -326,6 +326,7 @@ div.grid-bar div.price span {
 	font-size:24px;
 	font-family: "Verdana";
 	color:#000;
+	font-weight:600;
 }
 div.pager {
 	margin:20px 12px;

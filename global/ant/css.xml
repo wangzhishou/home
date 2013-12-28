@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compress" basedir="../" name="wechat">
+	<property name="css" value="./css" />
+	<property name="version" value="1.0.0" />
+	<property name="yuicompressor" value="tools/yuicompressor-2.4.7.jar" />
+	<property name="maincss" value="source.css" />
+
+	<!-- ================================= target : concat ================================= -->
+	<target name="concat" depends="" description="concat code">
+		<echo message="Concat Code Files Begin" />
+		<concat destfile="${css}\${maincss}" encoding="utf-8" 
+			fixlastline="on">
+			<!--  src -->
+			<fileset dir="./" includes="src/normalize.css" />
+			<fileset dir="./" includes="src/style.css" />			
+			<fileset dir="./" includes="src/ui.css" />				
+		</concat>
+		<echo message="Concat Code Files Finished" />
+
+	</target>
+
+	<!-- ================================= target : compress ================================= -->
+
+	<target name="compress" depends="concat" description="compress code">
+
+		<echo message="Compress Code Begin" />
+
+		<apply executable="java" parallel="false" failonerror="true" dest="./">
+			<fileset dir="${css}" includes="${maincss}" />
+			<arg line="-jar" /> 
+			<arg path="${yuicompressor}" />
+			<arg line="--charset utf-8" />
+			<arg line="-o" />
+			<targetfile />
+			<mapper type="glob" from="*.css" to="style.css" />
+		</apply>
+
+		<echo message="Compress Code Finish" />
+
+	</target>
+
+</project>
