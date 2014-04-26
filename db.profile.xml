@@ -1,13 +1,6 @@
 
-<!-- Generate on 2013-12-15 22:47:15 -->
-<dbprofile><id>website</id><date>2013-12-15 22:47:15</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.014926195144653</duration><memory>1915008</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:48:20 -->
-<dbprofile><id>website</id><date>2013-12-15 22:48:20</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.020333051681519</duration><memory>1915008</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:48:58 -->
-<dbprofile><id>website</id><date>2013-12-15 22:48:58</date><access_uri><![CDATA[/]]></access_uri><duration>0.019840002059937</duration><memory>1968568</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
-SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-12-30 22:59:41 -->
+<dbprofile><id>website</id><date>2013-12-30 22:59:41</date><access_uri><![CDATA[/]]></access_uri><duration>0.029375076293945</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -19,41 +12,14 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 22:49:14 -->
-<dbprofile><id>website</id><date>2013-12-15 22:49:14</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.02005410194397</duration><memory>1914992</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:49:16 -->
-<dbprofile><id>website</id><date>2013-12-15 22:49:16</date><access_uri><![CDATA[/post/saveNew?q1387118956838=Q]]></access_uri><duration>0.017246007919312</duration><memory>1750952</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:51:29 -->
-<dbprofile><id>website</id><date>2013-12-15 22:51:29</date><access_uri><![CDATA[/post/saveNew?q1387119089282=Q]]></access_uri><duration>0.0096619129180908</duration><memory>1751336</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
-SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:58:05 -->
-<dbprofile><id>website</id><date>2013-12-15 22:58:05</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.016825914382935</duration><memory>1915352</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
-SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:58:08 -->
-<dbprofile><id>website</id><date>2013-12-15 22:58:08</date><access_uri><![CDATA[/post/saveNew?q1387119488162=Q]]></access_uri><duration>0.01364803314209</duration><memory>1750952</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:58:11 -->
-<dbprofile><id>website</id><date>2013-12-15 22:58:11</date><access_uri><![CDATA[/post/saveNew?q1387119491823=Q]]></access_uri><duration>0.014727830886841</duration><memory>1750952</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:58:17 -->
-<dbprofile><id>website</id><date>2013-12-15 22:58:17</date><access_uri><![CDATA[/post/saveNew?q1387119497520=Q]]></access_uri><duration>0.016798973083496</duration><memory>1750952</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:58:41 -->
-<dbprofile><id>website</id><date>2013-12-15 22:58:41</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.014317035675049</duration><memory>1915008</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 22:59:16 -->
-<dbprofile><id>website</id><date>2013-12-15 22:59:16</date><access_uri><![CDATA[/]]></access_uri><duration>0.019476890563965</duration><memory>1968568</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
-SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-12-30 22:59:41 -->
+<dbprofile><id>website</id><date>2013-12-30 22:59:41</date><access_uri><![CDATA[/]]></access_uri><duration>0.022759914398193</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -65,15 +31,14 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:02:58 -->
-<dbprofile><id>website</id><date>2013-12-15 23:02:58</date><access_uri><![CDATA[/]]></access_uri><duration>0.019935131072998</duration><memory>1968544</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
-SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-12-30 22:59:41 -->
+<dbprofile><id>website</id><date>2013-12-30 22:59:41</date><access_uri><![CDATA[/]]></access_uri><duration>0.021739959716797</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -85,15 +50,14 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:03:00 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:00</date><access_uri><![CDATA[/]]></access_uri><duration>0.022008895874023</duration><memory>1968568</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
-SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-12-30 22:59:42 -->
+<dbprofile><id>website</id><date>2013-12-30 22:59:42</date><access_uri><![CDATA[/]]></access_uri><duration>0.033750057220459</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -105,15 +69,14 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:03:01 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:01</date><access_uri><![CDATA[/]]></access_uri><duration>0.020240068435669</duration><memory>1968568</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
-SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+<!-- Generate on 2013-12-30 22:59:42 -->
+<dbprofile><id>website</id><date>2013-12-30 22:59:42</date><access_uri><![CDATA[/]]></access_uri><duration>0.023273944854736</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
                         ,post_tag.tag_id AS _tag__post_id
@@ -125,18 +88,14 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:03:02 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:02</date><access_uri><![CDATA[/post/create]]></access_uri><duration>0.017602920532227</duration><memory>1914992</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 23:03:24 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:24</date><access_uri><![CDATA[/]]></access_uri><duration>0.011986970901489</duration><memory>1967144</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
-SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
+<!-- Generate on 2013-12-30 23:05:54 -->
+<dbprofile><id>website</id><date>2013-12-30 23:05:54</date><access_uri><![CDATA[/]]></access_uri><duration>0.02315092086792</duration><memory>1967072</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
 SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
@@ -149,29 +108,33 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
                          ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:03:25 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:25</date><access_uri><![CDATA[/user/reg]]></access_uri><duration>0.016077041625977</duration><memory>2455272</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
+<!-- Generate on 2013-12-30 23:05:55 -->
+<dbprofile><id>website</id><date>2013-12-30 23:05:55</date><access_uri><![CDATA[/]]></access_uri><duration>0.030678033828735</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
 
-<!-- Generate on 2013-12-15 23:03:29 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:29</date><access_uri><![CDATA[/user/login]]></access_uri><duration>0.017025947570801</duration><memory>2111168</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 23:03:31 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:31</date><access_uri><![CDATA[/user/reg]]></access_uri><duration>0.01814603805542</duration><memory>2212808</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 23:03:31 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:31</date><access_uri><![CDATA[/user/login]]></access_uri><duration>0.013531923294067</duration><memory>1868720</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 23:03:39 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:39</date><access_uri><![CDATA[/user/reg]]></access_uri><duration>0.0092389583587646</duration><memory>2214416</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10]]></sql></dbprofile>
-
-<!-- Generate on 2013-12-15 23:03:41 -->
-<dbprofile><id>website</id><date>2013-12-15 23:03:41</date><access_uri><![CDATA[/]]></access_uri><duration>0.016504049301147</duration><memory>1968568</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='1'     LIMIT 10
+<!-- Generate on 2013-12-30 23:27:32 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:32</date><access_uri><![CDATA[/]]></access_uri><duration>0.025381088256836</duration><memory>1967072</memory><sql><![CDATA[SELECT tag.* FROM tag  WHERE tag.status='0'    ORDER BY RAND() LIMIT 10
 SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
 SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
 SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
@@ -184,7 +147,368 @@
                         ON post.id = post_tag.post_id
                         LEFT OUTER JOIN tag
                         ON tag.id = post_tag.tag_id
-                        WHERE post.status='1'
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:33 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:33</date><access_uri><![CDATA[/]]></access_uri><duration>0.022055149078369</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:33</date><access_uri><![CDATA[/]]></access_uri><duration>0.014961957931519</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:34</date><access_uri><![CDATA[/]]></access_uri><duration>0.030466079711914</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:34</date><access_uri><![CDATA[/]]></access_uri><duration>0.020773887634277</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:34</date><access_uri><![CDATA[/]]></access_uri><duration>0.016324996948242</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:34</date><access_uri><![CDATA[/]]></access_uri><duration>0.02236008644104</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:35 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:35</date><access_uri><![CDATA[/]]></access_uri><duration>0.021212100982666</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:35 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:35</date><access_uri><![CDATA[/]]></access_uri><duration>0.023336172103882</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:35 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:35</date><access_uri><![CDATA[/]]></access_uri><duration>0.020917892456055</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:35 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:35</date><access_uri><![CDATA[/]]></access_uri><duration>0.025570154190063</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:35 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:35</date><access_uri><![CDATA[/]]></access_uri><duration>0.017110109329224</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:36 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:36</date><access_uri><![CDATA[/]]></access_uri><duration>0.022524833679199</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:36 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:36</date><access_uri><![CDATA[/]]></access_uri><duration>0.02009391784668</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:36 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:36</date><access_uri><![CDATA[/]]></access_uri><duration>0.021142959594727</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:37 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:37</date><access_uri><![CDATA[/]]></access_uri><duration>0.027014970779419</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:37 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:37</date><access_uri><![CDATA[/]]></access_uri><duration>0.022546052932739</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:37 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:37</date><access_uri><![CDATA[/]]></access_uri><duration>0.018338918685913</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:27:37 -->
+<dbprofile><id>website</id><date>2013-12-30 23:27:37</date><access_uri><![CDATA[/]]></access_uri><duration>0.021286964416504</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
+						
+                        
+                        ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC
+                         ]]></sql></dbprofile>
+
+<!-- Generate on 2013-12-30 23:28:34 -->
+<dbprofile><id>website</id><date>2013-12-30 23:28:34</date><access_uri><![CDATA[/]]></access_uri><duration>0.030531883239746</duration><memory>1966872</memory><sql><![CDATA[SELECT COUNT(post.id) as _total FROM post  WHERE post.status='1'     LIMIT 1
+SELECT post.id FROM post WHERE post.status='1' ORDER BY post.createtime DESC LIMIT  0,20
+SELECT *, post.id AS _post__id, tag.id AS _tag__id, tag.id, post.status AS _post__status, tag.status AS _tag__status, post_tag.tag_id, post_tag.post_id
+                        ,post_tag.tag_id AS _tag__post_id
+                        ,post_tag.post_id AS _post__tag_id
+                        FROM post
+						
+						
+                        LEFT OUTER JOIN post_tag
+                        ON post.id = post_tag.post_id
+                        LEFT OUTER JOIN tag
+                        ON tag.id = post_tag.tag_id
+                        WHERE post.status='1' AND post.id IN (3,2,1)
 						
                         
                         ORDER BY post.createtime DESC,  tag.name ASC,  post_tag.tag_id,post_tag.post_id ASC

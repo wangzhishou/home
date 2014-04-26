@@ -21,5 +21,4 @@ $dbmap['Comment']['belongs_to']['User'] = array('foreign_key'=>'id');
 
 $dbconfig['dev'] = array('localhost', 'haotebie', 'root', '', 'mysql', true, 'collate'=>'utf8_unicode_ci', 'charset'=>'utf8');
 $dbconfig['prod'] = array('localhost', 'haotebie', 'root', '', 'mysql', true, 'collate'=>'utf8_unicode_ci', 'charset'=>'utf8');
-
 ?>
